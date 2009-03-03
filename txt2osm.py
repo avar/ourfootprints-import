@@ -1068,7 +1068,9 @@ def parse_pnt(infile):
 
 if len(sys.argv) < 2 or sys.argv[1] == "--help":
     print "Usage: txt2osm [files...]"
-    quit()
+    print "Example:"
+    print "\t ./txt2osm.py UMP-Warszawa/src/WOLOMIN*.txt -- UMP-Warszawa/src/*.txt > wolomin.osm"
+    sys.exit()
 for n, f in enumerate(sys.argv[1:]):
     srcidx = n + 1
     if f == '--':
@@ -1080,7 +1082,7 @@ for n, f in enumerate(sys.argv[1:]):
         infile = open(f, "r")
     except IOError:
         sys.stderr.write("Can't open file " + f + "!\n")
-        quit()
+        sys.exit()
     sys.stderr.write("Loading " + f + "\n")
 
     if f.endswith("pnt") or f.endswith("pnt.txt"):
