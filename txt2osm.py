@@ -577,6 +577,9 @@ def print_relation(rel, index, argv):
     """Prints a relation given by rel together with its ID to stdout as XML"""
     if rel.pop('_c') <= 0:
         return
+    if not rel.has_key("_members"):
+        sys.stderr.write( "warning: Unable to print relation not having memebers: %r\n" % (rel,) )
+        return
     print "<relation id='%i' visible='true'>" % index_to_relationid(index)
     for role, (type, members) in rel.pop('_members').items():
         for member in members:
@@ -659,7 +662,14 @@ def convert_tag(way, key, value, feat):
         refpos = label.find("~[")
         if refpos > -1:
             try:
-                refstr, sep, right = label[refpos + 2:].partition(' ')
+                ## refstr, sep, right = label[refpos + 2:].partition(' ')            # py_ver >= 2.5 version
+                label_split = label[refpos + 2:].split(' ',1)                        # above line in py_ver = 2.4
+                if len(label_split) == 2:
+                    refstr,right = label[refpos + 2:].split(' ',1)
+                else:
+                    refstr = label_split[0]
+                    right = ""
+                    
                 code, ref = refstr.split(']')
                 label = (label[:refpos] + right).strip(' \t')
                 way[reftype[int(code, 0)]] = ref.replace("/", ";")
@@ -904,12 +914,36 @@ def add_addrinfo(nodes, addrs, street, city, right, count):
         else:
             prev_house = "xx"
 
+
+class NodesToWayNotFound(ValueError):
+    """
+    Raised when way of two nodes can not be found
+    """
+    def __init__(self,node_a,node_b):
+        self.node_a = node_a
+        self.node_b = node_b
+        
+    def __str__(self):
+        return "<NodesToWayNotFound %r,%r>" % (self.node_a,self.node_b,)
+    
 def nodes_to_way(a, b):
     for way in ways:
+        ## print "DEBUG: way['_nodes']: %r" % (way['_nodes'],)
         if a in way['_nodes'] and b in way['_nodes']:
             # Hopefully there's only one
             return way
-    raise ParsingError('NOWAI!')
+            
+    raise NodesToWayNotFound(a,b)
+    
+    for way in ways:
+        way_nodes = way['_nodes']
+        if a in way_nodes:
+            print "DEBUG: node a: %r found in way: %r" % (a,way)
+        if b in way_nodes:
+            print "DEBUG: node b: %r found in way: %r" % (b,way)
+            
+    ## print "DEBUG: no way nodes: a: %r b: %r" % (a,b,)
+    raise NodesToWayNotFound(a,b)
 
 def signbit(x):
     if x > 0:
@@ -1118,7 +1152,11 @@ for rel in relations:
 
 for rel in relations:
     if rel['type'] == 'restriction':
-        preprepare_restriction(rel)
+        try:
+            preprepare_restriction(rel)
+            ## print "DEBUG: preprepare_restriction(rel:%r) OK." % (rel,)
+        except NodesToWayNotFound,ntwnf:
+            sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
 
 # Way level:  split ways on level changes
 # TODO: possibly emit a relation to group the ways
@@ -1144,10 +1182,16 @@ for way in levelledways:
 
 for rel in relations:
     if rel['type'] == 'restriction':
-        prepare_restriction(rel)
+        try:
+            prepare_restriction(rel)
+        except NodesToWayNotFound,ntwnf:
+            sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
 for rel in relations:
     if rel['type'] == 'restriction':
-        make_restriction(rel)
+        try:
+            make_restriction(rel)
+        except NodesToWayNotFound,ntwnf:
+            sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
 
 for way in ways:
     if way['_c'] > 0:
