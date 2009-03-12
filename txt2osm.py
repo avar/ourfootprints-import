@@ -959,7 +959,7 @@ def next_node(pivot, dir):
 def split_way(way, node):
     l = len(way['_nodes'])
     i = way['_nodes'].index(node)
-    if i == 0 or i == i - 1:
+    if i == 0 or i == l - 1:
         return
     newway = way.copy()
     ways.append(newway)
