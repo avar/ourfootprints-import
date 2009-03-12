@@ -869,7 +869,6 @@ def add_addrinfo(nodes, addrs, street, city, right, count):
                     low_node = (low_node[0] + normlat / 10,
                                 low_node[1] + normlon / 10)
                 attrs['addr:housenumber'] = low
-                attrs['copyme'] = "y" ####
                 points_append(low_node, attrs.copy())
 
             pt1 = len(points)
@@ -877,7 +876,6 @@ def add_addrinfo(nodes, addrs, street, city, right, count):
             while hi_node in points:
                 hi_node = (hi_node[0] - normlat / 10, hi_node[1] - normlon / 10)
             attrs['addr:housenumber'] = hi
-            attrs['copyme'] = "y" ####
             points_append(hi_node, attrs.copy())
 
             if len(addrs[n]) >= 8:
