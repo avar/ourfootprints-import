@@ -900,7 +900,6 @@ def add_addrinfo(nodes, addrs, street, city, right, count):
             way = {
                 '_nodes': [pt0, pt1],
                 'addr:interpolation': type,
-                'copyme': "y", ####
                 '_c': count,
                 '_src': srcidx,
             }
