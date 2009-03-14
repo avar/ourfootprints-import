@@ -1,0 +1,278 @@
+diff --git a/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt b/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
+index 34d5172..93e5e96 100644
+--- a/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
++++ b/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
+@@ -1,7 +1,11 @@
+ ;Afryka
+-  35.91000,  -5.30000,  6,Ceuta
++OziExplorer Point File Version 1.0
++WGS 84
++Reserved 1
++Reserved 2
++255,65535,3,8,0,0,CITY Hiszpania
++  35.91000,  -5.30000,  6,Ceuta,,,
+   35.30000,  -2.95000,  6,Melilla
+-;Canary Islands
+   28.10000,  -15.43000,  8,Las Palmas
+   28.47000,  -16.25000,  8,Santa Cruz de Tenerife
+   28.48000,  -16.32000,  7,San Cristóbal de la Laguna
+diff --git a/UMP-JeleniaGora/src/miasta.txt b/UMP-JeleniaGora/src/miasta.txt
+index e0664c1..e69de29 100644
+--- a/UMP-JeleniaGora/src/miasta.txt
++++ b/UMP-JeleniaGora/src/miasta.txt
+@@ -1,90 +0,0 @@
+-[Countries]
+-Country1=Polska~[0x1d]PL
+-[END-Countries]
+-
+-[Regions]
+-Region1=dolno¶l±skie
+-CountryIdx1=1
+-[END-Regions]
+-
+-[Cities]
+-City1=Szklarska Porêba
+-RegionIdx1=1
+-City2=Jelenia Góra
+-RegionIdx2=1
+-City3=Zgorzelec
+-RegionIdx3=1
+-City4=Krzywa
+-RegionIdx4=1
+-City5=Boles³awiec
+-RegionIdx5=1
+-City6=kamienna góra
+-RegionIdx6=1
+-City7=kowary
+-RegionIdx7=1
+-City8=cieplice
+-RegionIdx8=1
+-City9=lwówek ¶l.
+-RegionIdx9=1
+-City10=gryfów ¶l.
+-RegionIdx10=1
+-City11=b³a¿ejów
+-RegionIdx11=1
+-City12=che³msko ¶l.
+-RegionIdx12=1
+-City13=GOLIñSK
+-RegionIdx13=1
+-City14=MIEROSZóW
+-RegionIdx14=1
+-City15=nowe siod³o
+-RegionIdx15=1
+-City16=okrzeszyn
+-RegionIdx16=1
+-City17=uniemy¶l
+-RegionIdx17=1
+-City18=Lubiatów
+-RegionIdx18=1
+-City19=Nowa sól
+-RegionIdx19=1
+-City20=olszyna
+-RegionIdx20=1
+-City21=wêgliniec
+-RegionIdx21=1
+-City22=lubañ
+-RegionIdx22=1
+-City23=góra
+-RegionIdx23=1
+-City24=serby
+-RegionIdx24=1
+-City25=radwanice
+-RegionIdx25=1
+-City26=lubsko
+-RegionIdx26=1
+-City27=G³ogów
+-RegionIdx27=1
+-City28=¶wiêtno
+-RegionIdx28=1
+-City29=mochy
+-RegionIdx29=1
+-City30=kaszczor
+-RegionIdx30=1
+-City31=wijewo
+-RegionIdx31=1
+-City32=Lipno
+-RegionIdx32=1
+-City33=Smigiel
+-RegionIdx33=1
+-City34=Wschowa
+-RegionIdx34=1
+-City35=Slawa
+-RegionIdx35=1
+-City36=szlichtyngowa
+-RegionIdx36=1
+-City37=konotop
+-RegionIdx37=1
+-City38=otyn
+-RegionIdx38=1
+-City39=kozuchow
+-RegionIdx39=1
+-[END-Cities]
+-
+diff --git a/UMP-Kalisz/src/POI-Kalisz.pnt b/UMP-Kalisz/src/POI-Kalisz.pnt
+index 8b413b2..6ee2047 100644
+--- a/UMP-Kalisz/src/POI-Kalisz.pnt
++++ b/UMP-Kalisz/src/POI-Kalisz.pnt
+@@ -15,8 +15,6 @@ Reserved 2
+   51.60072,  18.77262,  0,Pomnik Bohaterom wrzesnia 1939,,Sieradz,POMNIK
+   51.59860,  18.69875,  0,Elektrocieplownia,Zachodnia,Sieradz,TOWER
+   51.82535,  17.94680,  0,Kamieñ Œw. Jadwigi,,,ATRAKCJA
+-  51.45717,  18.93333,  0,,,,0x1809
+-  51.45275,  18.93333,  0,,,,0x1809
+   51.19832,  18.85636,  0,Mokry Las,,,REZERWAT
+   51.59197,  18.74720,  0,Most,,Sieradz,MOST
+   51.60008,  18.76931,  0,Most,,Sieradz,MOST
+diff --git a/UMP-NowySacz/src/POI-NowySacz1.pnt b/UMP-NowySacz/src/POI-NowySacz1.pnt
+index 2449704..ac5bf56 100644
+--- a/UMP-NowySacz/src/POI-NowySacz1.pnt
++++ b/UMP-NowySacz/src/POI-NowySacz1.pnt
+@@ -1256,7 +1256,7 @@ Reserved 2
+   49.61331,  20.69868,  0,,,Nowy S¹cz,0x1616
+   49.60945,  20.70065,  0,,,Nowy S¹cz,0x1616
+   49.61735,  20.71489,  0,,,Nowy S¹cz,0x1616
+-  49.60800,  20.69426,  0,,,Nowy S¹cz,0x1916
++  49.60800,  20.69426,  0,,,Nowy S¹cz,0x1616
+   49.60829,  20.69228,  0,,,Nowy S¹cz,0x1616
+   49.60811,  20.69523,  0,,,Nowy S¹cz,0x1616
+   49.62421,  20.71926,  0,,,Nowy S¹cz,0x1616
+@@ -2139,9 +2139,9 @@ Reserved 2
+   49.42166,  20.95920,  0,Kredyt Bank,Zdrojowa;35;+48184716487,Krynica-Zdrój,ATM
+   49.41108,  20.95531,  0,Bank Spó³dzielczy,Kraszewskiego;37;+48184715573,Krynica-Zdrój,ATM
+   49.41229,  20.95540,  0,U Edyty,,Krynica-Zdrój,RESTAURACJA
+-  49.63303,  20.71183,  0,,,Nowy S¹cz,0x1716
+-  49.62076,  20.71825,  0,,,Nowy S¹cz,0x1716
+-  49.61978,  20.71739,  0,,,Nowy S¹cz,0x1716
++  49.63303,  20.71183,  0,,,Nowy S¹cz,0x1616
++  49.62076,  20.71825,  0,,,Nowy S¹cz,0x1616
++  49.61978,  20.71739,  0,,,Nowy S¹cz,0x1616
+   49.63542,  20.69216,  0,Media Markt,Tarnowska,Nowy S¹cz,RTV
+   49.58897,  20.59580,  0,Grodzisko,,,ATRAKCJA
+   49.58528,  20.60697,  0,Cmentarz Ewangelicki,,,CMENTARZ
+diff --git a/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt b/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
+index 7d2f788..ef55230 100644
+--- a/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
++++ b/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
+@@ -1,8 +1,13 @@
+ ;Madeira
++;Açores
++OziExplorer Point File Version 1.0
++WGS 84
++Reserved 1
++Reserved 2
++255,65535,3,8,0,0,CITY Portugalia
+   32.65000,  -16.90000,  6,Funchal
+   32.63000,  -16.96000,  5,Câmara de Lobos
+   32.63000,  -16.84000,  4,Caniço
+   32.70000,  -16.76000,  4,Machico
+-;Açores
+   37.75000,  -25.67000,  5,Ponta Delgada
+   38.66000,  -27.22000,  4,Angra de Heroismo
+diff --git a/UMP-Poznan/src/POZNAN.ulice.txt b/UMP-Poznan/src/POZNAN.ulice.txt
+index 3aefeb1..cd0ce66 100644
+--- a/UMP-Poznan/src/POZNAN.ulice.txt
++++ b/UMP-Poznan/src/POZNAN.ulice.txt
+@@ -31871,8 +31871,8 @@ Type=0x6
+ Label=Wergiliusza
+ EndLevel=1
+ Data0=(52.44443,16.88162),(52.44455,16.88242)
+--Numbers1=0,O,45,47,N,-1,-1
+--Numbers2=1,N,-1,-1,N,-1,-1
++Numbers1=0,O,45,47,N,-1,-1
++Numbers2=1,N,-1,-1,N,-1,-1
+ [END]
+ 
+ [POLYLINE]
+diff --git a/UMP-Przemysl/src/Pruchnik-pliki.txt b/UMP-Przemysl/src/Pruchnik-pliki.txt
+index 15fb04c..e69de29 100644
+--- a/UMP-Przemysl/src/Pruchnik-pliki.txt
++++ b/UMP-Przemysl/src/Pruchnik-pliki.txt
+@@ -1,8 +0,0 @@
+-PRUCHNIK.obszary.txt
+-PRUCHNIK.szlaki.txt
+-PRUCHNIK.ulice.txt
+-PRUCHNIK.woda.txt
+-PRUCHNIK.zielone.txt
+-PRUCHNIK.warstwice.txt
+-PRUCHNIK.drogi.txt
+-POI-Pruchnik.txt
+diff --git a/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt b/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
+index 8131774..827a29d 100644
+--- a/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
++++ b/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
+@@ -560,7 +560,6 @@ Type=0x6
+ Label=plac S³oneczny
+ EndLevel=1
+ Data0=(53.33828,15.02069),(53.33815,15.01977)
+-End Level=1
+ [END]
+ 
+ [POLYLINE]
+diff --git a/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt b/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
+index 9779a6b..7a5773c 100644
+--- a/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
++++ b/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
+@@ -1,3 +1,8 @@
++OziExplorer Point File Version 1.0
++WGS 84
++Reserved 1
++Reserved 2
++255,65535,3,8,0,0,CITY Ukraina
+   49.98000,  36.22000, 10,Charkiv
+   48.45000,  34.98000, 10,Dnipropetrovsk
+   48.00000,  37.82000, 10,Doneck
+diff --git a/UMP-Wroclaw/src/LUBIN.drogi.txt b/UMP-Wroclaw/src/LUBIN.drogi.txt
+index 09a35d8..eeb79c2 100644
+--- a/UMP-Wroclaw/src/LUBIN.drogi.txt
++++ b/UMP-Wroclaw/src/LUBIN.drogi.txt
+@@ -1564,11 +1564,6 @@ Data0=(51.399253,16.209972),(51.400192,16.207088)
+ Miasto=Lubin
+ [END]
+ 
+-[POI]
+-Type=0x0
+-Label=DUmMY
+-Data0=(52.000000,20.555550)
+-[END]
+ ;-- Segment #76556, 31 points, src/wro/wro-marco.plt
+ [POLYLINE]
+ Type=0x5
+diff --git a/UMP-Wroclaw/src/WALBRZYCH.drogi.txt b/UMP-Wroclaw/src/WALBRZYCH.drogi.txt
+index 769d987..75e5ea0 100644
+--- a/UMP-Wroclaw/src/WALBRZYCH.drogi.txt
++++ b/UMP-Wroclaw/src/WALBRZYCH.drogi.txt
+@@ -21205,7 +21205,7 @@ Type=0x6
+ Label=Solna
+ EndLevel=1
+ Data0=(50.849014,16.285631),(50.848915,16.285217),(50.848781,16.284832),(50.848636,16.284431),(50.848556,16.283924),(50.848533,16.283473),(50.848514,16.283012),(50.848548,16.282102),(50.848716,16.281440),(50.848953,16.280878)
+-Misto=Œwiebodzice
++Miasto=Œwiebodzice
+ [END]
+ 
+ [POLYLINE]
+diff --git a/UMP-Wroclaw/src/WROCLAW.drogi.txt b/UMP-Wroclaw/src/WROCLAW.drogi.txt
+index bc4f185..ba77208 100644
+--- a/UMP-Wroclaw/src/WROCLAW.drogi.txt
++++ b/UMP-Wroclaw/src/WROCLAW.drogi.txt
+@@ -4991,7 +4991,7 @@ Miasto=Bielany Wroc³awskie
+ 
+ [POLYLINE]
+ Type=0x3
+-Label=~[0c2c]8
++Label=~[0x2c]8
+ EndLevel=2
+ DirIndicator=1
+ Data0=(51.041831,16.969509),(51.042610,16.969677),(51.042919,16.969734),(51.043502,16.969905),(51.044017,16.970125),(51.044712,16.970420),(51.045047,16.970563),(51.046463,16.970607),(51.047050,16.970624),(51.047328,16.970684),(51.047584,16.970848)
+diff --git a/narzedzia/pnt2poi.awk b/narzedzia/pnt2poi.awk
+index fd1b66e..f764d37 100644
+--- a/narzedzia/pnt2poi.awk
++++ b/narzedzia/pnt2poi.awk
+@@ -309,6 +309,7 @@ BEGIN { FS=",";
+ 	sym["SZLAK"]="0x6412";
+ 	sym["JASKINIA"]="0x6413";
+ 	sym["CAVE"]="0x6413";	# Tunel?
++	sym["TUNEL"]="0x6413";
+ 	sym["OLIGOCEN"]="0x6414";
+ 	sym["BUNKIER"]="0x6415";	# ???
+ 	sym["FORT"]="0x6415";	# ???
