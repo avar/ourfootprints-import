@@ -919,26 +919,26 @@ class NodesToWayNotFound(ValueError):
     def __init__(self,node_a,node_b):
         self.node_a = node_a
         self.node_b = node_b
-        
+
     def __str__(self):
         return "<NodesToWayNotFound %r,%r>" % (self.node_a,self.node_b,)
-    
+
 def nodes_to_way(a, b):
     for way in ways:
         ## print "DEBUG: way['_nodes']: %r" % (way['_nodes'],)
         if a in way['_nodes'] and b in way['_nodes']:
             # Hopefully there's only one
             return way
-            
+
     raise NodesToWayNotFound(a,b)
-    
+
     for way in ways:
         way_nodes = way['_nodes']
         if a in way_nodes:
             print "DEBUG: node a: %r found in way: %r" % (a,way)
         if b in way_nodes:
             print "DEBUG: node b: %r found in way: %r" % (b,way)
-            
+
     ## print "DEBUG: no way nodes: a: %r b: %r" % (a,b,)
     raise NodesToWayNotFound(a,b)
 
@@ -1007,13 +1007,55 @@ def make_restriction(rel):
         blon = float(points[nodes[1]][1])
         clat = float(points[nodes[2]][0])
         clon = float(points[nodes[2]][1])
-        # Vector dot product (?)
+        # Vector cross product (?)
         angle = (blat - alat) * (clon - blon) - (blon - alon) * (clat - blat)
 
         if angle > 0.0:
             rel['restriction'] = 'no_right_turn'
         else:
             rel['restriction'] = 'no_left_turn'
+
+def polygon_make_ccw(shape):
+    nodes = shape['_nodes']
+    num = len(nodes) - 1
+    if (num < 3):
+        return
+
+    angle = 0.0
+    epsilon = 0.001
+    for i in range(num):
+        try:
+            a = (i + 0)
+            b = (i + 1)
+            c = (i + 2) % num
+            # No projection needed
+            alat = float(points[nodes[a]][0])
+            alon = float(points[nodes[a]][1])
+            blat = float(points[nodes[b]][0])
+            blon = float(points[nodes[b]][1])
+            clat = float(points[nodes[c]][0])
+            clon = float(points[nodes[c]][1])
+            ablen = math.hypot(blat - alat, blon - alon)
+            bclen = math.hypot(clat - blat, clon - blon)
+            # Vector cross product (?)
+            cross = (blat - alat) * (clon - blon) - (blon - alon) * (clat - blat)
+            # Vector dot product (?)
+            dot = (blat - alat) * (clat - blat) + (blon - alon) * (clon - blon)
+
+            sine = cross / (ablen * bclen)
+            cosine = dot / (ablen * bclen)
+            angle += signbit(sine) * math.acos(cosine)
+        except:
+            pass
+    angle = math.degrees(-angle)
+
+    if angle > -360.0 - epsilon and angle < -360.0 + epsilon: # CW
+        nodes.reverse()
+    elif angle > 360.0 - epsilon and angle < 360.0 + epsilon: # CCW
+        pass
+    else:
+        # Likely an illegal shape
+        shape['fixme'] = "Weird shape"
 
 def recode(line):
     try:
@@ -1065,6 +1107,8 @@ def parse_txt(infile):
                 way['ele'] = way.pop('name').replace(',', '.')
             if 'depth' in way and way['depth'] == '_name':
                 way['depth'] = way.pop('name').replace(',', '.')
+            if feat == Features.polygon:
+                polygon_make_ccw(way)
 
             if feat == Features.poi:
                 # execution order shouldn't matter here, unlike in C
