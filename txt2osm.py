@@ -691,12 +691,20 @@ def convert_tag(way, key, value, feat):
         way['loc_name'] = value
     elif key == 'DirIndicator':
         way['oneway'] = value
-    elif key in [ 'Data0',  'Data1', 'Data2', 'Data3', 'Data4' ]:
-        if '_nodes' in way:
+    elif key.startswith('Data'):
+        num = int(key[4:])
+        count, nodes = prepare_line(value, feat == Features.polygon)
+        # way['layer'] = num ??
+        if '_nodes' not in way:
+            way['_nodes'] = nodes
+            way['_c'] = count
+        elif feat != Features.polygon:
             sys.stderr.write("warning: Way " + str(way) + " has multiple "
                              "polylines/polygons, some will be discarded!\n")
-        way['_c'], way['_nodes'] = prepare_line(value, feat == Features.polygon)
-        # way['layer'] = data[4:] ??
+        else:
+            if '_innernodes' not in way:
+                way['_innernodes'] = []
+            way['_innernodes'].append(nodes)
     elif key == 'Type':
         if feat == Features.polygon:
             tag(way, shape_types[int(value, 0)])
@@ -1015,6 +1023,29 @@ def make_restriction(rel):
         else:
             rel['restriction'] = 'no_left_turn'
 
+def make_multipolygon(outer, holes):
+    rel = {
+        'type':     'multipolygon',
+        '_c':       outer['_c'],
+        '_src':     outer['_src'],
+        '_members': {
+            'outer': ('way', [ ways.index(outer) ]),
+            'inner': ('way', []),
+        },
+    }
+
+    for inner in holes:
+        way = {
+            '_c':     outer['_c'],
+            '_nodes': inner,
+            '_src':   outer['_src'],
+        }
+
+        ways.append(way)
+        rel['_members']['inner'][1].append(ways.index(way))
+
+    return rel
+
 def polygon_make_ccw(shape):
     nodes = shape['_nodes']
     num = len(nodes) - 1
@@ -1123,7 +1154,14 @@ def parse_txt(infile):
             except:
                 print line
                 raise ParsingError('Can\'t split the thing')
-            polyline[key.strip()] = recode(value).strip()
+            key = key.strip()
+            if key in polyline:
+                if key.startswith('Data'):
+                    while key in polyline:
+                        key = "Data" + str(int(key[4:]) + 1)
+                else:
+                    raise ParsingError('Key ' + key + ' repeats')
+            polyline[key] = recode(value).strip()
         elif line.startswith(';'):
             strn = recode(line[1:].strip(" \t\n"))
             if comment is not None:
@@ -1198,6 +1236,10 @@ for rel in relations:
             ## print "DEBUG: preprepare_restriction(rel:%r) OK." % (rel,)
         except NodesToWayNotFound,ntwnf:
             sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
+
+for way in ways:
+    if '_innernodes' in way:
+        relations.append(make_multipolygon(way, way.pop('_innernodes')))
 
 # Way level:  split ways on level changes
 # TODO: possibly emit a relation to group the ways
