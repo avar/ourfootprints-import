@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# vim: set fileencoding=utf-8 et :
+# vim: set fileencoding=utf-8 encoding=utf-8 et :
 # txt2osm, an UnofficialMapProject .txt to OpenStreetMap .osm converter.
 # Copyright (C) 2008  Mariusz Adamski, rhn
 # Copyright (C) 2009  Andrzej Zaborowski
@@ -705,6 +705,7 @@ def convert_tag(way, key, value, feat):
             if '_innernodes' not in way:
                 way['_innernodes'] = []
             way['_innernodes'].append(nodes)
+            way['_c'] += count
     elif key == 'Type':
         if feat == Features.polygon:
             tag(way, shape_types[int(value, 0)])
