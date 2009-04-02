@@ -669,7 +669,7 @@ def convert_tag(way, key, value, feat):
                 else:
                     refstr = label_split[0]
                     right = ""
-                    
+
                 code, ref = refstr.split(']')
                 label = (label[:refpos] + right).strip(' \t')
                 way[reftype[int(code, 0)]] = ref.replace("/", ";")
@@ -691,21 +691,30 @@ def convert_tag(way, key, value, feat):
         way['loc_name'] = value
     elif key == 'DirIndicator':
         way['oneway'] = value
-    elif key.startswith('Data'):
+    elif key in [ 'Data0', 'Data1', 'Data2', 'Data3' ]:
         num = int(key[4:])
-        count, nodes = prepare_line(value, feat == Features.polygon)
-        # way['layer'] = num ??
-        if '_nodes' not in way:
-            way['_nodes'] = nodes
+        if '_nodes' in way:
+            sys.stderr.write("warning: Way " + str(way) + " has multiple "
+                             "polylines/polygons, some will be discarded!\n")
+        count, way['_nodes'] = prepare_line(value, feat == Features.polygon)
+        if '_c' in way:
+            way['_c'] += count
+        else:
             way['_c'] = count
-        elif feat != Features.polygon:
+        # way['layer'] = num ??
+    elif key.startswith('_Inner'):
+        if feat != Features.polygon:
             sys.stderr.write("warning: Way " + str(way) + " has multiple "
                              "polylines/polygons, some will be discarded!\n")
         else:
+            count, nodes = prepare_line(value, feat == Features.polygon)
             if '_innernodes' not in way:
                 way['_innernodes'] = []
             way['_innernodes'].append(nodes)
-            way['_c'] += count
+            if '_c' in way:
+                way['_c'] += count
+            else:
+                way['_c'] = count
     elif key == 'Type':
         if feat == Features.polygon:
             tag(way, shape_types[int(value, 0)])
@@ -1027,6 +1036,7 @@ def make_restriction(rel):
 def make_multipolygon(outer, holes):
     rel = {
         'type':     'multipolygon',
+        'note':     'TODO: fix roles manually',
         '_c':       outer['_c'],
         '_src':     outer['_src'],
         '_members': {
@@ -1041,9 +1051,21 @@ def make_multipolygon(outer, holes):
             '_nodes': inner,
             '_src':   outer['_src'],
         }
-
         ways.append(way)
         rel['_members']['inner'][1].append(ways.index(way))
+        polygon_make_ccw(way)
+
+        # Assume that the polygon with most nodes is the outer shape and
+        # all other polygons are the holes.
+        # That's a stupid heuristic but is much simpler than a complete
+        # check of which polygons lie entirely inside other polygons and
+        # there might turn up some very complex cases like polygons crossing
+        # one another and multiple nesting.
+        if len(inner) > len(outer['_nodes']):
+            tmp = outer['_nodes']
+            outer['_nodes'] = inner
+            way['_nodes'] = tmp
+        way['_nodes'].reverse()
 
     return rel
 
@@ -1158,8 +1180,11 @@ def parse_txt(infile):
             key = key.strip()
             if key in polyline:
                 if key.startswith('Data'):
+                    key = "_Inner0"
                     while key in polyline:
-                        key = "Data" + str(int(key[4:]) + 1)
+                        key = "_Inner" + str(int(key[6:]) + 1)
+                elif key == 'City' and polyline[key] == 'Y':
+                    pass
                 else:
                     raise ParsingError('Key ' + key + ' repeats')
             polyline[key] = recode(value).strip()
