@@ -93,7 +93,30 @@ pline_types = {
     0xe10: [ "railway", "tram" ],
     0xe11: [ "railway", "abandoned" ],
 
-    0x6702: [ "highway", "track" ]
+    0x6702: [ "highway", "track" ],
+
+    0x10e00: [ "highway", "path", "ref", "Czerwony szlak",
+             "marked_trail_red", "yes" ],
+    0x10e01: [ "highway", "path", "ref", "Żółty szlak",
+             "marked_trail_yellow", "yes" ],
+    0x10e02: [ "highway", "path", "ref", "Zielony szlak",
+             "marked_trail_green", "yes" ],
+    0x10e03: [ "highway", "path", "ref", "Niebieski szlak",
+             "marked_trail_blue", "yes" ],
+    0x10e04: [ "highway", "path", "ref", "Czarny szlak",
+             "marked_trail_black", "yes" ],
+    0x10e07: [ "highway", "path", "ref", "Szlak", "note", "TODO" ],
+    0x10e08: [ "highway", "cycleway", "ref", "Czerwony szlak",
+             "marked_trail_red", "yes" ],
+    0x10e09: [ "highway", "cycleway", "ref", "Żółty szlak",
+             "marked_trail_yellow", "yes" ],
+    0x10e0a: [ "highway", "cycleway", "ref", "Zielony szlak",
+             "marked_trail_green", "yes" ],
+    0x10e0b: [ "highway", "cycleway", "ref", "Niebieski szlak",
+             "marked_trail_blue", "yes" ],
+    0x10e0c: [ "highway", "cycleway", "ref", "Czarny szlak",
+             "marked_trail_black", "yes" ],
+    0x10e0f: [ "highway", "cycleway", "ref", "Szlak", "note", "TODO" ],
 }
 shape_types = {
     0x1:  [ "landuse",  "residential" ],
