@@ -93,6 +93,8 @@ pline_types = {
     0xe10: [ "railway", "tram" ],
     0xe11: [ "railway", "abandoned" ],
 
+    0xe12: [ "highway", "construction" ], # TODO
+
     0x6702: [ "highway", "track" ],
 
     0x10e00: [ "highway", "path", "ref", "Czerwony szlak",
@@ -117,6 +119,9 @@ pline_types = {
     0x10e0c: [ "highway", "cycleway", "ref", "Czarny szlak",
              "marked_trail_black", "yes" ],
     0x10e0f: [ "highway", "cycleway", "ref", "Szlak", "note", "TODO" ],
+
+    0x10e12: [ "highway", "construction" ], # TODO
+    0x10e13: [ "railway", "construction" ], # TODO
 }
 shape_types = {
     0x1:  [ "landuse",  "residential" ],
@@ -714,7 +719,7 @@ def convert_tag(way, key, value, feat):
         way['loc_name'] = value
     elif key == 'DirIndicator':
         way['oneway'] = value
-    elif key in [ 'Data0', 'Data1', 'Data2', 'Data3' ]:
+    elif key in [ 'Data0', 'Data1', 'Data2', 'Data3', 'Data4' ]:
         num = int(key[4:])
         if '_nodes' in way:
             sys.stderr.write("warning: Way " + str(way) + " has multiple "
@@ -836,6 +841,10 @@ def convert_tag(way, key, value, feat):
         way['addr:postcode'] = value
     elif key == 'Time':
         way['hour_on'] = value
+    elif key == 'ForceClass' or key == 'ForceSpeed':
+        fclass = int(value) # Routing helper
+        # Ignore it for the moment, seems to be used mainly for temporary setups
+        # such as detours.
     else:
         if key.lower() in [ 'levels', 'lavels', 'city', 'typ', 'plik' ]:
             pass # Known typo

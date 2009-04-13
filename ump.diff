@@ -1,25 +1,45 @@
-diff --git a/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt b/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
-index 34d5172..93e5e96 100644
---- a/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
-+++ b/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
-@@ -1,7 +1,11 @@
- ;Afryka
--  35.91000,  -5.30000,  6,Ceuta
+Index: UMP-Bialystok/src/BIALYSTOK.ulice.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Bialystok/src/BIALYSTOK.ulice.txt,v
+retrieving revision 1.77
+diff -u -r1.77 BIALYSTOK.ulice.txt
+--- UMP-Bialystok/src/BIALYSTOK.ulice.txt	11 Apr 2009 11:23:13 -0000	1.77
++++ UMP-Bialystok/src/BIALYSTOK.ulice.txt	13 Apr 2009 12:17:47 -0000
+@@ -7084,7 +7084,7 @@
+ Label=~[0x2e]65 Baranowicka
+ EndLevel=4
+ Data0=(53.12207,23.20314),(53.12206,23.20331),(53.12213,23.20561),(53.12218,23.20641),(53.12224,23.20731),(53.12241,23.20961),(53.12248,23.21053),(53.12265,23.21285),(53.12284,23.21540),(53.12295,23.21688),(53.12302,23.21789),(53.12338,23.22194),(53.12360,23.22443),(53.12367,23.22538),(53.12393,23.22670),(53.12430,23.22780),(53.12451,23.22833),(53.12516,23.22986)
+-Label2-=Baranowicka
++Label2=Baranowicka
+ [END]
+ 
+ [POLYLINE]
+Index: UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt,v
+retrieving revision 1.2
+diff -u -r1.2 Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
+--- UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt	7 Apr 2009 08:46:21 -0000	1.2
++++ UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt	13 Apr 2009 12:17:47 -0000
+@@ -1,3 +1,11 @@
++;Afryka
 +OziExplorer Point File Version 1.0
 +WGS 84
 +Reserved 1
 +Reserved 2
 +255,65535,3,8,0,0,CITY Hiszpania
 +  35.91000,  -5.30000,  6,Ceuta,,,
-   35.30000,  -2.95000,  6,Melilla
--;Canary Islands
++  35.30000,  -2.95000,  6,Melilla
+ ;Canary Islands
    28.10000,  -15.43000,  8,Las Palmas
    28.47000,  -16.25000,  8,Santa Cruz de Tenerife
-   28.48000,  -16.32000,  7,San Cristóbal de la Laguna
-diff --git a/UMP-JeleniaGora/src/miasta.txt b/UMP-JeleniaGora/src/miasta.txt
-index e0664c1..e69de29 100644
---- a/UMP-JeleniaGora/src/miasta.txt
-+++ b/UMP-JeleniaGora/src/miasta.txt
+Index: UMP-JeleniaGora/src/miasta.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-JeleniaGora/src/miasta.txt,v
+retrieving revision 1.3
+diff -u -r1.3 miasta.txt
+--- UMP-JeleniaGora/src/miasta.txt	12 Feb 2007 02:20:03 -0000	1.3
++++ UMP-JeleniaGora/src/miasta.txt	13 Apr 2009 12:17:47 -0000
 @@ -1,90 +0,0 @@
 -[Countries]
 -Country1=Polska~[0x1d]PL
@@ -111,11 +131,14 @@ index e0664c1..e69de29 100644
 -RegionIdx39=1
 -[END-Cities]
 -
-diff --git a/UMP-Kalisz/src/POI-Kalisz.pnt b/UMP-Kalisz/src/POI-Kalisz.pnt
-index 8b413b2..6ee2047 100644
---- a/UMP-Kalisz/src/POI-Kalisz.pnt
-+++ b/UMP-Kalisz/src/POI-Kalisz.pnt
-@@ -15,8 +15,6 @@ Reserved 2
+Index: UMP-Kalisz/src/POI-Kalisz.pnt
+===================================================================
+RCS file: /home/cvsroot/UMP-Kalisz/src/POI-Kalisz.pnt,v
+retrieving revision 1.86
+diff -u -r1.86 POI-Kalisz.pnt
+--- UMP-Kalisz/src/POI-Kalisz.pnt	12 Mar 2009 01:04:56 -0000	1.86
++++ UMP-Kalisz/src/POI-Kalisz.pnt	13 Apr 2009 12:17:47 -0000
+@@ -15,8 +15,6 @@
    51.60072,  18.77262,  0,Pomnik Bohaterom wrzesnia 1939,,Sieradz,POMNIK
    51.59860,  18.69875,  0,Elektrocieplownia,Zachodnia,Sieradz,TOWER
    51.82535,  17.94680,  0,Kamieñ Œw. Jadwigi,,,ATRAKCJA
@@ -124,11 +147,14 @@ index 8b413b2..6ee2047 100644
    51.19832,  18.85636,  0,Mokry Las,,,REZERWAT
    51.59197,  18.74720,  0,Most,,Sieradz,MOST
    51.60008,  18.76931,  0,Most,,Sieradz,MOST
-diff --git a/UMP-NowySacz/src/POI-NowySacz1.pnt b/UMP-NowySacz/src/POI-NowySacz1.pnt
-index 2449704..ac5bf56 100644
---- a/UMP-NowySacz/src/POI-NowySacz1.pnt
-+++ b/UMP-NowySacz/src/POI-NowySacz1.pnt
-@@ -1256,7 +1256,7 @@ Reserved 2
+Index: UMP-NowySacz/src/POI-NowySacz1.pnt
+===================================================================
+RCS file: /home/cvsroot/UMP-NowySacz/src/POI-NowySacz1.pnt,v
+retrieving revision 1.70
+diff -u -r1.70 POI-NowySacz1.pnt
+--- UMP-NowySacz/src/POI-NowySacz1.pnt	11 Apr 2009 09:39:41 -0000	1.70
++++ UMP-NowySacz/src/POI-NowySacz1.pnt	13 Apr 2009 12:17:48 -0000
+@@ -1228,7 +1228,7 @@
    49.61331,  20.69868,  0,,,Nowy S¹cz,0x1616
    49.60945,  20.70065,  0,,,Nowy S¹cz,0x1616
    49.61735,  20.71489,  0,,,Nowy S¹cz,0x1616
@@ -137,7 +163,7 @@ index 2449704..ac5bf56 100644
    49.60829,  20.69228,  0,,,Nowy S¹cz,0x1616
    49.60811,  20.69523,  0,,,Nowy S¹cz,0x1616
    49.62421,  20.71926,  0,,,Nowy S¹cz,0x1616
-@@ -2139,9 +2139,9 @@ Reserved 2
+@@ -2095,9 +2095,9 @@
    49.42166,  20.95920,  0,Kredyt Bank,Zdrojowa;35;+48184716487,Krynica-Zdrój,ATM
    49.41108,  20.95531,  0,Bank Spó³dzielczy,Kraszewskiego;37;+48184715573,Krynica-Zdrój,ATM
    49.41229,  20.95540,  0,U Edyty,,Krynica-Zdrój,RESTAURACJA
@@ -150,10 +176,13 @@ index 2449704..ac5bf56 100644
    49.63542,  20.69216,  0,Media Markt,Tarnowska,Nowy S¹cz,RTV
    49.58897,  20.59580,  0,Grodzisko,,,ATRAKCJA
    49.58528,  20.60697,  0,Cmentarz Ewangelicki,,,CMENTARZ
-diff --git a/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt b/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
-index 7d2f788..ef55230 100644
---- a/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
-+++ b/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
+Index: UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt,v
+retrieving revision 1.1
+diff -u -r1.1 Portugalia-miasta_poza_obszarem_mapy.pnt.txt
+--- UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt	8 May 2008 23:04:16 -0000	1.1
++++ UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt	13 Apr 2009 12:17:48 -0000
 @@ -1,8 +1,13 @@
  ;Madeira
 +;Açores
@@ -169,11 +198,14 @@ index 7d2f788..ef55230 100644
 -;Açores
    37.75000,  -25.67000,  5,Ponta Delgada
    38.66000,  -27.22000,  4,Angra de Heroismo
-diff --git a/UMP-Poznan/src/POZNAN.ulice.txt b/UMP-Poznan/src/POZNAN.ulice.txt
-index 3aefeb1..cd0ce66 100644
---- a/UMP-Poznan/src/POZNAN.ulice.txt
-+++ b/UMP-Poznan/src/POZNAN.ulice.txt
-@@ -31871,8 +31871,8 @@ Type=0x6
+Index: UMP-Poznan/src/POZNAN.ulice.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Poznan/src/POZNAN.ulice.txt,v
+retrieving revision 1.819
+diff -u -r1.819 POZNAN.ulice.txt
+--- UMP-Poznan/src/POZNAN.ulice.txt	10 Apr 2009 18:45:47 -0000	1.819
++++ UMP-Poznan/src/POZNAN.ulice.txt	13 Apr 2009 12:17:52 -0000
+@@ -31823,8 +31823,8 @@
  Label=Wergiliusza
  EndLevel=1
  Data0=(52.44443,16.88162),(52.44455,16.88242)
@@ -184,10 +216,13 @@ index 3aefeb1..cd0ce66 100644
  [END]
  
  [POLYLINE]
-diff --git a/UMP-Przemysl/src/Pruchnik-pliki.txt b/UMP-Przemysl/src/Pruchnik-pliki.txt
-index 15fb04c..e69de29 100644
---- a/UMP-Przemysl/src/Pruchnik-pliki.txt
-+++ b/UMP-Przemysl/src/Pruchnik-pliki.txt
+Index: UMP-Przemysl/src/Pruchnik-pliki.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Przemysl/src/Pruchnik-pliki.txt,v
+retrieving revision 1.3
+diff -u -r1.3 Pruchnik-pliki.txt
+--- UMP-Przemysl/src/Pruchnik-pliki.txt	13 Mar 2007 22:38:11 -0000	1.3
++++ UMP-Przemysl/src/Pruchnik-pliki.txt	13 Apr 2009 12:17:52 -0000
 @@ -1,8 +0,0 @@
 -PRUCHNIK.obszary.txt
 -PRUCHNIK.szlaki.txt
@@ -197,11 +232,14 @@ index 15fb04c..e69de29 100644
 -PRUCHNIK.warstwice.txt
 -PRUCHNIK.drogi.txt
 -POI-Pruchnik.txt
-diff --git a/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt b/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
-index 8131774..827a29d 100644
---- a/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
-+++ b/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
-@@ -560,7 +560,6 @@ Type=0x6
+Index: UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt,v
+retrieving revision 1.43
+diff -u -r1.43 STARGARD_SZCZECINSKI.ulice.txt
+--- UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt	7 Apr 2009 17:47:48 -0000	1.43
++++ UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt	13 Apr 2009 12:17:52 -0000
+@@ -560,7 +560,6 @@
  Label=plac S³oneczny
  EndLevel=1
  Data0=(53.33828,15.02069),(53.33815,15.01977)
@@ -209,10 +247,53 @@ index 8131774..827a29d 100644
  [END]
  
  [POLYLINE]
-diff --git a/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt b/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
-index 9779a6b..7a5773c 100644
---- a/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
-+++ b/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
+Index: UMP-Szwecja/src/POI-Szwecja.nawigacja.pnt
+===================================================================
+RCS file: /home/cvsroot/UMP-Szwecja/src/POI-Szwecja.nawigacja.pnt,v
+retrieving revision 1.7
+diff -u -r1.7 POI-Szwecja.nawigacja.pnt
+--- UMP-Szwecja/src/POI-Szwecja.nawigacja.pnt	1 Apr 2009 10:54:48 -0000	1.7
++++ UMP-Szwecja/src/POI-Szwecja.nawigacja.pnt	13 Apr 2009 12:17:54 -0000
+@@ -3353,9 +3353,9 @@
+   62.34982,  17.57795,  2,Oc.W.R.G.8s.12M Gubben,,,WIELOBARWNE
+   60.25761,  18.62706,  2,Q.12M+Fl.W.R.G.3s Tolvöregrundet,,,WIELOBARWNE
+   63.66393,  20.31368,  2,Q.W.R.G.13M Bredskärssund,,,WIELOBARWNE
+-  65.13622,  21.62873,  1,3,Iso.W.R.G.3s.17M Leskär,,,WIELOBARWNE
+-  63.79108,  20.83634,  1,3,Iso.W.R.G.6s.18M Bergudden,,,WIELOBARWNE
+-  63.66882,  20.34204,  1,3,Oc.(2)W.R.G.12s.18M Fjärdgrund,,,WIELOBARWNE
++  65.13622,  21.62873,  1,3-Iso.W.R.G.3s.17M Leskär,,,WIELOBARWNE
++  63.79108,  20.83634,  1,3-Iso.W.R.G.6s.18M Bergudden,,,WIELOBARWNE
++  63.66882,  20.34204,  1,3-Oc.(2)W.R.G.12s.18M Fjärdgrund,,,WIELOBARWNE
+   60.66822,  17.29892,  1,F.W.R. Sikvik,,,WIELOBARWNE
+   64.31396,  21.34240,  1,F.W.R.G. Munkviken,,,WIELOBARWNE
+   63.65418,  20.12481,  1,F.W.R.G. Skatan,,,WIELOBARWNE
+Index: UMP-Tarnow/src/TARNOW.woda.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Tarnow/src/TARNOW.woda.txt,v
+retrieving revision 1.81
+diff -u -r1.81 TARNOW.woda.txt
+--- UMP-Tarnow/src/TARNOW.woda.txt	11 Mar 2009 19:01:12 -0000	1.81
++++ UMP-Tarnow/src/TARNOW.woda.txt	13 Apr 2009 12:17:54 -0000
+@@ -1348,8 +1348,7 @@
+ Data0=(50.31927,21.06498),(50.31798,21.06225),(50.31702,21.05980),(50.31594,21.05412),(50.31586,21.04931),(50.31639,21.04687),(50.31850,21.04161),(50.31959,21.03854),(50.31974,21.03543),(50.31981,21.02882),(50.31880,21.02485),(50.31783,21.02371),(50.31674,21.02092),(50.31575,21.01863),(50.31524,21.01661),(50.31363,21.01309),(50.31384,21.00852),(50.31180,21.00852),(50.31176,21.01178),(50.31245,21.01571),(50.31354,21.01940),(50.31438,21.02120),(50.31661,21.02504),(50.31734,21.02719),(50.31843,21.03067),(50.31841,21.03627),(50.31747,21.03978),(50.31476,21.04562),(50.31408,21.04802),(50.31401,21.05184),(50.31433,21.05588),(50.31549,21.06058),(50.31706,21.06498),(50.31861,21.06929),(50.32112,21.07287),(50.32390,21.07592),(50.32942,21.07970),(50.33262,21.08154),(50.33332,21.08178),(50.33332,21.07877),(50.33268,21.07841),(50.32976,21.07656),(50.32809,21.07616),(50.32315,21.07201),(50.32129,21.06927)
+ [END]
+ 
+-[POLYGON]
+-Type=0x41
+-Data0=(50.02099,20.98608),(50.02092,20.98586),(50.02082,20.98582),(50.02071,20.98593),(50.02060,20.98620),(50.02058,20.98633),(50.02058,20.98661),(50.02069,20.98676),(50.02082,20.98678),(50.02095,20.98655),(50.02099,20.98631)
+-[END]
+-
++[POLYGON]
++Type=0x41
++Data0=(50.02099,20.98608),(50.02092,20.98586),(50.02082,20.98582),(50.02071,20.98593),(50.02060,20.98620),(50.02058,20.98633),(50.02058,20.98661),(50.02069,20.98676),(50.02082,20.98678),(50.02095,20.98655),(50.02099,20.98631)
++[END]
+Index: UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt,v
+retrieving revision 1.1
+diff -u -r1.1 miasta_poza_obszarem_mapy.pnt.txt
+--- UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt	8 May 2008 20:41:24 -0000	1.1
++++ UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt	13 Apr 2009 12:17:54 -0000
 @@ -1,3 +1,8 @@
 +OziExplorer Point File Version 1.0
 +WGS 84
@@ -222,27 +303,29 @@ index 9779a6b..7a5773c 100644
    49.98000,  36.22000, 10,Charkiv
    48.45000,  34.98000, 10,Dnipropetrovsk
    48.00000,  37.82000, 10,Doneck
-diff --git a/UMP-Wroclaw/src/LUBIN.drogi.txt b/UMP-Wroclaw/src/LUBIN.drogi.txt
-index 09a35d8..eeb79c2 100644
---- a/UMP-Wroclaw/src/LUBIN.drogi.txt
-+++ b/UMP-Wroclaw/src/LUBIN.drogi.txt
-@@ -1564,11 +1564,6 @@ Data0=(51.399253,16.209972),(51.400192,16.207088)
- Miasto=Lubin
+Index: UMP-Wroclaw/src/LEGNICA.ulice.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Wroclaw/src/LEGNICA.ulice.txt,v
+retrieving revision 1.18
+diff -u -r1.18 LEGNICA.ulice.txt
+--- UMP-Wroclaw/src/LEGNICA.ulice.txt	9 Apr 2009 09:45:25 -0000	1.18
++++ UMP-Wroclaw/src/LEGNICA.ulice.txt	13 Apr 2009 12:17:55 -0000
+@@ -3449,7 +3449,6 @@
+ EndLevel=1
+ Data0=(51.199161,16.146429),(51.199001,16.148126)
+ Label2=Puchatka (Kubusia)
+-Label2=Puchatka
  [END]
  
--[POI]
--Type=0x0
--Label=DUmMY
--Data0=(52.000000,20.555550)
--[END]
- ;-- Segment #76556, 31 points, src/wro/wro-marco.plt
  [POLYLINE]
- Type=0x5
-diff --git a/UMP-Wroclaw/src/WALBRZYCH.drogi.txt b/UMP-Wroclaw/src/WALBRZYCH.drogi.txt
-index 769d987..75e5ea0 100644
---- a/UMP-Wroclaw/src/WALBRZYCH.drogi.txt
-+++ b/UMP-Wroclaw/src/WALBRZYCH.drogi.txt
-@@ -21205,7 +21205,7 @@ Type=0x6
+Index: UMP-Wroclaw/src/WALBRZYCH.drogi.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Wroclaw/src/WALBRZYCH.drogi.txt,v
+retrieving revision 1.216
+diff -u -r1.216 WALBRZYCH.drogi.txt
+--- UMP-Wroclaw/src/WALBRZYCH.drogi.txt	9 Apr 2009 09:45:25 -0000	1.216
++++ UMP-Wroclaw/src/WALBRZYCH.drogi.txt	13 Apr 2009 12:17:58 -0000
+@@ -19525,7 +19525,7 @@
  Label=Solna
  EndLevel=1
  Data0=(50.849014,16.285631),(50.848915,16.285217),(50.848781,16.284832),(50.848636,16.284431),(50.848556,16.283924),(50.848533,16.283473),(50.848514,16.283012),(50.848548,16.282102),(50.848716,16.281440),(50.848953,16.280878)
@@ -251,11 +334,14 @@ index 769d987..75e5ea0 100644
  [END]
  
  [POLYLINE]
-diff --git a/UMP-Wroclaw/src/WROCLAW.drogi.txt b/UMP-Wroclaw/src/WROCLAW.drogi.txt
-index bc4f185..ba77208 100644
---- a/UMP-Wroclaw/src/WROCLAW.drogi.txt
-+++ b/UMP-Wroclaw/src/WROCLAW.drogi.txt
-@@ -4991,7 +4991,7 @@ Miasto=Bielany Wroc³awskie
+Index: UMP-Wroclaw/src/WROCLAW.drogi.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Wroclaw/src/WROCLAW.drogi.txt,v
+retrieving revision 1.273
+diff -u -r1.273 WROCLAW.drogi.txt
+--- UMP-Wroclaw/src/WROCLAW.drogi.txt	9 Apr 2009 21:08:04 -0000	1.273
++++ UMP-Wroclaw/src/WROCLAW.drogi.txt	13 Apr 2009 12:17:59 -0000
+@@ -4834,7 +4834,7 @@
  
  [POLYLINE]
  Type=0x3
@@ -264,11 +350,14 @@ index bc4f185..ba77208 100644
  EndLevel=2
  DirIndicator=1
  Data0=(51.041831,16.969509),(51.042610,16.969677),(51.042919,16.969734),(51.043502,16.969905),(51.044017,16.970125),(51.044712,16.970420),(51.045047,16.970563),(51.046463,16.970607),(51.047050,16.970624),(51.047328,16.970684),(51.047584,16.970848)
-diff --git a/narzedzia/pnt2poi.awk b/narzedzia/pnt2poi.awk
-index fd1b66e..f764d37 100644
---- a/narzedzia/pnt2poi.awk
-+++ b/narzedzia/pnt2poi.awk
-@@ -309,6 +309,7 @@ BEGIN { FS=",";
+Index: narzedzia/pnt2poi.awk
+===================================================================
+RCS file: /home/cvsroot/narzedzia/pnt2poi.awk,v
+retrieving revision 1.57
+diff -u -r1.57 pnt2poi.awk
+--- narzedzia/pnt2poi.awk	25 Jan 2009 13:55:40 -0000	1.57
++++ narzedzia/pnt2poi.awk	13 Apr 2009 12:18:00 -0000
+@@ -309,6 +309,7 @@
  	sym["SZLAK"]="0x6412";
  	sym["JASKINIA"]="0x6413";
  	sym["CAVE"]="0x6413";	# Tunel?
