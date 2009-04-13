@@ -509,8 +509,9 @@ reftype = {
 }
 
 class Mylist(object):
-    k = {}
-    v = [] #
+    def __init__(self):
+        self.k = {}
+        self.v = [] #
     def __len__(self):
         return len(self.k)
     def __getitem__(self, key):
