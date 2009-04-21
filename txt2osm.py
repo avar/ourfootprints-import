@@ -94,6 +94,7 @@ pline_types = {
     0xe11: [ "railway", "abandoned" ],
 
     0xe12: [ "highway", "construction" ], # TODO
+    0xe13: [ "railway", "construction" ], # TODO
 
     0x6702: [ "highway", "track" ],
 
@@ -140,8 +141,7 @@ shape_types = {
     0xd:  [ "landuse",  "construction" ],
     0xe:  [ "aeroway",  "aerodrome" ],
     0x13: [ "building", "yes" ],
-    0x14: [ "military", "barracks", "natural", "wood",
-            "note",     "TODO: fixme - choose one" ], # usage varies :(
+    0x14: [ "natural",  "wood" ], # sometimes landuse=military
     0x15: [ "natural",  "wood" ],
     0x16: [ "natural",  "wood" ],
     0x17: [ "leisure",  "park" ],
@@ -178,6 +178,8 @@ shape_types = {
     0x51: [ "natural",  "wetland" ],
     0x52: [ "leisure",  "garden", "tourism", "zoo" ],
     0x53: [ "landuse",  "landfill" ],
+
+    0x2d0a: [ "leisure",  "stadium" ],
 }
 poi_types = {
     0x04:   [ "place",    "city" ],
@@ -1342,7 +1344,7 @@ for way in ways:
                 del pointattrs[node]['_out']
 
 print "<?xml version='1.0' encoding='UTF-8'?>"
-print "<osm version='0.5' generator='txt2osm %s converter for UMP-PL'>" \
+print "<osm version='null' generator='txt2osm %s converter for UMP-PL'>" \
     % __version__
 
 for index, point in enumerate(points):
