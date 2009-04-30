@@ -507,7 +507,7 @@ reftype = {
     0x2c: 'int_ref',
     0x2d: 'ref',
     0x2e: 'ref',
-    0x2f: 'reg_ref',
+    0x2f: 'ref',
 }
 
 class Mylist(object):
@@ -848,6 +848,9 @@ def convert_tag(way, key, value, feat):
         fclass = int(value) # Routing helper
         # Ignore it for the moment, seems to be used mainly for temporary setups
         # such as detours.
+    elif key in [ 'Nod0', 'Nod1' ]:
+        # TODO: what does this do?
+        pass
     else:
         if key.lower() in [ 'levels', 'lavels', 'city', 'typ', 'plik' ]:
             pass # Known typo
@@ -1344,7 +1347,7 @@ for way in ways:
                 del pointattrs[node]['_out']
 
 print "<?xml version='1.0' encoding='UTF-8'?>"
-print "<osm version='null' generator='txt2osm %s converter for UMP-PL'>" \
+print "<osm version='0.6' generator='txt2osm %s converter for UMP-PL'>" \
     % __version__
 
 for index, point in enumerate(points):
