@@ -88,6 +88,8 @@ pline_types = {
              "marked_trail_blue", "yes" ],
     0xe0c: [ "highway", "cycleway", "ref", "Czarny szlak",
              "marked_trail_black", "yes" ],
+    0xe0d: [ "highway", "cycleway", "ref", "Zielony szlak z liściem",
+             "marked_trail_green", "yes" ],
     0xe0f: [ "highway", "cycleway", "ref", "Szlak", "note", "TODO" ],
 
     0xe10: [ "railway", "tram" ],
@@ -96,7 +98,10 @@ pline_types = {
     0xe12: [ "highway", "construction" ], # TODO
     0xe13: [ "railway", "construction" ], # TODO
 
+    0x6701: [ "highway", "path" ],
     0x6702: [ "highway", "track" ],
+    0x6707: [ "highway", "path", "ref", "Niebieski szlak", "bicycle", "yes",
+             "marked_trail_blue", "yes" ],
 
     0x10e00: [ "highway", "path", "ref", "Czerwony szlak",
              "marked_trail_red", "yes" ],
@@ -120,6 +125,9 @@ pline_types = {
     0x10e0c: [ "highway", "cycleway", "ref", "Czarny szlak",
              "marked_trail_black", "yes" ],
     0x10e0f: [ "highway", "cycleway", "ref", "Szlak", "note", "TODO" ],
+
+    0x10e10: [ "railway", "tram" ],
+    0x10e11: [ "railway", "abandoned" ],
 
     0x10e12: [ "highway", "construction" ], # TODO
     0x10e13: [ "railway", "construction" ], # TODO
@@ -238,9 +246,10 @@ poi_types = {
     0x1708: [ "shop",     "fixme" ],
     0x1709: [ "bridge",   "yes" ],
     0x1710: [ "barrier",  "gate" ],
+    0x17105:[ "highway",  "stop" ],
     0x1712: [ "landuse",  "construction" ],
-    0x170a: [ "fixme",    "deleteme" ],
-    0x170d: [ "fixme",    "deleteme" ],
+    0x170a: [ "note",     "TODO: verify" ],
+    0x170d: [ "note",     "TODO" ],
     0x190b: [ "highway",  "construction" ],
     0x1a10: [ "man_made", "beacon" ],
     0x1b00: [ "note",     "fixme" ],
@@ -266,7 +275,11 @@ poi_types = {
     0x2a00: [ "amenity",  "restaurant" ],
     0x2a01: [ "amenity",  "restaurant", "cuisine", "american" ],
     0x2a02: [ "amenity",  "restaurant", "cuisine", "asian" ],
+    0x2a025:[ "amenity",  "restaurant", "cuisine", "sushi" ],
     0x2a03: [ "amenity",  "restaurant", "cuisine", "barbecue" ],
+    0x2a030:[ "amenity",  "restaurant", "cuisine", "barbecue" ],
+    0x2a031:[ "amenity",  "restaurant", "cuisine", "grill" ],
+    0x2a032:[ "amenity",  "restaurant", "cuisine", "kebab" ],
     0x2a04: [ "amenity",  "restaurant", "cuisine", "chinese" ],
     0x2a05: [ "shop",     "bakery" ],
     0x2a06: [ "amenity",  "pub" ],
@@ -281,24 +294,33 @@ poi_types = {
     0x2a0f: [ "amenity",  "restaurant", "cuisine", "french" ],
     0x2a10: [ "amenity",  "restaurant", "cuisine", "german" ],
     0x2a11: [ "amenity",  "restaurant", "cuisine", "british" ],
-    0x2a12: [ "amenity",  "fast_food",  "cuisine", "international" ],
+    0x2a12: [ "amenity",  "fast_food",  "cuisine", "greek" ],
+    0x2a125:[ "amenity",  "fast_food",  "cuisine", "lebanese" ],
     0x2a13: [ "amenity",  "restaurant", "cuisine", "international" ],
     0x2a14: [ "amenity",  "restaurant", "cuisine", "regional" ],
-    0x2b00: [ "tourism",  "hotel" ],
-    0x2b01: [ "tourism",  "motel" ],
+    0x2b00: [ "tourism",  "hostel" ],
+    0x2b01: [ "tourism",  "hotel" ],
+    0x2b015:[ "tourism",  "motel" ],
     0x2b02: [ "tourism",  "hostel" ],
     0x2b03: [ "tourism",  "camp_site" ],
     0x2b04: [ "tourism",  "hotel" ],
-    0x2c00: [ "landuse",  "retail", "note", "fixme" ],
+    0x2c00: [ "tourism",  "attraction" ],
     0x2c01: [ "tourism",  "attraction", "leisure", "park" ],
     0x2c02: [ "tourism",  "museum" ],
+    0x2c025:[ "tourism",  "museum", "amenity", "arts_centre" ],
     0x2c03: [ "amenity",  "library" ],
-    0x2c04: [ "tourism",  "viewpoint" ],
+    0x2c04: [ "historic", "castle" ],
+    0x2c040:[ "historic", "castle", "castle_type", "dworek" ],
+    0x2c041:[ "historic", "castle", "castle_type", "palace" ],
+    0x2c042:[ "historic", "castle", "castle_type", "fortress" ],
+    0x2c043:[ "historic", "castle", "castle_type", "fortress" ],
     0x2c05: [ "amenity",  "school" ],
     0x2c06: [ "leisure",  "park" ],
     0x2c07: [ "tourism",  "zoo" ],
     0x2c08: [ "leisure",  "sports_centre" ],
-    0x2c09: [ "amenity",  "theatre", "note", "fixme" ],
+    0x2c080:[ "leisure",  "pitch" ],
+    0x2c081:[ "leisure",  "stadium" ],
+    0x2c09: [ "amenity",  "theatre", "note", "concert_hall" ],
     0x2c0a: [ "amenity",  "restaurant", "cuisine", "wine_bar" ],
     0x2c0b: [ "amenity",  "place_of_worship" ],
     0x2c0c: [ "natural",  "spring", "amenity", "spa" ],
@@ -307,25 +329,31 @@ poi_types = {
     0x2d02: [ "amenity",  "fast_food" ],
     0x2d03: [ "amenity",  "cinema" ],
     0x2d04: [ "amenity",  "nightclub" ],
+    0x2d045:[ "amenity",  "casino" ],
     0x2d05: [ "sport",    "golf", "leisure", "golf_course" ],
     0x2d06: [ "sport",    "skiing" ],
     0x2d07: [ "sport",    "9pin" ],
     0x2d08: [ "sport",    "skating" ],
     0x2d09: [ "sport",    "swimming" ],
     0x2d0a: [ "leisure",  "stadium" ],
+    0x2d0a0:[ "leisure",  "sports_centre", "sport", "fitness" ],
+    0x2d0a1:[ "leisure",  "sports_centre", "sport", "tennis" ],
+    0x2d0a2:[ "leisure",  "sports_centre", "sport", "skating" ],
     0x2d0b: [ "sport",    "sailing" ],
     0x2e:   [ "shop",     "stationery" ],
     0x2e00: [ "shop",     "mall" ],
     0x2e01: [ "shop",     "department_store" ],
     0x2e02: [ "shop",     "grocery" ],
-    0x2e03: [ "shop",     "fixme" ],
-    0x2e04: [ "shop",     "supermarket" ],
+    0x2e025:[ "amenity",  "marketplace" ],
+    0x2e03: [ "shop",     "supermarket" ],
+    0x2e04: [ "shop",     "mall" ],
     0x2e05: [ "amenity",  "pharmacy" ],
     0x2e06: [ "shop",     "convenience" ],
     0x2e07: [ "shop",     "clothes" ],
     0x2e08: [ "shop",     "garden_centre" ],
     0x2e09: [ "shop",     "furniture" ],
-    0x2e0a: [ "shop",     "special_retail", "note", "fixme" ],
+    0x2e0a: [ "shop",     "outdoor" ],
+    0x2e0a5:[ "shop",     "bicycle" ],
     0x2e0b: [ "shop",     "computer" ],
     0x2e0c: [ "shop",     "pets" ],
     0x2f00: [ "amenity",  "miscellaneous" ],
@@ -337,14 +365,22 @@ poi_types = {
     0x2f06: [ "amenity",  "bank" ], # Also used with amenity=bureau_de_change
     0x2f07: [ "shop",     "car" ],
     0x2f08: [ "amenity",  "bus_station" ],
+    0x2f080:[ "highway",  "bus_stop" ],
+    0x2f081:[ "railway",  "tram_stop" ],
+    0x2f082:[ "railway",  "station", "operator", "metro" ],
+    0x2f083:[ "highway",  "bus_stop", "operator", "PKS" ],
+    0x2f084:[ "railway",  "station", "operator", "PKP" ],
+
     0x2f09: [ "waterway", "boatyard" ],
     0x2f0a: [ "shop",     "car_wrecker" ],
     0x2f0b: [ "amenity",  "parking" ],
     0x2f0c: [ "amenity",  "toilets" ],
+    0x2f0c5:[ "tourism",  "information" ],
     0x2f0d: [ "amenity",  "automobile_club" ],
     0x2f0e: [ "shop",     "car_wash" ],
     0x2f0f: [ "shop",     "outdoor", "operator", "Garmin" ],
     0x2f10: [ "amenity",  "personal_service" ],
+    0x2f105:[ "amenity",  "tattoo" ],
     0x2f11: [ "amenity",  "public_building" ],
     0x2f13: [ "shop",     "bicycle" ],
     0x2f12: [ "amenity",  "wifi" ],
@@ -355,6 +391,9 @@ poi_types = {
     0x3000: [ "amenity",  "public_building" ],
     0x3001: [ "amenity",  "police" ],
     0x3002: [ "amenity",  "hospital" ],
+    0x30025:[ "amenity",  "doctors" ],
+    0x30026:[ "amenity",  "veterinary" ],
+    0x30027:[ "shop",     "dentist" ],
     0x3003: [ "amenity",  "public_building" ],
     0x3004: [ "amenity",  "courthouse" ],
     0x3005: [ "amenity",  "nightclub" ],
@@ -384,6 +423,8 @@ poi_types = {
     0x5400: [ "sport",    "swimming" ],
     0x5500: [ "waterway", "dam" ], # Map_Features requires a way
     0x5600: [ "barrier",  "gate" ],
+    0x56005:[ "danger",   "photoradar" ],
+    0x5700: [ "danger",   "yes" ],
     0x5800: [ "amenity",  "prison" ],
     0x5900: [ "aeroway",  "aerodrome" ],
     0x5901: [ "aeroway",  "aerodrome" ],
@@ -416,8 +457,11 @@ poi_types = {
     0x640e: [ "leisure",  "park" ],
     0x6410: [ "amenity",  "school" ],
     0x6411: [ "man_made", "tower" ],
+    0x64110:[ "man_made", "tower", "height", "short" ],
+    0x64111:[ "man_made", "tower", "height", "tall" ],
     0x6412: [ "highway",  "marked_trail", "note", "fixme" ],
-    0x6413: [ "tunnel",   "yes", "layer", "-1" ], # or Cave Entrance
+    0x6413: [ "tunnel",   "yes", "layer", "-1" ],
+    0x64135:[ "natural",  "cave_entrance" ],
     0x6414: [ "amenity",  "drinking_water" ],
     0x6415: [ "historic", "ruins" ],
     0x6416: [ "tourism",  "hotel" ],
@@ -429,11 +473,13 @@ poi_types = {
     0x6507: [ "natural",  "spring", "man_made", "water_works" ],
     0x6508: [ "waterway", "waterfall" ],
     0x6509: [ "amenity",  "fountain", "note", "fixme" ],
+    0x650a: [ "natural",  "glacier" ],
     0x650b: [ "waterway", "dock" ],
     0x650c: [ "natural",  "land" ],        # Island as a POI
     0x650d: [ "natural",  "water" ],       # Lake as a POI
-    0x650e: [ "natural",  "spring" ],
+    0x650e: [ "natural",  "spring" ],      # geyser -> spring or volcano?
     0x650f: [ "natural",  "water" ],       # Pond as a POI
+    0x650f5:[ "amenity",  "toilets" ],
     0x6511: [ "natural",  "spring" ],
     0x6512: [ "waterway", "stream" ],
     0x6513: [ "natural",  "water" ],       # Swamp as a POI
@@ -447,7 +493,7 @@ poi_types = {
     0x6607: [ "natural",  "cliff" ],       # Cliff as a POI
     0x6608: [ "natural",  "peak" ],
     0x6609: [ "natural",  "plain" ],
-    0x660a: [ "landuse",  "forest" ],      # Forest as a POI
+    0x660a: [ "natural",  "tree" ],
     0x660b: [ "place",    "locality", "note", "fixme" ],
     0x660e: [ "natural",  "volcano" ],
     0x660f: [ "amenity",  "signpost" ],
@@ -1301,10 +1347,6 @@ for rel in relations:
         except NodesToWayNotFound,ntwnf:
             sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
 
-for way in ways:
-    if '_innernodes' in way:
-        relations.append(make_multipolygon(way, way.pop('_innernodes')))
-
 # Way level:  split ways on level changes
 # TODO: possibly emit a relation to group the ways
 levelledways = [way for way in ways if '_levels' in way]
@@ -1326,6 +1368,10 @@ for way in levelledways:
             else:
                 subway['tunnel'] = 'yes'
             ways.append(subway)
+
+for way in ways:
+    if '_innernodes' in way:
+        relations.append(make_multipolygon(way, way.pop('_innernodes')))
 
 for rel in relations:
     if rel['type'] == 'restriction':

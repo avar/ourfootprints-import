@@ -8,7 +8,7 @@ if [ $# != 2 ]; then
 fi
 
 echo "<?xml version='1.0' encoding='UTF-8'?>"
-echo "<osm version='0.5' generator='$0'>"
+echo "<osm version='0.6' generator='$0'>"
 cat "$1" | grep -v "<osm" | grep -v "<\\?xml" | grep -v "</osm"
 cat "$2" | grep -v "<osm" | grep -v "<\\?xml" | grep -v "</osm" | \
     sed "s/id='-/id='-1000000/" | \
