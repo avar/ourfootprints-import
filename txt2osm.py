@@ -84,6 +84,8 @@ pline_types = {
              "marked_trail_yellow", "yes" ],
     0xe0a: [ "highway", "cycleway", "ref", "Zielony szlak",
              "marked_trail_green", "yes" ],
+    0x1e0a:[ "highway", "cycleway", "ref", "Zielony szlak",
+             "marked_trail_green", "yes" ],
     0xe0b: [ "highway", "cycleway", "ref", "Niebieski szlak",
              "marked_trail_blue", "yes" ],
     0xe0c: [ "highway", "cycleway", "ref", "Czarny szlak",
@@ -221,6 +223,7 @@ poi_types = {
     0x0f00: [ "place",    "village" ],
     0x1000: [ "place",    "village" ],
     0x1100: [ "place",    "village" ],
+    0x1150: [ "landuse",  "construction" ],
     0x1200: [ "bridge",   "yes" ],
     0x1500: [ "place",    "locality" ],
     0x1600: [ "man_made", "lighthouse" ],
@@ -251,6 +254,7 @@ poi_types = {
     0x170a: [ "note",     "TODO: verify" ],
     0x170d: [ "note",     "TODO" ],
     0x190b: [ "highway",  "construction" ],
+    0x1a0b: [ "man_made", "beacon" ],
     0x1a10: [ "man_made", "beacon" ],
     0x1b00: [ "note",     "fixme" ],
     0x1b02: [ "natural",  "peak" ],
@@ -266,6 +270,7 @@ poi_types = {
     0x2100: [ "highway",  "motorway_junction", "amenity", "parking" ],
     0x2110: [ "highway",  "motorway_junction", "amenity", "parking" ],
     0x2200: [ "highway",  "motorway_junction" ],
+    0x2400: [ "amenity",  "weigh_station" ],
     0x2500: [ "highway",  "motorway_junction", "barrier", "toll_booth" ],
     0x2600: [ "bridge",   "yes" ],
     0x2700: [ "highway",  "motorway_junction" ],
@@ -360,9 +365,15 @@ poi_types = {
     0x2f01: [ "amenity",  "fuel" ],
     0x2f02: [ "amenity",  "car_rental" ],
     0x2f03: [ "shop",     "car_repair" ],
+    0x2f030:[ "shop",     "car" ],
     0x2f04: [ "aeroway",  "aerodrome" ],
     0x2f05: [ "amenity",  "post_office" ],
+    0x2f050:[ "amenity",  "post_office", "type", "courier" ],
+    0x2f051:[ "amenity",  "post_office", "type", "courier", "operator", "dhl" ],
+    0x2f052:[ "amenity",  "post_office", "type", "courier", "operator", "ups" ],
     0x2f06: [ "amenity",  "bank" ], # Also used with amenity=bureau_de_change
+    0x2f061:[ "amenity",  "bank", "atm", "yes" ],
+    0x2f062:[ "amenity",  "atm" ],
     0x2f07: [ "shop",     "car" ],
     0x2f08: [ "amenity",  "bus_station" ],
     0x2f080:[ "highway",  "bus_stop" ],
@@ -381,7 +392,10 @@ poi_types = {
     0x2f0f: [ "shop",     "outdoor", "operator", "Garmin" ],
     0x2f10: [ "amenity",  "personal_service" ],
     0x2f105:[ "amenity",  "tattoo" ],
+    0x2f106:[ "shop",     "optician" ],
     0x2f11: [ "amenity",  "public_building" ],
+    0x2f115:[ "landuse",  "industrial", "amenity", "factory" ],
+    0x2f116:[ "landuse",  "commercial" ],
     0x2f13: [ "shop",     "bicycle" ],
     0x2f12: [ "amenity",  "wifi" ],
     0x2f14: [ "amenity",  "public_building" ],
@@ -410,6 +424,7 @@ poi_types = {
     0x4800: [ "tourism",  "camp_sire" ],
     0x4900: [ "leisure",  "park" ],
     0x4700: [ "waterway", "dock" ],
+    0x4701: [ "waterway", "boat_ramp" ],
     0x4a00: [ "tourism",  "picnic_site" ],
     0x4b00: [ "amenity",  "hospital" ],
     0x4c00: [ "tourism",  "information" ],
@@ -423,8 +438,17 @@ poi_types = {
     0x5400: [ "sport",    "swimming" ],
     0x5500: [ "waterway", "dam" ], # Map_Features requires a way
     0x5600: [ "barrier",  "gate" ],
-    0x56005:[ "danger",   "photoradar" ],
+    0x56001:[ "danger",   "photoradar", "type", "fake" ],
+    0x56002:[ "danger",   "photoradar", "type", "portable" ],
+    0x56003:[ "danger",   "photoradar", "type", "permanent" ],
+    0x56004:[ "danger",   "police_control" ],
+    0x56005:[ "danger",   "police_control;photoradar" ],
     0x5700: [ "danger",   "yes" ],
+    0x57000:[ "danger",   "photoradar" ],
+    0x57001:[ "danger",   "radar" ],
+    0x57002:[ "danger",   "yes" ],
+    0x57003:[ "danger",   "speed_limit" ],
+    0x57004:[ "danger",   "level_crossing" ],
     0x5800: [ "amenity",  "prison" ],
     0x5900: [ "aeroway",  "aerodrome" ],
     0x5901: [ "aeroway",  "aerodrome" ],
@@ -502,6 +526,7 @@ poi_types = {
     0x6612: [ "amenity",  "watersports_rental" ],
     0x6613: [ "natural",  "peak", "place", "region" ],
     0x6614: [ "natural",  "scree" ],
+    0x6615: [ "natural",  "peak", "place", "locality", "note", "fixme", "sport", "ski" ],
     0x6616: [ "natural",  "peak" ],
     0x6617: [ "place",    "locality", "natural",  "valley" ],
     0x6618: [ "natural",  "wood" ],        # Wood as a POI
@@ -638,7 +663,7 @@ def print_point(point, index, argv):
 
 def print_way(way, index, argv):
     """Prints a way given by way together with its ID to stdout as XML"""
-    if way.pop('_c') <= 0:
+    if way.pop('_c') > -50:
         return
     print "<way id='%d' visible='true'>" % index_to_wayid(index)
     for nindex in way.pop('_nodes'):
@@ -1002,7 +1027,7 @@ def add_addrinfo(nodes, addrs, street, city, right, count):
             way = {
                 '_nodes': [pt0, pt1],
                 'addr:interpolation': type,
-                '_c': count,
+                '_c': -100,
                 '_src': srcidx,
             }
             if low != hi:
@@ -1387,10 +1412,13 @@ for rel in relations:
             sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
 
 for way in ways:
-    if way['_c'] > 0:
+    if way['_c'] < -50:
         for node in way['_nodes']:
             if '_out' in pointattrs[node]:
                 del pointattrs[node]['_out']
+    else:
+        for node in way['_nodes']:
+            pointattrs[node]['_out'] = 1
 
 print "<?xml version='1.0' encoding='UTF-8'?>"
 print "<osm version='0.6' generator='txt2osm %s converter for UMP-PL'>" \

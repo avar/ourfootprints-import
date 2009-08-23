@@ -1,653 +1,11 @@
-? UMP-Albania/src/POI-Albania.inne.pnt-converted.txt
-? UMP-Albania/src/cities-Albania.pnt-converted.txt
-? UMP-Andora/src/POI-Andora.inne.pnt-converted.txt
-? UMP-Andora/src/cities-Andora.pnt-converted.txt
-? UMP-Austria/src/AUSTRIA.debug.pnt-converted.txt
-? UMP-Austria/src/POI-Austria.inne.pnt-converted.txt
-? UMP-Austria/src/POI-Austria.paliwo.pnt-converted.txt
-? UMP-Austria/src/POI-ROBOCZY.pnt-converted.txt
-? UMP-Austria/src/cities-Austria.pnt-converted.txt
-? UMP-Belgia/src/BELGIA.debug.pnt-converted.txt
-? UMP-Belgia/src/POI-Belgia.inne.pnt-converted.txt
-? UMP-Belgia/src/POI-Belgia.nawigacja.pnt-converted.txt
-? UMP-Belgia/src/POI-Belgia.paliwo.pnt-converted.txt
-? UMP-Belgia/src/cities-Belgia.pnt-converted.txt
-? UMP-Bialorus/src/POI-Bialorus.inne.pnt-converted.txt
-? UMP-Bialorus/src/cities-Bialorus.pnt-converted.txt
-? UMP-Bialystok/src/BIALYSTOK.debug.pnt-converted.txt
-? UMP-Bialystok/src/BIALYSTOK.routing.pnt-converted.txt
-? UMP-Bialystok/src/POI-Bialystok.inne.pnt-converted.txt
-? UMP-Bialystok/src/POI-Bialystok.koscioly.pnt-converted.txt
-? UMP-Bialystok/src/POI-Bialystok.paliwo.pnt-converted.txt
-? UMP-Bialystok/src/POI-Bialystok.topo.pnt-converted.txt
-? UMP-Bialystok/src/cities-Bialystok.pnt-converted.txt
-? UMP-Bosnia/src/BOSNIA_HERCEGOWINA.debug.pnt-converted.txt
-? UMP-Bosnia/src/POI-Bosnia_Hercegowina.inne.pnt-converted.txt
-? UMP-Bosnia/src/cities-BosniaHercegowina.pnt-converted.txt
-? UMP-Bulgaria/src/BULGARIA.debug.pnt-converted.txt
-? UMP-Bulgaria/src/POI-Bulgaria.inne.pnt-converted.txt
-? UMP-Bulgaria/src/POI-Bulgaria.nawigacja.pnt-converted.txt
-? UMP-Bulgaria/src/cities-Bulgaria.pnt-converted.txt
-? UMP-Chorwacja/src/CHORWACJA.debug.pnt-converted.txt
-? UMP-Chorwacja/src/POI-Chorwacja.geografia.pnt-converted.txt
-? UMP-Chorwacja/src/POI-Chorwacja.inne.pnt-converted.txt
-? UMP-Chorwacja/src/POI-Chorwacja.nawigacja.pnt-converted.txt
-? UMP-Chorwacja/src/POI-Chorwacja.paliwo.pnt-converted.txt
-? UMP-Chorwacja/src/cities-Chorwacja.pnt-converted.txt
-? UMP-Ciechanow/src/CIECHANOW.debug.pnt-converted.txt
-? UMP-Ciechanow/src/CIECHANOW.szlaki.topo.pnt-converted.txt
-? UMP-Ciechanow/src/POI-Ciechanow.bankomaty.pnt-converted.txt
-? UMP-Ciechanow/src/POI-Ciechanow.inne.pnt-converted.txt
-? UMP-Ciechanow/src/POI-Ciechanow.jedzenie.pnt-converted.txt
-? UMP-Ciechanow/src/POI-Ciechanow.kolej.pnt-converted.txt
-? UMP-Ciechanow/src/POI-Ciechanow.paliwo.pnt-converted.txt
-? UMP-Ciechanow/src/cities-Ciechanow.pnt-converted.txt
-? UMP-Cypr/src/CYPR.debug.pnt-converted.txt
-? UMP-Cypr/src/POI-Cypr.inne.pnt-converted.txt
-? UMP-Cypr/src/POI-Cypr.jedzenie.pnt-converted.txt
-? UMP-Cypr/src/POI-Cypr.koscioly.pnt-converted.txt
-? UMP-Cypr/src/POI-Cypr.nawigacja.pnt-converted.txt
-? UMP-Cypr/src/POI-Cypr.paliwo.pnt-converted.txt
-? UMP-Cypr/src/cities-Cypr.pnt-converted.txt
-? UMP-Czarnogora/src/CZARNOGORA.debug.pnt-converted.txt
-? UMP-Czarnogora/src/POI-Czarnogora.inne.pnt-converted.txt
-? UMP-Czarnogora/src/cities-Czarnogora.pnt-converted.txt
-? UMP-Czechy/src/CZECHY.debug.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.geografia.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.hotele.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.inne.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.jedzenie.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.kolej.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.paliwo.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.rozrywka.pnt-converted.txt
-? UMP-Czechy/src/POI-Czechy.sklepy.pnt-converted.txt
-? UMP-Czechy/src/cities-Czechy.pnt-converted.txt
-? UMP-Dania/src/DANIA.debug.pnt-converted.txt
-? UMP-Dania/src/POI-Dania.geografia.pnt-converted.txt
-? UMP-Dania/src/POI-Dania.inne.pnt-converted.txt
-? UMP-Dania/src/POI-Dania.nawigacja.pnt-converted.txt
-? UMP-Dania/src/POI-Dania.paliwo.pnt-converted.txt
-? UMP-Dania/src/cities-Dania.pnt-converted.txt
-? UMP-Estonia/src/POI-Estonia.inne.pnt-converted.txt
-? UMP-Estonia/src/POI-Estonia.nawigacja.pnt-converted.txt
-? UMP-Estonia/src/cities-Estonia.pnt-converted.txt
-? UMP-Finlandia/src/POI-Finlandia.Nawigacja.pnt-converted.txt
-? UMP-Finlandia/src/POI-Finlandia.inne.pnt-converted.txt
-? UMP-Finlandia/src/cities-Finlandia.pnt-converted.txt
-? UMP-Francja/src/FRANCJA.debug.pnt-converted.txt
-? UMP-Francja/src/POI-Corse.inne.pnt-converted.txt
-? UMP-Francja/src/POI-Corse.nawigacja.pnt-converted.txt
-? UMP-Francja/src/POI-Corse.paliwo.pnt-converted.txt
-? UMP-Francja/src/POI-Corse.zabytki.pnt-converted.txt
-? UMP-Francja/src/POI-Francja.inne.pnt-converted.txt
-? UMP-Francja/src/POI-Francja.nawigacja.pnt-converted.txt
-? UMP-Francja/src/POI-Francja.paliwo.pnt-converted.txt
-? UMP-Francja/src/POI-Francja.zabytki.pnt-converted.txt
-? UMP-Francja/src/cities-Corse.pnt-converted.txt
-? UMP-Francja/src/cities-Francja.pnt-converted.txt
-? UMP-Gdansk/src/POI-Baltyk.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.bankomaty.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.budynki.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.geografia.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.hotele.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.inne.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.jedzenie.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.kolej.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.koscioly.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.mosty.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.muzea.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.paliwo.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.routing.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.sklepy.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.szkoly.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.szlaki.topo.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.szpitale.pnt-converted.txt
-? UMP-Gdansk/src/POI-GDANSK.topo.pnt-converted.txt
-? UMP-Gdansk/src/cities-Gdansk.pnt-converted.txt
-? UMP-GorzowWlkp/src/GORZOW.debug.pnt-converted.txt
-? UMP-GorzowWlkp/src/POI-Gorzow.bankomaty.pnt-converted.txt
-? UMP-GorzowWlkp/src/POI-Gorzow.inne.pnt-converted.txt
-? UMP-GorzowWlkp/src/POI-Gorzow.paliwo.pnt-converted.txt
-? UMP-GorzowWlkp/src/POI-Gorzow.topo.pnt-converted.txt
-? UMP-GorzowWlkp/src/cities-Gorzow.pnt-converted.txt
-? UMP-GorzowWlkp/src/inne.zakazy.pnt-converted.txt
-? UMP-Grecja/src/GRECJA.debug.pnt-converted.txt
-? UMP-Grecja/src/POI-Grecja.geografia.pnt-converted.txt
-? UMP-Grecja/src/POI-Grecja.inne.pnt-converted.txt
-? UMP-Grecja/src/POI-Grecja.jedzenie.pnt-converted.txt
-? UMP-Grecja/src/POI-Grecja.nawigacja.pnt-converted.txt
-? UMP-Grecja/src/POI-Grecja.paliwo.pnt-converted.txt
-? UMP-Grecja/src/POI-Grecja.zabytki.pnt-converted.txt
-? UMP-Grecja/src/cities-Grecja.pnt-converted.txt
-? UMP-Hiszpania/src/HISZPANIA.debug.pnt-converted.txt
-? UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt-converted.txt
-? UMP-Hiszpania/src/POI-Hiszpania.inne.pnt-converted.txt
-? UMP-Hiszpania/src/POI-Hiszpania.nawigacja.pnt-converted.txt
-? UMP-Hiszpania/src/POI-Hiszpania.paliwo.pnt-converted.txt
-? UMP-Hiszpania/src/cities-Hiszpania.pnt-converted.txt
-? UMP-Holandia/src/HOLANDIA.debug.pnt-converted.txt
-? UMP-Holandia/src/POI-Holandia.inne.pnt-converted.txt
-? UMP-Holandia/src/POI-Holandia.nawigacja.pnt-converted.txt
-? UMP-Holandia/src/POI-Holandia.paliwo.pnt-converted.txt
-? UMP-Holandia/src/cities-Holandia.pnt-converted.txt
-? UMP-Irlandia/src/POI-Irlandia.inne.pnt-converted.txt
-? UMP-Irlandia/src/POI-Irlandia.nawigacja.pnt-converted.txt
-? UMP-Irlandia/src/POI-Irlandia.zabytki.pnt-converted.txt
-? UMP-Irlandia/src/cities-Irlandia.pnt-converted.txt
-? UMP-JeleniaGora/src/POI-JeleniaGora.bankomaty.pnt-converted.txt
-? UMP-JeleniaGora/src/POI-JeleniaGora.benzyna.pnt-converted.txt
-? UMP-JeleniaGora/src/POI-JeleniaGora.debug.pnt-converted.txt
-? UMP-JeleniaGora/src/POI-JeleniaGora.pnt-converted.txt
-? UMP-JeleniaGora/src/POI-JeleniaGora.routing.pnt-converted.txt
-? UMP-JeleniaGora/src/POI-JeleniaGora.topo.pnt-converted.txt
-? UMP-JeleniaGora/src/cities-JeleniaGora.pnt-converted.txt
-? UMP-Kaliningrad/src/POI-Kaliningrad.nawigacja.pnt-converted.txt
-? UMP-Kaliningrad/src/cities-Kaliningrad.pnt-converted.txt
-? UMP-Kalisz/src/KALISZ.POI.bunkry.pnt-converted.txt
-? UMP-Kalisz/src/KALISZ.topo.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.bankomaty.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.jedzenie.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.kolej.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.koscioly.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.paliwo.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.routing.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.sklepy.pnt-converted.txt
-? UMP-Kalisz/src/POI-Kalisz.szpitale.pnt-converted.txt
-? UMP-Kalisz/src/cities-Kalisz.pnt-converted.txt
-? UMP-Katowice/src/POI-Cieszyn.pnt-converted.txt
-? UMP-Katowice/src/POI-Katowice.pnt-converted.txt
-? UMP-Katowice/src/POI-Ustron.pnt-converted.txt
-? UMP-Katowice/src/POI-Wisla.pnt-converted.txt
-? UMP-Katowice/src/POI-bankomaty.pnt-converted.txt
-? UMP-Katowice/src/POI-jedzenie.pnt-converted.txt
-? UMP-Katowice/src/POI-koscioly.pnt-converted.txt
-? UMP-Katowice/src/POI-paliwo.pnt-converted.txt
-? UMP-Katowice/src/POI-routing.pnt-converted.txt
-? UMP-Katowice/src/POI-szpitale.pnt-converted.txt
-? UMP-Katowice/src/cities-Katowice.pnt-converted.txt
-? UMP-Kielce/src/KIELCE.debug.pnt-converted.txt
-? UMP-Kielce/src/POI-Kielce.geografia.pnt-converted.txt
-? UMP-Kielce/src/POI-Kielce.inne.pnt-converted.txt
-? UMP-Kielce/src/POI-Kielce.koscioly.pnt-converted.txt
-? UMP-Kielce/src/POI-Kielce.paliwo.pnt-converted.txt
-? UMP-Kielce/src/cities-Kielce.pnt-converted.txt
-? UMP-Klodzko/src/KLODZKO.debug.pnt-converted.txt
-? UMP-Klodzko/src/POI-Glucholazy.pnt-converted.txt
-? UMP-Klodzko/src/POI-Klodzko.pnt-converted.txt
-? UMP-Klodzko/src/POI-Nysa.pnt-converted.txt
-? UMP-Klodzko/src/POI-Paczkow.pnt-converted.txt
-? UMP-Klodzko/src/cities-Klodzko.pnt-converted.txt
-? UMP-Kosowo/src/POI-Kosowo.inne.pnt-converted.txt
-? UMP-Kosowo/src/cities-Kosowo.pnt-converted.txt
-? UMP-Koszalin/src/KOSZALIN.debug.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.budynki.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.geografia.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.hotele.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.inne.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.jedzenie.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.kolej.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.koscioly.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.mosty.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.paliwo.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.szkoly.pnt-converted.txt
-? UMP-Koszalin/src/POI-KOSZALIN.topo.pnt-converted.txt
-? UMP-Koszalin/src/cities-Koszalin.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.atrakcje.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.bankomaty.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.budynki.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.dorozlozenia.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.gastronomia.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.hotele.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.inne.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.koscioly.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.paliwo.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.rozrywka.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.szkoly.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.szpitale.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.transport.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.zabytki.pnt-converted.txt
-? UMP-Krakow/src/KRAKOW.zakupy.pnt-converted.txt
-? UMP-Krakow/src/POI-Krakow.inne.pnt-converted.txt
-? UMP-Krakow/src/POI-routing.pnt-converted.txt
-? UMP-Krakow/src/cities-Krakow.pnt-converted.txt
-? UMP-Leszno/src/POI-Leszno.topo.pnt-converted.txt
-? UMP-Leszno/src/POI-benzyna.pnt-converted.txt
-? UMP-Leszno/src/POI-inne.pnt-converted.txt
-? UMP-Leszno/src/POI-routing.pnt-converted.txt
-? UMP-Leszno/src/cities-Leszno.pnt-converted.txt
-? UMP-Lichtenstein/src/POI-Lichtenstein.inne.pnt-converted.txt
-? UMP-Lichtenstein/src/cities-Lichtenstein.pnt-converted.txt
-? UMP-Litwa/src/POI-Litwa.inne.pnt-converted.txt
-? UMP-Litwa/src/cities-Litwa.pnt-converted.txt
-? UMP-Lodz/src/LODZ.debug.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.atrakcje.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.bankomaty.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.bunkry.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.danger.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.hotele.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.jedzenie.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.koscioly.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.mosty.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.paliwa.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.parkingi.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.routing.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.sklepy.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.sport.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.szkoly.pnt-converted.txt
-? UMP-Lodz/src/POI-BELCHATOW.zdrowie.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.bankomaty.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.benzyna.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.budynki.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.hotele.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.inne.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.jedzenie.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.rozrywka.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.sklepy.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.szpitale.pnt-converted.txt
-? UMP-Lodz/src/POI-Lodz.topo.pnt-converted.txt
-? UMP-Lodz/src/POI-routing.pnt-converted.txt
-? UMP-Lodz/src/cities-Belchatow.pnt-converted.txt
-? UMP-Lodz/src/cities-Lodz.pnt-converted.txt
-? UMP-Lotwa/src/POI-Lotwa.inne.pnt-converted.txt
-? UMP-Lotwa/src/cities-Lotwa.pnt-converted.txt
-? UMP-Lublin/src/LUBLIN.kolej.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.bankomaty.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.hotele.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.jedzenie.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.koscioly.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.paliwo.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.sklepy.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.szkoly.pnt-converted.txt
-? UMP-Lublin/src/POI-Lublin.szpitale.pnt-converted.txt
-? UMP-Lublin/src/POI-routing.pnt-converted.txt
-? UMP-Lublin/src/cities-Lublin.pnt-converted.txt
-? UMP-Luksemburg/src/LUKSEMBURG.debug.pnt-converted.txt
-? UMP-Luksemburg/src/POI-Luksemburg.inne.pnt-converted.txt
-? UMP-Luksemburg/src/POI-Luksemburg.paliwo.pnt-converted.txt
-? UMP-Luksemburg/src/cities-Luksemburg.pnt-converted.txt
-? UMP-Macedonia/src/POI-Macedonia.inne.pnt-converted.txt
-? UMP-Macedonia/src/cities-Macedonia.pnt-converted.txt
-? UMP-Malta/src/POI-Malta.inne.pnt-converted.txt
-? UMP-Malta/src/POI-Malta.nawigacja.pnt-converted.txt
-? UMP-Malta/src/cities-Malta.pnt-converted.txt
-? UMP-Moldawia/src/POI-Moldawia.inne.pnt-converted.txt
-? UMP-Moldawia/src/cities-Moldawia.pnt-converted.txt
-? UMP-Norwegia/src/POI-Norwegia.inne.pnt-converted.txt
-? UMP-Norwegia/src/POI-Norwegia.nawigacja.pnt-converted.txt
-? UMP-Norwegia/src/cities-Norwegia.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.bankomaty.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.debug.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.geografia.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.hotele.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.inne.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.jedzenie.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.koscioly.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.paliwo.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.rozrywka.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.sklepy.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.szkoly.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.szpitale.pnt-converted.txt
-? UMP-NowySacz/src/NOWY_SACZ.zabytki.pnt-converted.txt
-? UMP-NowySacz/src/POI-Limanowa.pnt-converted.txt
-? UMP-NowySacz/src/POI-NowySacz.pnt-converted.txt
-? UMP-NowySacz/src/POI-NowySacz.topo.pnt-converted.txt
-? UMP-NowySacz/src/POI-NowySacz1.pnt-converted.txt
-? UMP-NowySacz/src/POI-Zakopane.pnt-converted.txt
-? UMP-NowySacz/src/ZAKOPANE.jedzenie.pnt-converted.txt
-? UMP-NowySacz/src/cities-NowySacz.pnt-converted.txt
-? UMP-Olsztyn/src/OLSZTYN.debug.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.geografia.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.hotele.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.inne.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.jedzenie.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.koscioly.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.mosty.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.paliwo.pnt-converted.txt
-? UMP-Olsztyn/src/POI-Olsztyn.topo.pnt-converted.txt
-? UMP-Olsztyn/src/cities-Olsztyn.pnt-converted.txt
-? UMP-Opole/src/OPOLE.routing.pnt-converted.txt
-? UMP-Opole/src/OPOLE.topo.pnt-converted.txt
-? UMP-Opole/src/POI-Olesno.pnt-converted.txt
-? UMP-Opole/src/POI-Opole.paliwo.pnt-converted.txt
-? UMP-Opole/src/POI-Opole.pnt-converted.txt
-? UMP-Opole/src/cities-Opole.pnt-converted.txt
-? UMP-Pila/src/POI-PILA.routing.pnt-converted.txt
-? UMP-Pila/src/POI-Pila.budynki.pnt-converted.txt
-? UMP-Pila/src/POI-Pila.inne.pnt-converted.txt
-? UMP-Pila/src/POI-Pila.koscioly.pnt-converted.txt
-? UMP-Pila/src/POI-Pila.kultura.pnt-converted.txt
-? UMP-Pila/src/POI-Pila.mosty.pnt-converted.txt
-? UMP-Pila/src/POI-Pila.paliwo.pnt-converted.txt
-? UMP-Pila/src/POI-Pila.topo.pnt-converted.txt
-? UMP-Pila/src/cities-Pila.pnt-converted.txt
-? UMP-Plock/src/PLOCK.bankomaty.pnt-converted.txt
-? UMP-Plock/src/PLOCK.budynki.pnt-converted.txt
-? UMP-Plock/src/PLOCK.debug.topo.pnt-converted.txt
-? UMP-Plock/src/PLOCK.hotele.pnt-converted.txt
-? UMP-Plock/src/PLOCK.inne.pnt-converted.txt
-? UMP-Plock/src/PLOCK.jedzenie.pnt-converted.txt
-? UMP-Plock/src/PLOCK.kolej.pnt-converted.txt
-? UMP-Plock/src/PLOCK.koscioly.pnt-converted.txt
-? UMP-Plock/src/PLOCK.paliwo.pnt-converted.txt
-? UMP-Plock/src/PLOCK.routing.pnt-converted.txt
-? UMP-Plock/src/PLOCK.rozrywka.pnt-converted.txt
-? UMP-Plock/src/PLOCK.sklepy.pnt-converted.txt
-? UMP-Plock/src/PLOCK.sport.pnt-converted.txt
-? UMP-Plock/src/PLOCK.szkoly.pnt-converted.txt
-? UMP-Plock/src/PLOCK.szpitale.pnt-converted.txt
-? UMP-Plock/src/PLOCK.topo.pnt-converted.txt
-? UMP-Plock/src/PLOCK.zabytki.pnt-converted.txt
-? UMP-Plock/src/cities-Plock.pnt-converted.txt
-? UMP-Portugalia/src/POI-Portugalia.inne.pnt-converted.txt
-? UMP-Portugalia/src/POI-Portugalia.nawigacja.pnt-converted.txt
-? UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt-converted.txt
-? UMP-Portugalia/src/cities-Portugalia.pnt-converted.txt
-? UMP-Poznan/src/POI-Poznan.edu.przedszkola.pnt-converted.txt
-? UMP-Poznan/src/POI-Poznan.historia.pnt-converted.txt
-? UMP-Poznan/src/POI-Poznan.szlaki.topo.pnt-converted.txt
-? UMP-Poznan/src/POI-Poznan.topo.pnt-converted.txt
-? UMP-Poznan/src/POI-banki.pnt-converted.txt
-? UMP-Poznan/src/POI-hotele.pnt-converted.txt
-? UMP-Poznan/src/POI-inne.pnt-converted.txt
-? UMP-Poznan/src/POI-jedzenie.pnt-converted.txt
-? UMP-Poznan/src/POI-paliwo.pnt-converted.txt
-? UMP-Poznan/src/cities-Poznan.pnt-converted.txt
-? UMP-Poznan/src/inne.zakazy.pnt-converted.txt
-? UMP-Przemysl/src/POI-Przemysl.pnt-converted.txt
-? UMP-Przemysl/src/POI-routing.pnt-converted.txt
-? UMP-Przemysl/src/cities-Przemysl.pnt-converted.txt
-? UMP-Radom/src/POI-Radom.bankomaty.pnt-converted.txt
-? UMP-Radom/src/POI-Radom.paliwo.pnt-converted.txt
-? UMP-Radom/src/POI-Radom.pnt-converted.txt
-? UMP-Radom/src/RADOM.debug.pnt-converted.txt
-? UMP-Radom/src/cities-Radom.pnt-converted.txt
-? UMP-Rosja/src/POI-Rosja.inne.pnt-converted.txt
-? UMP-Rosja/src/POI-Rosja.nawigacja.pnt-converted.txt
-? UMP-Rosja/src/cities-Rosja.pnt-converted.txt
-? UMP-Rumunia/src/POI-Rumunia.inne.pnt-converted.txt
-? UMP-Rumunia/src/POI-Rumunia.nawigacja.pnt-converted.txt
-? UMP-Rumunia/src/cities-Rumunia.pnt-converted.txt
-? UMP-Rzeszow/src/POI-Debica.pnt-converted.txt
-? UMP-Rzeszow/src/POI-Rzeszow.paliwo.pnt-converted.txt
-? UMP-Rzeszow/src/POI-Rzeszow.pnt-converted.txt
-? UMP-Rzeszow/src/POI-Rzeszow.szkoly.pnt-converted.txt
-? UMP-Rzeszow/src/POI-routing.pnt-converted.txt
-? UMP-Rzeszow/src/cities-Rzeszow.pnt-converted.txt
-? UMP-Serbia/src/POI-Serbia.inne.pnt-converted.txt
-? UMP-Serbia/src/SERBIA.debug.pnt-converted.txt
-? UMP-Serbia/src/cities-Serbia.pnt-converted.txt
-? UMP-Siedlce/src/POI-Siedlce.bankomaty.pnt-converted.txt
-? UMP-Siedlce/src/POI-Siedlce.paliwo.pnt-converted.txt
-? UMP-Siedlce/src/POI-Siedlce.pnt-converted.txt
-? UMP-Siedlce/src/SIEDLCE.debug.pnt-converted.txt
-? UMP-Siedlce/src/SIEDLCE.topo.pnt-converted.txt
-? UMP-Siedlce/src/cities-Siedlce.pnt-converted.txt
-? UMP-Slowacja/src/POI-Slowacja.geografia.pnt-converted.txt
-? UMP-Slowacja/src/POI-Slowacja.inne.pnt-converted.txt
-? UMP-Slowacja/src/POI-Slowacja.paliwo.pnt-converted.txt
-? UMP-Slowacja/src/SLOWACJA.debug.pnt-converted.txt
-? UMP-Slowacja/src/cities-Slowacja.pnt-converted.txt
-? UMP-Slowenia/src/POI-Slowenia.inne.pnt-converted.txt
-? UMP-Slowenia/src/SLOWENIA.debug.pnt-converted.txt
-? UMP-Slowenia/src/cities-Slowenia.pnt-converted.txt
-? UMP-Suwalki/src/POI-Suwalki.geografia.pnt-converted.txt
-? UMP-Suwalki/src/POI-Suwalki.inne.pnt-converted.txt
-? UMP-Suwalki/src/POI-Suwalki.mosty.pnt-converted.txt
-? UMP-Suwalki/src/POI-Suwalki.paliwo.pnt-converted.txt
-? UMP-Suwalki/src/POI-Suwalki.sport.pnt-converted.txt
-? UMP-Suwalki/src/POI-Suwalki.topo.pnt-converted.txt
-? UMP-Suwalki/src/SUWALKI.debug.pnt-converted.txt
-? UMP-Suwalki/src/SUWALKI.szlaki.topo.pnt-converted.txt
-? UMP-Suwalki/src/cities-Suwalki.pnt-converted.txt
-? UMP-Szczecin/src/POI-Baltyk.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.bankomaty.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.budynki.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.geografia.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.hotele.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.inne.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.jedzenie.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.kolej.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.koscioly.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.mosty.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.paliwo.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.sklepy.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.szkoly.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.szpitale.pnt-converted.txt
-? UMP-Szczecin/src/POI-Szczecin.topo.pnt-converted.txt
-? UMP-Szczecin/src/SZCZECIN.debug.pnt-converted.txt
-? UMP-Szczecin/src/cities-Szczecin.pnt-converted.txt
-? UMP-Szwajcaria/src/POI-Szwajcaria.inne.pnt-converted.txt
-? UMP-Szwajcaria/src/SZWAJCARIA.debug.pnt-converted.txt
-? UMP-Szwajcaria/src/cities-Szwajcaria.pnt-converted.txt
-? UMP-Szwecja/src/POI-Szwecja.debug.pnt-converted.txt
-? UMP-Szwecja/src/POI-Szwecja.geografia.pnt-converted.txt
-? UMP-Szwecja/src/POI-Szwecja.inne.pnt-converted.txt
-? UMP-Szwecja/src/POI-Szwecja.nawigacja.pnt-converted.txt
-? UMP-Szwecja/src/POI-Szwecja.porty.pnt-converted.txt
-? UMP-Szwecja/src/cities-Szwecja.pnt-converted.txt
-? UMP-Tarnow/src/POI-bankomaty.pnt-converted.txt
-? UMP-Tarnow/src/POI-debug.pnt-converted.txt
-? UMP-Tarnow/src/POI-inne.pnt-converted.txt
-? UMP-Tarnow/src/POI-koscioly.pnt-converted.txt
-? UMP-Tarnow/src/POI-paliwo.pnt-converted.txt
-? UMP-Tarnow/src/POI-szkoly.pnt-converted.txt
-? UMP-Tarnow/src/POI-szpitale.pnt-converted.txt
-? UMP-Tarnow/src/cities-Tarnow.pnt-converted.txt
-? UMP-Torun/src/BYDGOSZCZ.punkty.pnt-converted.txt
-? UMP-Torun/src/BYDGOSZCZ.routing.pnt-converted.txt
-? UMP-Torun/src/DROGI.routing.pnt-converted.txt
-? UMP-Torun/src/POI-Torun.pnt-converted.txt
-? UMP-Torun/src/POI-routing.pnt-converted.txt
-? UMP-Torun/src/cities-Torun.pnt-converted.txt
-? UMP-Turcja/src/POI-Turcja.inne.pnt-converted.txt
-? UMP-Turcja/src/POI-Turcja.nawigacja.pnt-converted.txt
-? UMP-Turcja/src/TURCJA.debug.pnt-converted.txt
-? UMP-Turcja/src/cities-Turcja.pnt-converted.txt
-? UMP-Ukraina/src/POI-Ukraina.geografia.pnt-converted.txt
-? UMP-Ukraina/src/POI-Ukraina.inne.pnt-converted.txt
-? UMP-Ukraina/src/UKRAINA.debug.pnt-converted.txt
-? UMP-Ukraina/src/cities-Ukraina.pnt-converted.txt
-? UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.bankomaty.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.budynki.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.debug.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.debug.topo.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.historia.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.hotele.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.inne.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.jedzenie.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.kinoteatr.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.kolej.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.koscioly.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.msi.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.paliwo.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.rozrywka.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.sklepy.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.sport.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.szkoly.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.szlaki.topo.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.szpitale.pnt-converted.txt
-? UMP-Warszawa/src/WARSZAWA.zabytki.pnt-converted.txt
-? UMP-Warszawa/src/cities-Warszawa.pnt-converted.txt
-? UMP-Wegry/src/POI-Wegry.inne.pnt-converted.txt
-? UMP-Wegry/src/WEGRY.debug.pnt-converted.txt
-? UMP-Wegry/src/cities-Wegry.pnt-converted.txt
-? UMP-WielkaBrytania/src/POI-Anglia.inne.pnt-converted.txt
-? UMP-WielkaBrytania/src/POI-IrlandiaPln.inne.pnt-converted.txt
-? UMP-WielkaBrytania/src/POI-Owcze.pnt-converted.txt
-? UMP-WielkaBrytania/src/POI-Szkocja.inne.pnt-converted.txt
-? UMP-WielkaBrytania/src/POI-WielkaBrytania.nawigacja.pnt-converted.txt
-? UMP-WielkaBrytania/src/WIELKA_BRYTANIA.debug.pnt-converted.txt
-? UMP-WielkaBrytania/src/cities-IrlandiaPln.pnt-converted.txt
-? UMP-WielkaBrytania/src/cities-Owcze.pnt-converted.txt
-? UMP-WielkaBrytania/src/cities-WielkaBrytania.pnt-converted.txt
-? UMP-Wlochy/src/EMILIAROMANIA.debug.pnt-converted.txt
-? UMP-Wlochy/src/LOMBARDIA.debug.pnt-converted.txt
-? UMP-Wlochy/src/LUGRIA.debug.pnt-converted.txt
-? UMP-Wlochy/src/PIEMONTE.debug.pnt-converted.txt
-? UMP-Wlochy/src/POI-Abruzzo.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Abruzzo.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Abruzzo.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Abruzzo.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Abruzzo.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Abruzzo.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Abruzzo.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Basilicata.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Basilicata.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Basilicata.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Basilicata.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Basilicata.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Basilicata.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Basilicata.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Calabria.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Calabria.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Calabria.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Calabria.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Campania.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Campania.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Campania.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Campania.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Campania.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Campania.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Campania.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-EmiliaRomania.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-EmiliaRomania.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-EmiliaRomania.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-EmiliaRomania.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-EmiliaRomania.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-EmiliaRomania.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-EmiliaRomania.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lazio.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lazio.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lazio.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lazio.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lazio.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lazio.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lazio.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lombardia.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lombardia.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lombardia.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lombardia.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lombardia.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lombardia.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.bankomaty.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Lugria.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Piemonte.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Piemonte.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Piemonte.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Piemonte.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Piemonte.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Piemonte.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sardegna.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sardegna.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sardegna.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sardegna.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sardegna.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sardegna.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sicilia.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sicilia.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sicilia.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sicilia.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sicilia.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Sicilia.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Toscana.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Toscana.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Toscana.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Toscana.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Toscana.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Toscana.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Toscana.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Trentino.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Trentino.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Trentino.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Trentino.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Trentino.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Trentino.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-UmbriaMarche.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-UmbriaMarche.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-UmbriaMarche.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-UmbriaMarche.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-UmbriaMarche.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-UmbriaMarche.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/POI-Veneto.inne.pnt-converted.txt
-? UMP-Wlochy/src/POI-Veneto.jedzenie.pnt-converted.txt
-? UMP-Wlochy/src/POI-Veneto.koscioly.pnt-converted.txt
-? UMP-Wlochy/src/POI-Veneto.nawigacja.pnt-converted.txt
-? UMP-Wlochy/src/POI-Veneto.paliwo.pnt-converted.txt
-? UMP-Wlochy/src/POI-Veneto.sklepy.pnt-converted.txt
-? UMP-Wlochy/src/POI-Veneto.zabytki.pnt-converted.txt
-? UMP-Wlochy/src/TOSCANA.debug.pnt-converted.txt
-? UMP-Wlochy/src/TRENTINO.debug.pnt-converted.txt
-? UMP-Wlochy/src/VENETO.debug.pnt-converted.txt
-? UMP-Wlochy/src/cities-Abruzzo.pnt-converted.txt
-? UMP-Wlochy/src/cities-Basilicata.pnt-converted.txt
-? UMP-Wlochy/src/cities-Calabria.pnt-converted.txt
-? UMP-Wlochy/src/cities-Campania.pnt-converted.txt
-? UMP-Wlochy/src/cities-EmiliaRomania.pnt-converted.txt
-? UMP-Wlochy/src/cities-Lazio.pnt-converted.txt
-? UMP-Wlochy/src/cities-Lombardia.pnt-converted.txt
-? UMP-Wlochy/src/cities-Lugria.pnt-converted.txt
-? UMP-Wlochy/src/cities-Piemonte.pnt-converted.txt
-? UMP-Wlochy/src/cities-Sardegna.pnt-converted.txt
-? UMP-Wlochy/src/cities-Sicilia.pnt-converted.txt
-? UMP-Wlochy/src/cities-Toscana.pnt-converted.txt
-? UMP-Wlochy/src/cities-Trentino.pnt-converted.txt
-? UMP-Wlochy/src/cities-UmbriaMarche.pnt-converted.txt
-? UMP-Wlochy/src/cities-Veneto.pnt-converted.txt
-? UMP-Wloclawek/src/POI-Wloclawek.pnt-converted.txt
-? UMP-Wloclawek/src/POI-benzyna.pnt-converted.txt
-? UMP-Wloclawek/src/POI-routing.pnt-converted.txt
-? UMP-Wloclawek/src/cities-Wloclawek.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Legnica-routing.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Legnica.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Lubin-routing.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Lubin.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Olawa-routing.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Olesnica.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Olesnica.routing.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Swidnica.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Trzebnica-routing.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Trzebnica.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Walbrzych-routing.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Walbrzych.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Wroclaw-routing.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Wroclaw.inne.pnt-converted.txt
-? UMP-Wroclaw/src/POI-Wroclaw.pnt-converted.txt
-? UMP-Wroclaw/src/cities-Olesnica.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.bankomaty.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.budynki.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.geografia.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.inne.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.kolej.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.koscioly.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.paliwo.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.routing.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.szkoly.pnt-converted.txt
-? UMP-Zamosc/src/POI-Zamosc.topo.pnt-converted.txt
-? UMP-Zamosc/src/cities-Zamosc.pnt-converted.txt
-? UMP-szlaki/src/CIECHANOW.szlaki.pnt-converted.txt
-? UMP-szlaki/src/GDANSK.szlaki.pnt-converted.txt
-? UMP-szlaki/src/POI-Poznan.szlaki.topo.pnt-converted.txt
-? UMP-szlaki/src/POZNAN.szlaki.pnt-converted.txt
-? UMP-szlaki/src/SUWALKI.szlaki.pnt-converted.txt
-? UMP-szlaki/src/WARSZAWA.szlaki.pnt-converted.txt
 Index: UMP-Bialystok/src/BIALYSTOK.ulice.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Bialystok/src/BIALYSTOK.ulice.txt,v
-retrieving revision 1.82
-diff -u -r1.82 BIALYSTOK.ulice.txt
---- UMP-Bialystok/src/BIALYSTOK.ulice.txt	17 May 2009 20:31:37 -0000	1.82
-+++ UMP-Bialystok/src/BIALYSTOK.ulice.txt	10 Jun 2009 11:14:22 -0000
-@@ -7064,7 +7064,7 @@
+retrieving revision 1.99
+diff -u -r1.99 BIALYSTOK.ulice.txt
+--- UMP-Bialystok/src/BIALYSTOK.ulice.txt	19 Aug 2009 22:38:26 -0000	1.99
++++ UMP-Bialystok/src/BIALYSTOK.ulice.txt	23 Aug 2009 10:05:59 -0000
+@@ -7018,7 +7018,7 @@
  Label=~[0x2e]65 Baranowicka
  EndLevel=4
  Data0=(53.12207,23.20314),(53.12206,23.20331),(53.12213,23.20561),(53.12218,23.20641),(53.12224,23.20731),(53.12241,23.20961),(53.12248,23.21053),(53.12265,23.21285),(53.12284,23.21540),(53.12295,23.21688),(53.12302,23.21789),(53.12338,23.22194),(53.12360,23.22443),(53.12367,23.22538),(53.12393,23.22670),(53.12430,23.22780),(53.12451,23.22833),(53.12516,23.22986)
@@ -656,37 +14,35 @@ diff -u -r1.82 BIALYSTOK.ulice.txt
  [END]
  
  [POLYLINE]
-Index: UMP-Dania/src/DANIA.obszary.txt
+Index: UMP-GorzowWlkp/src/KOSTRZYN.ulice.txt
 ===================================================================
-RCS file: /home/cvsroot/UMP-Dania/src/DANIA.obszary.txt,v
-retrieving revision 1.22
-diff -u -r1.22 DANIA.obszary.txt
---- UMP-Dania/src/DANIA.obszary.txt	5 Jun 2009 23:40:43 -0000	1.22
-+++ UMP-Dania/src/DANIA.obszary.txt	10 Jun 2009 11:14:32 -0000
-@@ -284,11 +284,11 @@
- Data0=(55.13700,14.11810),(55.14047,14.00000)
+RCS file: /home/cvsroot/UMP-GorzowWlkp/src/KOSTRZYN.ulice.txt,v
+retrieving revision 1.14
+diff -u -r1.14 KOSTRZYN.ulice.txt
+--- UMP-GorzowWlkp/src/KOSTRZYN.ulice.txt	21 Aug 2009 08:30:22 -0000	1.14
++++ UMP-GorzowWlkp/src/KOSTRZYN.ulice.txt	23 Aug 2009 10:06:04 -0000
+@@ -49,12 +49,12 @@
+ Data0=(52.61034,14.65565),(52.60155,14.65296),(52.60033,14.65262),(52.59896,14.65234),(52.59609,14.65178),(52.59550,14.65159),(52.59466,14.65121),(52.59406,14.65125),(52.59356,14.65123),(52.59188,14.65063)
  [END]
  
--[POLYLINE]
--Type=0x1e
--Label=TSS Bornholmsgat
--EndLevel=3
--[END]
-+;[POLYLINE]
-+;Type=0x1e
-+;Label=TSS Bornholmsgat
-+;EndLevel=3
-+;[END]
++; Label=Pó³nocna temp
+ [POLYLINE]
+ Type=0x5
+-Label=Pó³nocna temp
+ EndLevel=2
+ Data0=(52.61053,14.65596),(52.61005,14.67726),(52.60434,14.68147)
+-Label1=Pó³nocna
++Label=Pó³nocna
+ [END]
  
  [POLYLINE]
- Type=0x1d
 Index: UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt,v
 retrieving revision 1.2
 diff -u -r1.2 Hiszpania-miasta_poza_obszarem_mapy.pnt.txt
 --- UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt	7 Apr 2009 08:46:21 -0000	1.2
-+++ UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt	10 Jun 2009 11:14:32 -0000
++++ UMP-Hiszpania/src/Hiszpania-miasta_poza_obszarem_mapy.pnt.txt	23 Aug 2009 10:06:08 -0000
 @@ -1,3 +1,11 @@
 +;Afryka
 +OziExplorer Point File Version 1.0
@@ -705,7 +61,7 @@ RCS file: /home/cvsroot/UMP-JeleniaGora/src/miasta.txt,v
 retrieving revision 1.3
 diff -u -r1.3 miasta.txt
 --- UMP-JeleniaGora/src/miasta.txt	12 Feb 2007 02:20:03 -0000	1.3
-+++ UMP-JeleniaGora/src/miasta.txt	10 Jun 2009 11:14:32 -0000
++++ UMP-JeleniaGora/src/miasta.txt	23 Aug 2009 10:06:08 -0000
 @@ -1,90 +0,0 @@
 -[Countries]
 -Country1=Polska~[0x1d]PL
@@ -800,12 +156,12 @@ diff -u -r1.3 miasta.txt
 Index: UMP-Kalisz/src/POI-Kalisz.pnt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Kalisz/src/POI-Kalisz.pnt,v
-retrieving revision 1.86
-diff -u -r1.86 POI-Kalisz.pnt
---- UMP-Kalisz/src/POI-Kalisz.pnt	12 Mar 2009 01:04:56 -0000	1.86
-+++ UMP-Kalisz/src/POI-Kalisz.pnt	10 Jun 2009 11:14:32 -0000
+retrieving revision 1.91
+diff -u -r1.91 POI-Kalisz.pnt
+--- UMP-Kalisz/src/POI-Kalisz.pnt	20 Aug 2009 09:06:15 -0000	1.91
++++ UMP-Kalisz/src/POI-Kalisz.pnt	23 Aug 2009 10:06:08 -0000
 @@ -15,8 +15,6 @@
-   51.60072,  18.77262,  0,Pomnik Bohaterom wrzesnia 1939,,Sieradz,POMNIK
+   51.60072,  18.77262,  0,Pomnik Bohaterom Wrze¶nia 1939,,Sieradz,POMNIK
    51.59860,  18.69875,  0,Elektrocieplownia,Zachodnia,Sieradz,TOWER
    51.82535,  17.94680,  0,Kamieñ Œw. Jadwigi,,,ATRAKCJA
 -  51.45717,  18.93333,  0,,,,0x1809
@@ -813,14 +169,110 @@ diff -u -r1.86 POI-Kalisz.pnt
    51.19832,  18.85636,  0,Mokry Las,,,REZERWAT
    51.59197,  18.74720,  0,Most,,Sieradz,MOST
    51.60008,  18.76931,  0,Most,,Sieradz,MOST
+Index: UMP-Klodzko/src/KLODZKO.szlaki.topo.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Klodzko/src/KLODZKO.szlaki.topo.txt,v
+retrieving revision 1.12
+diff -u -r1.12 KLODZKO.szlaki.topo.txt
+--- UMP-Klodzko/src/KLODZKO.szlaki.topo.txt	17 Aug 2009 07:02:47 -0000	1.12
++++ UMP-Klodzko/src/KLODZKO.szlaki.topo.txt	23 Aug 2009 10:06:09 -0000
+@@ -74,8 +74,7 @@
+ Data0=(50.17269,16.77322),(50.17278,16.77395),(50.17345,16.77600),(50.17363,16.77639),(50.17375,16.77655),(50.17388,16.77663),(50.17435,16.77652),(50.17509,16.77585),(50.17641,16.77572),(50.17729,16.77665),(50.17844,16.77898),(50.17911,16.78113),(50.17906,16.78394),(50.17898,16.78456),(50.17907,16.79064),(50.17886,16.79147),(50.17875,16.79172),(50.17882,16.79234),(50.17941,16.79268),(50.18118,16.79298),(50.18217,16.79300),(50.18259,16.79209),(50.18288,16.79154),(50.18305,16.79145),(50.18360,16.79272),(50.18403,16.79366),(50.18506,16.79470),(50.18627,16.79643),(50.18674,16.79736),(50.18686,16.79778),(50.18691,16.79789),(50.18772,16.79959),(50.18888,16.80137),(50.18951,16.80194),(50.18968,16.80200),(50.19030,16.80195),(50.19107,16.80209),(50.19169,16.80234),(50.19158,16.80280),(50.19152,16.80346),(50.19230,16.80641),(50.19311,16.80870),(50.19400,16.81012),(50.19607,16.81196),(50.19649,16.81251),(50.19679,16.81334),(50.19688,16.81381),(50.19676,16.81437),(50.19633,16.81501),(50.19522,16.81659),(50.19490,16.81742),(50.19486,16.81849),(50.19535,16.82007),(50.19569,16.82205),(50.19660,16.82338),(50.19713,16.82396),(50.19760,16.82482),(50.19835,16.82589),(50.19867,16.82620),(50.19933,16.82732),(50.19938,16.82761),(50.19987,16.82829),(50.20001,16.82868),(50.20002,16.82902),(50.20064,16.83005),(50.20084,16.83020),(50.20141,16.83203),(50.20161,16.83295),(50.20182,16.83307),(50.20256,16.83314),(50.20303,16.83332),(50.20468,16.83319),(50.20523,16.83299),(50.20638,16.83308),(50.20716,16.83265),(50.20790,16.83258)
+ [END]
+ 
+-[POLYLINE]
+-Type=0x010e0a
+-Data0=(50.34678,16.40079),(50.34684,16.40152),(50.34715,16.40208),(50.34767,16.40260),(50.34778,16.40319),(50.34808,16.40384),(50.34810,16.40417),(50.34805,16.40473)
+-[END]
+-
++[POLYLINE]
++Type=0x010e0a
++Data0=(50.34678,16.40079),(50.34684,16.40152),(50.34715,16.40208),(50.34767,16.40260),(50.34778,16.40319),(50.34808,16.40384),(50.34810,16.40417),(50.34805,16.40473)
++[END]
+Index: UMP-Lublin/src/LUBLIN.woda.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Lublin/src/LUBLIN.woda.txt,v
+retrieving revision 1.105
+diff -u -r1.105 LUBLIN.woda.txt
+--- UMP-Lublin/src/LUBLIN.woda.txt	22 Aug 2009 14:20:21 -0000	1.105
++++ UMP-Lublin/src/LUBLIN.woda.txt	23 Aug 2009 10:06:11 -0000
+@@ -864,15 +864,27 @@
+ Type=0x1f
+ Label=Kanal zrzutowy
+ EndLevel=1
+-Data0=(51.45135,21.95987),(51.45129,21.94881),(51.45140,21.94853),(51.45177,21.94830)
+ Data0=(51.45135,21.95987),(51.45140,21.96685),(51.45146,21.96741),(51.45125,21.97065),(51.45131,21.97081)
+ [END]
+ 
+ [POLYLINE]
+ Type=0x1f
++Label=Kanal zrzutowy
++EndLevel=1
++Data0=(51.45135,21.95987),(51.45129,21.94881),(51.45140,21.94853),(51.45177,21.94830)
++[END]
++
++[POLYLINE]
++Type=0x1f
+ Label=Kanal dosylowy
+ EndLevel=1
+ Data0=(51.45107,21.95992),(51.45113,21.96603),(51.45131,21.96648),(51.45132,21.96698),(51.45118,21.96739),(51.45099,21.97067),(51.45111,21.97102)
++[END]
++
++[POLYLINE]
++Type=0x1f
++Label=Kanal dosylowy
++EndLevel=1
+ Data0=(51.45083,21.94825),(51.45085,21.95083),(51.45106,21.95155),(51.45107,21.95992)
+ [END]
+ 
+@@ -927,6 +939,12 @@
+ Label=Osadnik Wód Deszczowych
+ EndLevel=1
+ Data0=(51.40454,21.96971),(51.40325,21.96717),(51.40217,21.96724),(51.40213,21.96738),(51.40170,21.96746),(51.40155,21.96920),(51.40165,21.96922),(51.40173,21.96827),(51.40213,21.96778),(51.40345,21.96782),(51.40445,21.96982)
++[END]
++
++[POLYGON]
++Type=0x41
++Label=Osadnik Wód Deszczowych
++EndLevel=1
+ Data0=(51.40338,21.96809),(51.40371,21.96873),(51.40182,21.96915),(51.40187,21.96850),(51.40219,21.96809)
+ [END]
+ 
+@@ -2071,10 +2089,14 @@
+ 
+ [POLYLINE]
+ Type=0x18
+-Data0=(51.41168,21.94945),(51.41193,21.95067)
+ Data0=(51.41193,21.95067),(51.41156,21.95603),(51.41122,21.95729)
+ [END]
+ 
++[POLYLINE]
++Type=0x18
++Data0=(51.41168,21.94945),(51.41193,21.95067)
++[END]
++
+ [POLYGON]
+ Type=0x41
+ Label=£acha Wiœlana
+@@ -2085,6 +2107,10 @@
+ [POLYLINE]
+ Type=0x18
+ Data0=(51.41249,21.94653),(51.41171,21.94819)
++[END]
++
++[POLYLINE]
++Type=0x18
+ Data0=(51.41171,21.94819),(51.41169,21.94842)
+ [END]
+ 
 Index: UMP-NowySacz/src/POI-NowySacz1.pnt
 ===================================================================
 RCS file: /home/cvsroot/UMP-NowySacz/src/POI-NowySacz1.pnt,v
-retrieving revision 1.98
-diff -u -r1.98 POI-NowySacz1.pnt
---- UMP-NowySacz/src/POI-NowySacz1.pnt	1 Jun 2009 07:54:33 -0000	1.98
-+++ UMP-NowySacz/src/POI-NowySacz1.pnt	10 Jun 2009 11:14:34 -0000
-@@ -1225,7 +1225,7 @@
+retrieving revision 1.133
+diff -u -r1.133 POI-NowySacz1.pnt
+--- UMP-NowySacz/src/POI-NowySacz1.pnt	22 Aug 2009 12:08:14 -0000	1.133
++++ UMP-NowySacz/src/POI-NowySacz1.pnt	23 Aug 2009 10:06:12 -0000
+@@ -1223,7 +1223,7 @@
    49.61331,  20.69868,  0,,,Nowy S¹cz,0x1616
    49.60945,  20.70065,  0,,,Nowy S¹cz,0x1616
    49.61735,  20.71489,  0,,,Nowy S¹cz,0x1616
@@ -829,10 +281,10 @@ diff -u -r1.98 POI-NowySacz1.pnt
    49.60829,  20.69228,  0,,,Nowy S¹cz,0x1616
    49.60811,  20.69523,  0,,,Nowy S¹cz,0x1616
    49.62421,  20.71926,  0,,,Nowy S¹cz,0x1616
-@@ -2090,9 +2090,9 @@
+@@ -2086,9 +2086,9 @@
    49.42168,  20.95914,  0,Kredyt Bank,Zdrojowa;35;+48184716487,Krynica-Zdrój,ATM
    49.41110,  20.95534,  0,BPS ATM,Kraszewskiego;37;+48184715573,Krynica-Zdrój,ATM
-   49.41229,  20.95540,  0,U Edyty,,Krynica-Zdrój,RESTAURACJA
+   49.41229,  20.95540,  0,U Edytki,Kraszewskiego;32;+48501521580,Krynica-Zdrój,RESTAURACJA
 -  49.63303,  20.71183,  0,,,Nowy S¹cz,0x1716
 -  49.62076,  20.71825,  0,,,Nowy S¹cz,0x1716
 -  49.61978,  20.71739,  0,,,Nowy S¹cz,0x1716
@@ -842,181 +294,13 @@ diff -u -r1.98 POI-NowySacz1.pnt
    49.63542,  20.69216,  0,Media Markt,Tarnowska,Nowy S¹cz,RTV
    49.58897,  20.59580,  0,Grodzisko,,,ATRAKCJA
    49.58528,  20.60697,  0,Cmentarz Ewangelicki,,,CMENTARZ
-Index: UMP-Opole/src/OPOLE.szlaki.topo.txt
-===================================================================
-RCS file: /home/cvsroot/UMP-Opole/src/OPOLE.szlaki.topo.txt,v
-retrieving revision 1.39
-diff -u -r1.39 OPOLE.szlaki.topo.txt
---- UMP-Opole/src/OPOLE.szlaki.topo.txt	30 May 2009 20:20:05 -0000	1.39
-+++ UMP-Opole/src/OPOLE.szlaki.topo.txt	10 Jun 2009 11:14:35 -0000
-@@ -571,8 +571,7 @@
- Label=Zielony / Niebieski
- EndLevel=1
- Data0=(50.42979,18.96325),(50.42924,18.96325),(50.42774,18.96303),(50.42611,18.96281),(50.42515,18.96266),(50.42328,18.96306),(50.42274,18.96315),(50.42057,18.96306),(50.41862,18.96299),(50.41638,18.96289),(50.41588,18.96260)
--Label2=Szlak Tysi¹clecia Pañstwa Polskiego
--Label2=Szlak Œwierklaniecki 
-+Label2=Szlak Tysi¹clecia Pañstwa Polskiego / Szlak Œwierklaniecki 
- [END]
- 
- [POLYLINE]
-@@ -604,8 +603,7 @@
- Label=Zielony / Czerwony
- EndLevel=1
- Data0=(50.41221,18.94011),(50.41181,18.93965),(50.41109,18.93926),(50.41022,18.93892),(50.40950,18.93863),(50.40905,18.93845),(50.40878,18.94025),(50.40844,18.94218),(50.40816,18.94390),(50.40805,18.94416),(50.40659,18.94355),(50.40617,18.94343),(50.40600,18.94461),(50.40504,18.94398),(50.40357,18.94315),(50.40266,18.94261),(50.40172,18.94208),(50.40126,18.94189),(50.40027,18.94177),(50.39784,18.94168),(50.39498,18.94157),(50.39315,18.94151),(50.39169,18.94159)
--Label2=Szlak Tysi¹clecia Pañstwa Polskiego
--Label2=Szlak Husarii Polskiej
-+Label2=Szlak Tysi¹clecia Pañstwa Polskiego / Szlak Husarii Polskiej
- [END]
- 
- [POLYLINE]
-@@ -637,8 +635,7 @@
- Label=Niebieski / Czerwony
- EndLevel=1
- Data0=(50.37823,18.93955),(50.37801,18.93954),(50.37731,18.93942),(50.37615,18.93919),(50.37491,18.93899),(50.37399,18.93883),(50.37395,18.93937),(50.37388,18.94022),(50.37382,18.94119),(50.37380,18.94188),(50.37380,18.94234),(50.37381,18.94273),(50.37373,18.94287),(50.37335,18.94261),(50.37304,18.94181),(50.37248,18.94035),(50.37206,18.93928),(50.37151,18.93792),(50.37149,18.93734),(50.37118,18.93618),(50.37078,18.93576),(50.37069,18.93512),(50.37060,18.93372)
--Label2=Szlak Powstañców Œl¹skich
--Label2=Szlak Husarii Polskiej
-+Label2=Szlak Powstañców Œl¹skich / Szlak Husarii Polskiej
- [END]
- 
- [POLYLINE]
-@@ -646,8 +643,7 @@
- Label=Niebieski / Czerwony
- EndLevel=1
- Data0=(50.36725,18.93041),(50.36718,18.92998),(50.36710,18.92981),(50.36639,18.92922),(50.36585,18.92872),(50.36593,18.92857),(50.36589,18.92843),(50.36582,18.92835),(50.36571,18.92858),(50.36556,18.92841),(50.36549,18.92822),(50.36551,18.92805),(50.36604,18.92697),(50.36638,18.92633),(50.36668,18.92583),(50.36677,18.92563),(50.36668,18.92543),(50.36654,18.92535),(50.36570,18.92533),(50.36494,18.92534),(50.36440,18.92539),(50.36397,18.92530),(50.36355,18.92523),(50.36258,18.92461),(50.36160,18.92408),(50.36145,18.92378),(50.36055,18.92319),(50.35939,18.92254),(50.35875,18.92219),(50.35807,18.92203),(50.35698,18.92194),(50.35645,18.92177),(50.35528,18.92134),(50.35447,18.92102),(50.35280,18.92011),(50.35176,18.91958),(50.35034,18.91898),(50.34943,18.91858),(50.34826,18.91823)
--Label2=Szlak Powstañców Œl¹skich
--Label2=Szlak Husarii Polskiej
-+Label2=Szlak Powstañców Œl¹skich / Szlak Husarii Polskiej
- [END]
- 
- [POLYLINE]
-@@ -655,8 +651,7 @@
- Label=Zielony / Niebieski
- EndLevel=1
- Data0=(50.34826,18.91823),(50.34806,18.91821),(50.34787,18.91814),(50.34758,18.91816),(50.34732,18.91832),(50.34714,18.91882),(50.34681,18.91869),(50.34607,18.91798),(50.34534,18.91732),(50.34476,18.91683),(50.34382,18.91599),(50.34364,18.91580)
--Label2=Szlak Tysi¹clecia Pañstwa Polskiego
--Label2=Szlak Powstañców Œl¹skich
-+Label2=Szlak Tysi¹clecia Pañstwa Polskiego / Szlak Powstañców Œl¹skich
- [END]
- 
- [POLYLINE]
-@@ -680,8 +675,7 @@
- Label=Niebieski / Zielony
- EndLevel=1
- Data0=(50.39323,18.93205),(50.39382,18.92768),(50.39391,18.92660),(50.39431,18.92507),(50.39460,18.92427),(50.39486,18.92322),(50.39482,18.92228),(50.39512,18.92066),(50.39517,18.91994),(50.39574,18.91839),(50.39566,18.91770),(50.39624,18.91600),(50.39672,18.91430),(50.39739,18.91213),(50.39744,18.91174),(50.39736,18.91119),(50.39719,18.91079),(50.39735,18.90980),(50.39811,18.90792),(50.39843,18.90683),(50.39875,18.90526),(50.39897,18.90458),(50.39803,18.90331),(50.39737,18.90257),(50.39689,18.90222),(50.39667,18.90194),(50.39587,18.90137),(50.39565,18.90129),(50.39547,18.90130),(50.39536,18.90100),(50.39526,18.90085),(50.39518,18.90082),(50.39528,18.90023),(50.39534,18.90013),(50.39561,18.90000),(50.39562,18.89988),(50.39558,18.89970),(50.39540,18.89937),(50.39546,18.89915),(50.39561,18.89882)
--Label2=Szlak Powstañców Œl¹skich
--Label2=Szlak Tysi¹clecia Pañstwa Polskiego
-+Label2=Szlak Powstañców Œl¹skich / Szlak Tysi¹clecia Pañstwa Polskiego
- [END]
- 
- [POLYLINE]
-@@ -705,8 +699,7 @@
- Label=Zielony / Niebieski
- EndLevel=1
- Data0=(50.39187,18.87401),(50.39189,18.87346),(50.39159,18.87204),(50.39124,18.87050),(50.39091,18.86955),(50.38979,18.86820),(50.38901,18.86725),(50.38872,18.86739),(50.38864,18.86716),(50.38851,18.86723),(50.38820,18.86703),(50.38789,18.86717),(50.38770,18.86721),(50.38736,18.86709),(50.38717,18.86730),(50.38695,18.86733),(50.38681,18.86722),(50.38654,18.86722)
--Label2=Szlak Tysi¹clecia Pañstwa Polskiego
--Label2=Szlak Powstañców Œl¹skich
-+Label2=Szlak Tysi¹clecia Pañstwa Polskiego / Szlak Powstañców Œl¹skich
- [END]
- 
- [POLYLINE]
-@@ -730,8 +723,7 @@
- Label=¯ó³ty / Zielony
- EndLevel=1
- Data0=(50.37745,18.87738),(50.37709,18.87830),(50.37659,18.87959)
--Label2=Szlak im. Z. Kleszczyñskiego
--Label2=Szlak Tysi¹clecia Pañstwa Polskiego
-+Label2=Szlak im. Z. Kleszczyñskiego / Szlak Tysi¹clecia Pañstwa Polskiego
- [END]
- 
- [POLYLINE]
-@@ -803,8 +795,7 @@
- Label=Czerwony / ¯ó³ty
- EndLevel=1
- Data0=(50.34475,19.00143),(50.34472,19.00205),(50.34467,19.00278),(50.34460,19.00432),(50.34453,19.00556),(50.34448,19.00663),(50.34444,19.00744),(50.34429,19.01057),(50.34417,19.01332),(50.34412,19.01425),(50.34456,19.01444),(50.34551,19.01490),(50.34537,19.01573),(50.34509,19.01730),(50.34490,19.01811),(50.34450,19.01933),(50.34463,19.02151),(50.34485,19.02523),(50.34492,19.02621)
--Label2=Szlak Husarii Polskiej
--Label2=Szlak Historii Górnictwa Górnego Œl¹ska
-+Label2=Szlak Husarii Polskiej / Szlak Historii Górnictwa Górnego Œl¹ska
- [END]
- 
- [POLYLINE]
-@@ -836,8 +827,7 @@
- Label=Niebieski / Czarny
- EndLevel=1
- Data0=(50.40796,18.84531),(50.40885,18.84479),(50.41011,18.84299),(50.41058,18.84249)
--Label2=Szlak Powstañców Œl¹skich
--Label2=Szlak Segiecki
-+Label2=Szlak Powstañców Œl¹skich / Szlak Segiecki
- [END]
- 
- [POLYLINE]
-@@ -869,8 +859,7 @@
- Label=Niebieski / ¯ó³ty
- EndLevel=1
- Data0=(50.42730,18.80770),(50.42754,18.80664),(50.42877,18.80501),(50.42949,18.80351),(50.42998,18.80341),(50.43027,18.80315),(50.43020,18.80199),(50.43041,18.80077)
--Label2=Szlak Powstañców Œl¹skich
--Label2=Szlak Gwarków
-+Label2=Szlak Powstañców Œl¹skich / Szlak Gwarków
- [END]
- 
- [POLYLINE]
-@@ -918,9 +907,7 @@
- Label=Czerwony / Czarny / ¯ó³ty
- EndLevel=1
- Data0=(50.44254,18.85251),(50.44283,18.85276),(50.44321,18.85295),(50.44350,18.85363),(50.44401,18.85386),(50.44396,18.85462),(50.44439,18.85483)
--Label2=Szlak Husarii Polskiej
--Label2=Szlak Segiecki
--Label2=Szlak Gwarków
-+Label2=Szlak Husarii Polskiej / Szlak Segiecki / Szlak Gwarków
- [END]
- 
- [POLYLINE]
-@@ -936,8 +923,7 @@
- Label=Czerwony / ¯ó³ty
- EndLevel=1
- Data0=(50.44254,18.85251),(50.44242,18.85209),(50.44235,18.85150),(50.44191,18.85115),(50.44170,18.85053),(50.44105,18.84843),(50.44073,18.84737),(50.44051,18.84693)
--Label2=Szlak Husarii Polskiej
--Label2=Szlak Gwarków
-+Label2=Szlak Husarii Polskiej / Szlak Gwarków
- [END]
- 
- [POLYLINE]
-@@ -961,8 +947,7 @@
- Label=Czarny / ¯ó³ty
- EndLevel=1
- Data0=(50.44439,18.85483),(50.44486,18.85507),(50.44498,18.85489),(50.44548,18.85523),(50.44615,18.85544),(50.44613,18.85676),(50.44601,18.85796),(50.44586,18.85900),(50.44573,18.85998),(50.44588,18.86016),(50.44594,18.86112),(50.44630,18.86107),(50.44630,18.86125),(50.44600,18.86130),(50.44587,18.86141),(50.44607,18.86191),(50.44675,18.86252),(50.44720,18.86356),(50.44745,18.86404)
--Label2=Szlak Segiecki
--Label2=Szlak Gwarków
-+Label2=Szlak Segiecki / Szlak Gwarków
- [END]
- 
- [POLYLINE]
-@@ -970,8 +955,7 @@
- Label=Czarny / ¯ó³ty / Zielony
- EndLevel=1
- Data0=(50.44745,18.86404),(50.44847,18.86476)
--Label2=Szlak Segiecki
--Label2=Szlak Gwarków
-+Label2=Szlak Segiecki / Szlak Gwarków
- [END]
- 
- [POLYLINE]
-@@ -1050,8 +1034,7 @@
- Label=¯ó³ty / Czarny / Zielony
- EndLevel=1
- Data0=(50.46419,18.90383),(50.46410,18.90502),(50.46396,18.90689),(50.46389,18.90803)
--Label2=Szlak Gwarków
--Label2=Szlak Nakielski
-+Label2=Szlak Gwarków / Szlak Nakielski
- [END]
- 
- [POLYLINE]
 Index: UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt,v
 retrieving revision 1.1
 diff -u -r1.1 Portugalia-miasta_poza_obszarem_mapy.pnt.txt
 --- UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt	8 May 2008 23:04:16 -0000	1.1
-+++ UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt	10 Jun 2009 11:14:35 -0000
++++ UMP-Portugalia/src/Portugalia-miasta_poza_obszarem_mapy.pnt.txt	23 Aug 2009 10:06:12 -0000
 @@ -1,8 +1,13 @@
  ;Madeira
 +;Açores
@@ -1035,11 +319,11 @@ diff -u -r1.1 Portugalia-miasta_poza_obszarem_mapy.pnt.txt
 Index: UMP-Poznan/src/POZNAN.ulice.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Poznan/src/POZNAN.ulice.txt,v
-retrieving revision 1.848
-diff -u -r1.848 POZNAN.ulice.txt
---- UMP-Poznan/src/POZNAN.ulice.txt	3 Jun 2009 14:19:56 -0000	1.848
-+++ UMP-Poznan/src/POZNAN.ulice.txt	10 Jun 2009 11:14:41 -0000
-@@ -8195,7 +8195,6 @@
+retrieving revision 1.885
+diff -u -r1.885 POZNAN.ulice.txt
+--- UMP-Poznan/src/POZNAN.ulice.txt	21 Aug 2009 17:37:19 -0000	1.885
++++ UMP-Poznan/src/POZNAN.ulice.txt	23 Aug 2009 10:06:22 -0000
+@@ -8183,7 +8183,6 @@
  DirIndicator=1
  Data0=(52.38499,16.97139),(52.38419,16.97231)
  Label2=Boles³awa Krzywoustego
@@ -1047,7 +331,7 @@ diff -u -r1.848 POZNAN.ulice.txt
  [END]
  
  [POLYLINE]
-@@ -31833,8 +31832,8 @@
+@@ -31751,8 +31750,8 @@
  Label=Wergiliusza
  EndLevel=1
  Data0=(52.44443,16.88162),(52.44455,16.88242)
@@ -1058,13 +342,29 @@ diff -u -r1.848 POZNAN.ulice.txt
  [END]
  
  [POLYLINE]
+Index: UMP-Przemysl/src/IWONICZ-ZDROJ.ulice.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Przemysl/src/IWONICZ-ZDROJ.ulice.txt,v
+retrieving revision 1.14
+diff -u -r1.14 IWONICZ-ZDROJ.ulice.txt
+--- UMP-Przemysl/src/IWONICZ-ZDROJ.ulice.txt	20 Aug 2009 15:47:58 -0000	1.14
++++ UMP-Przemysl/src/IWONICZ-ZDROJ.ulice.txt	23 Aug 2009 10:06:22 -0000
+@@ -77,7 +77,7 @@
+ [POLYLINE]
+ Type=0x5
+ Data0=(49.58946,21.83075),(49.58847,21.82949),(49.58816,21.82773),(49.58735,21.82589),(49.58696,21.82537),(49.58512,21.82430),(49.58422,21.82417),(49.58372,21.82456),(49.58319,21.82520),(49.58259,21.82520),(49.58138,21.82443),(49.58101,21.82393),(49.58035,21.82318),(49.57979,21.82284),(49.57835,21.82131),(49.57789,21.82080),(49.57748,21.82061),(49.57677,21.82061),(49.57666,21.82061),(49.57535,21.82002),(49.57495,21.81955),(49.57454,21.81942),(49.57429,21.81939),(49.57415,21.81955),(49.57396,21.81980),(49.57381,21.81982),(49.57357,21.81962),(49.57344,21.81944),(49.57307,21.81929),(49.57172,21.81850),(49.57087,21.81774),(49.57050,21.81740),(49.56954,21.81542),(49.56927,21.81373),(49.56919,21.81331),(49.56902,21.81299),(49.56858,21.81250),(49.56832,21.81227),(49.56809,21.81175),(49.56762,21.81102),(49.56734,21.81041),(49.56701,21.81010),(49.56685,21.80983),(49.56662,21.80915),(49.56644,21.80806),(49.56622,21.80704),(49.56617,21.80622),(49.56610,21.80543),(49.56597,21.80483),(49.56595,21.80474),(49.56562,21.80448),(49.56541,21.80421),(49.56530,21.80378),(49.56514,21.80359),(49.56469,21.80350),(49.56406,21.80320),(49.56332,21.80308),(49.56249,21.80273),(49.56248,21.80237),(49.56307,21.80177),(49.56368,21.80113),(49.56421,21.80044)
+-EndLebel=2
++EndLevel=2
+ [END]
+ 
+ [POLYLINE]
 Index: UMP-Przemysl/src/Pruchnik-pliki.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Przemysl/src/Pruchnik-pliki.txt,v
 retrieving revision 1.3
 diff -u -r1.3 Pruchnik-pliki.txt
 --- UMP-Przemysl/src/Pruchnik-pliki.txt	13 Mar 2007 22:38:11 -0000	1.3
-+++ UMP-Przemysl/src/Pruchnik-pliki.txt	10 Jun 2009 11:14:41 -0000
++++ UMP-Przemysl/src/Pruchnik-pliki.txt	23 Aug 2009 10:06:22 -0000
 @@ -1,8 +0,0 @@
 -PRUCHNIK.obszary.txt
 -PRUCHNIK.szlaki.txt
@@ -1074,13 +374,37 @@ diff -u -r1.3 Pruchnik-pliki.txt
 -PRUCHNIK.warstwice.txt
 -PRUCHNIK.drogi.txt
 -POI-Pruchnik.txt
+Index: UMP-Suwalki/src/GOLDAP.ulice.txt
+===================================================================
+RCS file: /home/cvsroot/UMP-Suwalki/src/GOLDAP.ulice.txt,v
+retrieving revision 1.13
+diff -u -r1.13 GOLDAP.ulice.txt
+--- UMP-Suwalki/src/GOLDAP.ulice.txt	5 Aug 2009 15:32:51 -0000	1.13
++++ UMP-Suwalki/src/GOLDAP.ulice.txt	23 Aug 2009 10:06:22 -0000
+@@ -21,7 +21,7 @@
+ EndLevel=4
+ DirIndicator=1
+ Data0=(54.30839,22.30353),(54.30818,22.30349)
+-Lebel2=Królewiecka
++Label2=Królewiecka
+ [END]
+ 
+ [POLYLINE]
+@@ -818,6 +818,6 @@
+ EndLevel=4
+ DirIndicator=1
+ Data0=(54.30818,22.30349),(54.30839,22.30342)
+-Lebel2=Królewiecka
++Label2=Królewiecka
+ [END]
+ 
 Index: UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt,v
-retrieving revision 1.45
-diff -u -r1.45 STARGARD_SZCZECINSKI.ulice.txt
---- UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt	16 May 2009 08:44:28 -0000	1.45
-+++ UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt	10 Jun 2009 11:14:43 -0000
+retrieving revision 1.47
+diff -u -r1.47 STARGARD_SZCZECINSKI.ulice.txt
+--- UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt	8 Jul 2009 13:31:42 -0000	1.47
++++ UMP-Szczecin/src/STARGARD_SZCZECINSKI.ulice.txt	23 Aug 2009 10:06:22 -0000
 @@ -560,7 +560,6 @@
  Label=plac S³oneczny
  EndLevel=1
@@ -1089,25 +413,30 @@ diff -u -r1.45 STARGARD_SZCZECINSKI.ulice.txt
  [END]
  
  [POLYLINE]
-Index: UMP-Tarnow/src/TARNOW.woda.txt
+Index: UMP-Torun/src/inne.ulice.txt
 ===================================================================
-RCS file: /home/cvsroot/UMP-Tarnow/src/TARNOW.woda.txt,v
-retrieving revision 1.83
-diff -u -r1.83 TARNOW.woda.txt
---- UMP-Tarnow/src/TARNOW.woda.txt	30 Apr 2009 08:09:51 -0000	1.83
-+++ UMP-Tarnow/src/TARNOW.woda.txt	10 Jun 2009 11:14:46 -0000
-@@ -1357,4 +1357,3 @@
- EndLevel=1
- Data0=(50.00951,20.76430),(50.00885,20.76411),(50.00826,20.76348),(50.00751,20.76372),(50.00676,20.76307),(50.00654,20.76162),(50.00602,20.76059),(50.00591,20.75987),(50.00566,20.75959),(50.00517,20.75970),(50.00439,20.75950),(50.00370,20.75896),(50.00358,20.75835),(50.00326,20.75828),(50.00276,20.75875),(50.00148,20.75847),(50.00139,20.75802),(50.00104,20.75775),(50.00093,20.75724),(50.00075,20.75717),(50.00022,20.75742),(49.99999,20.75726),(49.99970,20.75772),(49.99889,20.75739),(49.99852,20.75719),(49.99812,20.75716),(49.99749,20.75675),(49.99654,20.75698),(49.99603,20.75665),(49.99559,20.75662),(49.99512,20.75737),(49.99420,20.75702),(49.99398,20.75762),(49.99396,20.75763),(49.99359,20.75773),(49.99350,20.75812),(49.99304,20.75838),(49.99279,20.75797),(49.99240,20.75815),(49.99164,20.75834),(49.99099,20.75931),(49.99028,20.75886),(49.98990,20.75882),(49.98985,20.75946),(49.98923,20.75926),(49.98859,20.75998),(49.98776,20.75960),(49.98736,20.75976),(49.98711,20.76066),(49.98649,20.76122),(49.98585,20.76210),(49.98447,20.76300),(49.98277,20.76361),(49.98161,20.76395),(49.98053,20.76326),(49.97975,20.76133),(49.97667,20.75662),(49.97630,20.75527),(49.97591,20.75530),(49.97547,20.75500),(49.97433,20.75604),(49.97391,20.75600),(49.97386,20.75552),(49.97372,20.75515),(49.97331,20.75518),(49.97305,20.75473),(49.97283,20.75457),(49.97224,20.75474),(49.97188,20.75457),(49.97004,20.75466),(49.96963,20.75444),(49.96927,20.75467),(49.96901,20.75452),(49.96871,20.75464),(49.96836,20.75445),(49.96674,20.75483),(49.96631,20.75586),(49.96600,20.75610),(49.96519,20.75567),(49.96508,20.75482),(49.96483,20.75456),(49.96451,20.75352),(49.96294,20.75228)
+RCS file: /home/cvsroot/UMP-Torun/src/inne.ulice.txt,v
+retrieving revision 1.379
+diff -u -r1.379 inne.ulice.txt
+--- UMP-Torun/src/inne.ulice.txt	21 Jun 2009 13:28:11 -0000	1.379
++++ UMP-Torun/src/inne.ulice.txt	23 Aug 2009 10:06:23 -0000
+@@ -725,8 +725,7 @@
+ Label=~[0x2f]534/543 Tysi¹clecia
+ EndLevel=3
+ Data0=(53.38238,18.94770),(53.38265,18.94464),(53.38263,18.94342),(53.38254,18.94160),(53.38260,18.94084),(53.38280,18.94004),(53.38309,18.93976),(53.38325,18.93963),(53.38467,18.93837)
+-Label2=Tysi¹clecia
+-Label2=1000-lecia
++Label2=Tysi¹clecia, 1000-lecia
+ Miasto=Radzyñ Che³miñski
  [END]
--
+ 
 Index: UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt,v
 retrieving revision 1.1
 diff -u -r1.1 miasta_poza_obszarem_mapy.pnt.txt
 --- UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt	8 May 2008 20:41:24 -0000	1.1
-+++ UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt	10 Jun 2009 11:14:47 -0000
++++ UMP-Ukraina/src/miasta_poza_obszarem_mapy.pnt.txt	23 Aug 2009 10:06:23 -0000
 @@ -1,3 +1,8 @@
 +OziExplorer Point File Version 1.0
 +WGS 84
@@ -1117,45 +446,31 @@ diff -u -r1.1 miasta_poza_obszarem_mapy.pnt.txt
    49.98000,  36.22000, 10,Charkiv
    48.45000,  34.98000, 10,Dnipropetrovsk
    48.00000,  37.82000, 10,Doneck
-Index: UMP-Wroclaw/src/LEGNICA.ulice.txt
+Index: UMP-Wroclaw/src/SZCZAWNO.ulice.txt
 ===================================================================
-RCS file: /home/cvsroot/UMP-Wroclaw/src/LEGNICA.ulice.txt,v
-retrieving revision 1.18
-diff -u -r1.18 LEGNICA.ulice.txt
---- UMP-Wroclaw/src/LEGNICA.ulice.txt	9 Apr 2009 09:45:25 -0000	1.18
-+++ UMP-Wroclaw/src/LEGNICA.ulice.txt	10 Jun 2009 11:14:47 -0000
-@@ -3449,7 +3449,6 @@
+RCS file: /home/cvsroot/UMP-Wroclaw/src/SZCZAWNO.ulice.txt,v
+retrieving revision 1.2
+diff -u -r1.2 SZCZAWNO.ulice.txt
+--- UMP-Wroclaw/src/SZCZAWNO.ulice.txt	4 Jul 2009 06:48:18 -0000	1.2
++++ UMP-Wroclaw/src/SZCZAWNO.ulice.txt	23 Aug 2009 10:06:23 -0000
+@@ -509,9 +509,3 @@
  EndLevel=1
- Data0=(51.199161,16.146429),(51.199001,16.148126)
- Label2=Puchatka (Kubusia)
--Label2=Puchatka
+ Data0=(50.796421,16.252750),(50.797840,16.252410),(50.799430,16.252109),(50.800411,16.251720),(50.800540,16.251329)
  [END]
- 
- [POLYLINE]
-Index: UMP-Wroclaw/src/WALBRZYCH.drogi.txt
-===================================================================
-RCS file: /home/cvsroot/UMP-Wroclaw/src/WALBRZYCH.drogi.txt,v
-retrieving revision 1.242
-diff -u -r1.242 WALBRZYCH.drogi.txt
---- UMP-Wroclaw/src/WALBRZYCH.drogi.txt	4 Jun 2009 11:10:14 -0000	1.242
-+++ UMP-Wroclaw/src/WALBRZYCH.drogi.txt	10 Jun 2009 11:14:51 -0000
-@@ -19411,7 +19411,7 @@
- Label=Solna
- EndLevel=1
- Data0=(50.849014,16.285631),(50.848915,16.285217),(50.848781,16.284832),(50.848636,16.284431),(50.848556,16.283924),(50.848533,16.283473),(50.848514,16.283012),(50.848548,16.282102),(50.848716,16.281440),(50.848953,16.280878)
--Misto=Œwiebodzice
-+Miasto=Œwiebodzice
- [END]
- 
- [POLYLINE]
+-
+-[POI]
+-Type=0x0
+-Label=DUmMY
+-Data0=(52.000000,20.555550)
+-[END]
 Index: UMP-Wroclaw/src/WROCLAW.drogi.txt
 ===================================================================
 RCS file: /home/cvsroot/UMP-Wroclaw/src/WROCLAW.drogi.txt,v
-retrieving revision 1.295
-diff -u -r1.295 WROCLAW.drogi.txt
---- UMP-Wroclaw/src/WROCLAW.drogi.txt	6 Jun 2009 18:15:49 -0000	1.295
-+++ UMP-Wroclaw/src/WROCLAW.drogi.txt	10 Jun 2009 11:14:52 -0000
-@@ -4815,7 +4815,7 @@
+retrieving revision 1.358
+diff -u -r1.358 WROCLAW.drogi.txt
+--- UMP-Wroclaw/src/WROCLAW.drogi.txt	20 Aug 2009 19:17:22 -0000	1.358
++++ UMP-Wroclaw/src/WROCLAW.drogi.txt	23 Aug 2009 10:06:26 -0000
+@@ -4806,7 +4806,7 @@
  
  [POLYLINE]
  Type=0x3
@@ -1164,28 +479,13 @@ diff -u -r1.295 WROCLAW.drogi.txt
  EndLevel=2
  DirIndicator=1
  Data0=(51.041831,16.969509),(51.042610,16.969677),(51.042919,16.969734),(51.043502,16.969905),(51.044017,16.970125),(51.044712,16.970420),(51.045047,16.970563),(51.046463,16.970607),(51.047050,16.970624),(51.047328,16.970684),(51.047584,16.970848)
-Index: UMP-Wroclaw/src/WROCLAW.obszary.txt
-===================================================================
-RCS file: /home/cvsroot/UMP-Wroclaw/src/WROCLAW.obszary.txt,v
-retrieving revision 1.52
-diff -u -r1.52 WROCLAW.obszary.txt
---- UMP-Wroclaw/src/WROCLAW.obszary.txt	27 Apr 2009 22:13:40 -0000	1.52
-+++ UMP-Wroclaw/src/WROCLAW.obszary.txt	10 Jun 2009 11:14:52 -0000
-@@ -1041,6 +1041,6 @@
- Label=Stacja trafo
- EndLevel=1
- Data0=(51.034487,17.096501),(51.034191,17.097755),(51.032847,17.096738),(51.033180,17.095551)
--Miast=Zacharzyce
-+Miasto=Zacharzyce
- [END]
- 
 Index: narzedzia/pnt2poi.awk
 ===================================================================
 RCS file: /home/cvsroot/narzedzia/pnt2poi.awk,v
-retrieving revision 1.63
-diff -u -r1.63 pnt2poi.awk
---- narzedzia/pnt2poi.awk	2 Jun 2009 12:16:02 -0000	1.63
-+++ narzedzia/pnt2poi.awk	10 Jun 2009 11:14:52 -0000
+retrieving revision 1.70
+diff -u -r1.70 pnt2poi.awk
+--- narzedzia/pnt2poi.awk	10 Aug 2009 10:07:04 -0000	1.70
++++ narzedzia/pnt2poi.awk	23 Aug 2009 10:06:26 -0000
 @@ -22,7 +22,7 @@
  	sym["WERYFIKOWAC"]="0x170a";
  	sym["NIE_WIEM"]="0x170d";
@@ -1256,10 +556,10 @@ diff -u -r1.63 pnt2poi.awk
 +	sym["stadium"]="0x2c081";
 +	sym["STADION"]="0x2c081";	# Sports(point)
 +	sym["BOISKO"]="0x2c080";
- 	sym["KONCERT"]="0x2c09";
+ 	sym["TARGI"]="0x2c09";
+ 	sym["FAIR"]="0x2c09";
  	sym["WINIARNIA"]="0x2c0a";
- 	sym["WINERY"]="0x2c0a";
-@@ -139,8 +139,8 @@
+@@ -141,8 +141,8 @@
  	sym["KINO"]="0x2d03";
  	sym["MULTIKINO"]="0x2d03";
  	sym["kina"]="0x2d03";	# Cinema
@@ -1270,7 +570,7 @@ diff -u -r1.63 pnt2poi.awk
  	sym["GOLF"]="0x2d05";
  	sym["NARTY"]="0x2d06";	# Ski center
  	sym["KREGLE"]="0x2d07";
-@@ -148,11 +148,11 @@
+@@ -150,11 +150,11 @@
  	sym["BASEN"]="0x2d09";
  	sym["baseny"]="0x2d09";
  	sym["NUREK"]="0x2d09";
@@ -1287,7 +587,7 @@ diff -u -r1.63 pnt2poi.awk
  	sym["SPORT"]="0x2d0a";	# Sports(point)
  	sym["landing"]="0x2d0b";
  
-@@ -168,7 +168,7 @@
+@@ -170,7 +170,7 @@
  	sym["MARKET"]="0x2e01";
  	sym["store"]="0x2e01";	# Dept. Store
  	sym["SPOZYWCZY"]="0x2e02";
@@ -1296,7 +596,7 @@ diff -u -r1.63 pnt2poi.awk
  	sym["GROCERY"]="0x2e02";
  	sym["SUPER"]="0x2e03";
  	sym["SUPERMARKET"]="0x2e03";
-@@ -187,7 +187,7 @@
+@@ -189,7 +189,7 @@
  	sym["DOM_I_OGROD"]="0x2e08";
  	sym["MEBLE"]="0x2e09";
  	sym["WNETRZA"]="0x2e09";
@@ -1305,7 +605,31 @@ diff -u -r1.63 pnt2poi.awk
  	sym["SPORTOWY"]="0x2e0a";
  	sym["TURYSTYCZNY"]="0x2e0a";
  	sym["RTV"]="0x2e0b";
-@@ -213,23 +213,23 @@
+@@ -201,44 +201,46 @@
+ 	sym["PALIWO"]="0x2f01";
+ 	sym["stacje benzynowe"]="0x2f01";
+ 	sym["RENTACAR"]="0x2f02";
+-	sym["AUTO"]="0x2f03";
+-	sym["CAR"]="0x2f03";
++	sym["AUTO"]="0x2f030";
++	sym["CAR"]="0x2f030";
+ 	sym["CARREPAIR"]="0x2f03";
+ 	sym["CARSERVICE"]="0x2f03";
+ 	sym["airport"]="0x2f04";
+ 	sym["AIRPORT"]="0x2f04";
+ 	sym["LOTNISKO"]="0x2f04";
+-	sym["POCZTA"]="0x2f05";	
+-	sym["INPOST"]="0x2f05";	
+-	sym["KURIER"]="0x2f05";	
+-	sym["ATM"]="0x2f06";
+-	sym["ATMBANK"]="0x2f06";
++	sym["POCZTA"]="0x2f05";
++	sym["INPOST"]="0x2f05";
++	sym["KURIER"]="0x2f050";
++	sym["DHL"]="0x2f051";
++	sym["UPS"]="0x2f052";
++	sym["ATM"]="0x2f062";
++	sym["ATMBANK"]="0x2f061";
  	sym["BANK"]="0x2f06";
  	sym["banki"]="0x2f06";
  	sym["CARDEALER"]="0x2f07";
@@ -1313,12 +637,12 @@ diff -u -r1.63 pnt2poi.awk
 -	sym["TRAM"]="0x2f08";
 -	sym["METRO"]="0x2f08";
 -	sym["PKS"]="0x2f08";
--	sym["PKP"]="0x2f08";	# bus/pkp
+-	sym["PKP"]="0x2f08";
 +	sym["BUS"]="0x2f080";
 +	sym["TRAM"]="0x2f081";
 +	sym["METRO"]="0x2f082";
 +	sym["PKS"]="0x2f083";
-+	sym["PKP"]="0x2f084";	# bus/pkp
++	sym["PKP"]="0x2f084";
  	sym["PORT"]="0x2f09";
  	sym["PRZYSTAN"]="0x2f09";
  	sym["parking"]="0x2f0b";	# 4d00?
@@ -1333,12 +657,22 @@ diff -u -r1.63 pnt2poi.awk
  	sym["CARWASH"]="0x2f0e";
  	sym["MYJNIA"]="0x2f0e";
  	sym["GARMIN"]="0x2f0f";
+ 	sym["USLUGI"]="0x2f10";	# personal services
+ 	sym["FRYZJER"]="0x2f10";	# personal services
 -	sym["TATOO"]="0x2f10";	# personal services
+-	sym["OPTYK"]="0x2f10";	# personal services
+-	sym["FABRYKA"]="0x2f11";
+-	sym["BUSINESS"]="0x2f11";
+-	sym["FIRMA"]="0x2f11";
 +	sym["TATOO"]="0x2f105";	# personal services
- 	sym["FABRYKA"]="0x2f11";
- 	sym["BUSINESS"]="0x2f11";
- 	sym["FIRMA"]="0x2f11";
-@@ -242,13 +242,13 @@
++	sym["OPTYK"]="0x2f106";	# personal services
++	sym["FABRYKA"]="0x2f115";
++	sym["BUSINESS"]="0x2f116";
++	sym["FIRMA"]="0x2f116";
+ 	sym["HOTSPOT"]="0x2f12";
+ 	sym["WIFI"]="0x2f12";
+ 	sym["REPAIR"]="0x2f13";
+@@ -252,13 +254,13 @@
  
  	sym["EMERGENCY"]="0x3000";	
  	sym["POLICJA"]="0x3001";
@@ -1355,8 +689,16 @@ diff -u -r1.63 pnt2poi.awk
 +	sym["WETERYNARZ"]="0x30026";
  	sym["RATUSZ"]="0x3003";
  	sym["SAD"]="0x3004";
- 	sym["toll"]="0x3006";
-@@ -271,11 +271,11 @@
+ 	sym["KONCERT"]="0x3005";
+@@ -274,6 +276,7 @@
+ 	sym["WRAK"]="0x4200";
+ 	sym["MARINA"]="0x4300";
+ 	sym["PRZYSTAN"]="0x4700";	# boat ramp? harbour
++	sym["BOAT_RAMP"]="0x4701";
+ 	sym["picnic"]="0x4a00";
+ 	sym["PICNIC"]="0x4a00";
+ 	sym["REST"]="0x4a00";
+@@ -283,18 +286,18 @@
  	sym["skiing"]="0x5300";
  	sym["SKI"]="0x5300";
  	sym["KAPIELISKO"]="0x5400";
@@ -1365,15 +707,27 @@ diff -u -r1.63 pnt2poi.awk
 -	sym["FS"]="0x5600"; # Fotoradar staly
 -	sym["KD"]="0x5600"; # Kontrola drogowa
 -	sym["RA"]="0x5600"; # Radiowoz z kamera
-+	sym["FA"]="0x56005"; # Atrapa fotoradaru
-+	sym["FP"]="0x56005"; # Fotoradar przenosny
-+	sym["FS"]="0x56005"; # Fotoradar staly
-+	sym["KD"]="0x56005"; # Kontrola drogowa
++	sym["FA"]="0x56001"; # Atrapa fotoradaru
++	sym["FP"]="0x56002"; # Fotoradar przenosny
++	sym["FS"]="0x56003"; # Fotoradar staly
++	sym["KD"]="0x56004"; # Kontrola drogowa
 +	sym["RA"]="0x56005"; # Radiowoz z kamera
  	sym["CZARNYPUNKT"]="0x5700";
  	sym["DANGER"]="0x5700";
- 	sym["FOTORADAR"]="0x5700";
-@@ -311,15 +311,15 @@
+-	sym["FOTORADAR"]="0x5700";
+-	sym["RADAR"]="0x5700";
+-	sym["NM"]="0x5700"; # Niebezpieczne miejsce
+-	sym["OP"]="0x5700"; # Ograniczenie predkosci
+-	sym["PK"]="0x5700"; # Przejazd kolejowy
++	sym["FOTORADAR"]="0x57000";
++	sym["RADAR"]="0x57001";
++	sym["NM"]="0x57002"; # Niebezpieczne miejsce
++	sym["OP"]="0x57003"; # Ograniczenie predkosci
++	sym["PK"]="0x57004"; # Przejazd kolejowy
+ 	sym["AIRPORTBIG"]="0x5901";
+ 	sym["AIRPORTMED"]="0x5902";
+ 	sym["AIRPORTSMALL"]="0x5903";
+@@ -324,15 +327,15 @@
  	sym["PLATFORMA"]="0x640d";
  	sym["RV_park"]="0x640e";
  	sym["REZERWAT"]="0x640e";	# park
@@ -1393,7 +747,7 @@ diff -u -r1.63 pnt2poi.awk
  	sym["OLIGOCEN"]="0x6414";
  	sym["BUNKIER"]="0x6415";	# ???
  	sym["FORT"]="0x6415";	# ???
-@@ -331,8 +331,8 @@
+@@ -344,14 +347,15 @@
  	sym["boat_ramp"]="0x650b"; # Harbor
  	sym["WYSPA"]="0x650c";
  	sym["JEZIORO"]="0x650d";
@@ -1401,15 +755,24 @@ diff -u -r1.63 pnt2poi.awk
 -	sym["WC"]="0x650f";	# ???
 +	sym["TOITOI"]="0x650f5";
 +	sym["WC"]="0x650f5";	# ???
+ 	sym["ZRODLO"]="0x6511";
+ 	sym["SPRING"]="0x6511";
  	sym["stream"]="0x6512";
  	sym["pond"]="0x6513";
  	sym["KURHAN"]="0x6600";	# ???
-@@ -347,7 +347,7 @@
+ 	sym["AREA"]="0x6602";
++	sym["AREA"]="0x6602";
+ 	sym["OBSZAR"]="0x6602";
+ 	sym["PLAZA"]="0x6604";	# beach
+ 	sym["JAZ"]="0x6605";	# canal?
+@@ -362,7 +366,9 @@
  	sym["TREE"]="0x660a";
  	sym["elevation"]="0x6610";
  	sym["plain"]="0x6610";
 -	sym["short_tower"]="0x6611";
 +	sym["short_tower"]="0x64110";
++	sym["tall_tower"]="0x64111";
++	sym["TALL_TOWER"]="0x64111";
  	sym["SKALA"]="0x6614";
  	sym["GORA"]="0x6616";
  	sym["HILL"]="0x6616";
