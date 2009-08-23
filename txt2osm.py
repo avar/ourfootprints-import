@@ -663,7 +663,7 @@ def print_point(point, index, argv):
 
 def print_way(way, index, argv):
     """Prints a way given by way together with its ID to stdout as XML"""
-    if way.pop('_c') > -50:
+    if way.pop('_c') <= 0:
         return
     print "<way id='%d' visible='true'>" % index_to_wayid(index)
     for nindex in way.pop('_nodes'):
@@ -1027,7 +1027,7 @@ def add_addrinfo(nodes, addrs, street, city, right, count):
             way = {
                 '_nodes': [pt0, pt1],
                 'addr:interpolation': type,
-                '_c': -100,
+                '_c': count,
                 '_src': srcidx,
             }
             if low != hi:
@@ -1412,13 +1412,10 @@ for rel in relations:
             sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
 
 for way in ways:
-    if way['_c'] < -50:
+    if way['_c'] > 0:
         for node in way['_nodes']:
             if '_out' in pointattrs[node]:
                 del pointattrs[node]['_out']
-    else:
-        for node in way['_nodes']:
-            pointattrs[node]['_out'] = 1
 
 print "<?xml version='1.0' encoding='UTF-8'?>"
 print "<osm version='0.6' generator='txt2osm %s converter for UMP-PL'>" \
