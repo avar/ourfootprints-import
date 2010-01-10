@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # vim: set fileencoding=utf-8 encoding=utf-8 et :
 # txt2osm, an UnofficialMapProject .txt to OpenStreetMap .osm converter.
 # Copyright (C) 2008  Mariusz Adamski, rhn
@@ -33,16 +33,16 @@ pline_types = {
     0x4:  [ "highway",  "secondary" ],
     0x5:  [ "highway",  "tertiary" ],
     0x6:  [ "highway",  "residential" ],
-    0x7:  [ "highway",  "living_street" ],
+    0x7:  [ "highway",  "living_street", "note", "FIXME: select one of: living_street, service, residential" ],
     0x8:  [ "highway",  "primary_link" ],
     0x9:  [ "highway",  "secondary_link" ],
-    0xa:  [ "highway",  "unclassified", "surface", "unpaved" ],
+    0xa:  [ "highway",  "unclassified" ],
     0xb:  [ "highway",  "trunk_link" ],
     0xc:  [ "junction", "roundabout" ],
     0xd:  [ "highway",  "cycleway" ],
     0xe:  [ "highway",  "service", "tunnel", "yes" ],
     0x14: [ "railway",  "rail" ],
-    0x16: [ "highway",  "track" ],
+    0x16: [ "highway",  "pedestrian" ],
     0x18: [ "waterway", "stream" ],
     0x19: [ "_rel",     "restriction" ],
     0x1a: [ "route",    "ferry" ],
@@ -64,6 +64,7 @@ pline_types = {
             "note",     "fixme: choose one" ],
     0x2a: [ "note",     "fixme" ],
     0x2c: [ "boundary", "historical", "admin_level", "2" ],
+    0x2f: [ "_rel",     "lane_restriction" ],
     0x44: [ "boundary", "administrative", "admin_level", "9" ],
     0x4b: [ "note",     "fixme" ],
 
@@ -77,7 +78,7 @@ pline_types = {
              "marked_trail_blue", "yes" ],
     0xe04: [ "highway", "footway", "ref", "Czarny szlak",
              "marked_trail_black", "yes" ],
-    0xe07: [ "highway", "footway", "ref", "Szlak", "note", "TODO" ],
+    0xe07: [ "highway", "footway", "ref", "Szlak", "note", "FIXME" ],
     0xe08: [ "highway", "cycleway", "ref", "Czerwony szlak",
              "marked_trail_red", "yes" ],
     0xe09: [ "highway", "cycleway", "ref", "Żółty szlak",
@@ -92,7 +93,7 @@ pline_types = {
              "marked_trail_black", "yes" ],
     0xe0d: [ "highway", "cycleway", "ref", "Zielony szlak z liściem",
              "marked_trail_green", "yes" ],
-    0xe0f: [ "highway", "cycleway", "ref", "Szlak", "note", "TODO" ],
+    0xe0f: [ "highway", "cycleway", "ref", "Szlak", "note", "FIXME" ],
 
     0xe10: [ "railway", "tram" ],
     0xe11: [ "railway", "abandoned" ],
@@ -115,7 +116,7 @@ pline_types = {
              "marked_trail_blue", "yes" ],
     0x10e04: [ "highway", "path", "ref", "Czarny szlak",
              "marked_trail_black", "yes" ],
-    0x10e07: [ "highway", "path", "ref", "Szlak", "note", "TODO" ],
+    0x10e07: [ "highway", "path", "ref", "Szlak", "note", "FIXME" ],
     0x10e08: [ "highway", "cycleway", "ref", "Czerwony szlak",
              "marked_trail_red", "yes" ],
     0x10e09: [ "highway", "cycleway", "ref", "Żółty szlak",
@@ -126,7 +127,9 @@ pline_types = {
              "marked_trail_blue", "yes" ],
     0x10e0c: [ "highway", "cycleway", "ref", "Czarny szlak",
              "marked_trail_black", "yes" ],
-    0x10e0f: [ "highway", "cycleway", "ref", "Szlak", "note", "TODO" ],
+    0x10e0d: [ "highway", "cycleway", "ref", "Szlak",
+             "marked_trail_black", "yes", "note", "FIXME" ],
+    0x10e0f: [ "highway", "cycleway", "ref", "Szlak", "note", "FIXME" ],
 
     0x10e10: [ "railway", "tram" ],
     0x10e11: [ "railway", "abandoned" ],
@@ -183,7 +186,7 @@ shape_types = {
     0x4c: [ "natural",  "water" ], # how does this differ from 0x40?
     0x4d: [ "natural",  "glacier" ],
     0x4e: [ "landuse",  "allotments" ],
-    0x4f: [ "landuse",  "farm" ],
+    0x4f: [ "natural",  "scrub" ],
     0x50: [ "natural",  "wood" ],
     0x51: [ "natural",  "wetland" ],
     0x52: [ "leisure",  "garden", "tourism", "zoo" ],
@@ -206,9 +209,9 @@ poi_types = {
     0x0e:   [ "place",    "village" ],
     0x2d:   [ "amenity",  "townhall" ],
 
-    0x0100: [ "place",    "city" ],
+    0x0100: [ "place",    "city" ], # Also used for voivodeships, regions
     0x0200: [ "place",    "city" ],
-    0x0300: [ "place",    "city" ],
+    0x0300: [ "place",    "city" ], # Also used for country nodes, seas
     0x0400: [ "place",    "city" ],
     0x0500: [ "place",    "city" ],
     0x0600: [ "place",    "city" ],
@@ -248,11 +251,20 @@ poi_types = {
     0x1616: [ "man_made", "beacon", "mark_type", "multicolored" ],
     0x1708: [ "shop",     "fixme" ],
     0x1709: [ "bridge",   "yes" ],
+    0x170b: [ "shop",     "verify!" ],
     0x1710: [ "barrier",  "gate" ],
     0x17105:[ "highway",  "stop" ],
+    0x1711: [ "note",     "FIXME" ],
     0x1712: [ "landuse",  "construction" ],
-    0x170a: [ "note",     "TODO: verify" ],
-    0x170d: [ "note",     "TODO" ],
+    0x170a: [ "note",     "FIXME: verify" ],
+    0x170d: [ "note",     "FIXME" ],
+    0x180c: [ "man_made", "beacon", "mark_type", "grounded-red" ],    # TODO
+    0x180c: [ "man_made", "beacon", "mark_type", "grounded-green" ],  # TODO
+    0x180c: [ "man_made", "beacon", "mark_type", "grounded-yellow" ], # TODO
+    0x180c: [ "man_made", "beacon", "mark_type", "cardinal-north" ],
+    0x190c: [ "man_made", "beacon", "mark_type", "cardinal-south" ],
+    0x1a0c: [ "man_made", "beacon", "mark_type", "cardinal-east" ],
+    0x1b0c: [ "man_made", "beacon", "mark_type", "cardinal-west" ],
     0x190b: [ "highway",  "construction" ],
     0x1a0b: [ "man_made", "beacon" ],
     0x1a10: [ "man_made", "beacon" ],
@@ -310,7 +322,9 @@ poi_types = {
     0x2b03: [ "tourism",  "camp_site" ],
     0x2b04: [ "tourism",  "hotel" ],
     0x2c00: [ "tourism",  "attraction" ],
+    0x2c005:[ "tourism",  "viewpoint" ],
     0x2c01: [ "tourism",  "attraction", "leisure", "park" ],
+    0x2c015:[ "leisure",  "playground" ],
     0x2c02: [ "tourism",  "museum" ],
     0x2c025:[ "tourism",  "museum", "amenity", "arts_centre" ],
     0x2c03: [ "amenity",  "library" ],
@@ -320,6 +334,9 @@ poi_types = {
     0x2c042:[ "historic", "castle", "castle_type", "fortress" ],
     0x2c043:[ "historic", "castle", "castle_type", "fortress" ],
     0x2c05: [ "amenity",  "school" ],
+    0x2c055:[ "amenity",  "university" ],
+    0x2c056:[ "amenity",  "kindergarten", "note", "Przedszkole" ],
+    0x2c057:[ "amenity",  "kindergarten", "note", "Żłobek" ],
     0x2c06: [ "leisure",  "park" ],
     0x2c07: [ "tourism",  "zoo" ],
     0x2c08: [ "leisure",  "sports_centre" ],
@@ -391,14 +408,17 @@ poi_types = {
     0x2f0e: [ "shop",     "car_wash" ],
     0x2f0f: [ "shop",     "outdoor", "operator", "Garmin" ],
     0x2f10: [ "amenity",  "personal_service" ],
-    0x2f105:[ "amenity",  "tattoo" ],
-    0x2f106:[ "shop",     "optician" ],
+    0x2f104:[ "amenity",  "personal_service", "shop", "hairdresser" ],
+    0x2f105:[ "amenity",  "personal_service", "shop", "tattoo" ],
+    0x2f106:[ "amenity",  "personal_service", "shop", "optician" ],
     0x2f11: [ "amenity",  "public_building" ],
     0x2f115:[ "landuse",  "industrial", "amenity", "factory" ],
     0x2f116:[ "landuse",  "commercial" ],
-    0x2f13: [ "shop",     "bicycle" ],
     0x2f12: [ "amenity",  "wifi" ],
-    0x2f14: [ "amenity",  "public_building" ],
+    0x2f13: [ "shop",     "bicycle" ],
+    0x2f14: [ "amenity",  "public_building", ],
+    0x2f144:[ "amenity",  "public_building", "type", "social" ],
+    0x2f145:[ "amenity",  "personal_service", "shop", "laundry" ],
     0x2f15: [ "amenity",  "public_building" ],
     0x2f16: [ "amenity",  "parking", "truck_stop", "yes" ],
     0x2f17: [ "amenity",  "travel_agency" ],
@@ -462,13 +482,14 @@ poi_types = {
     0x5d00: [ "tourism",  "information" ],
     0x5f00: [ "natural",  "scree" ],
     0x6100: [ "amenity",  "shelter", "building", "residential" ],
+    0x6101: [ "building", "industrial" ],
     0x6200: [ "depth",    "_name" ],
     0x6300: [ "ele",      "_name" ],
-    0x6400: [ "man_made", "fixme" ],
+    0x6400: [ "historic", "monument", "note", "FIXME" ],
     0x6401: [ "bridge",   "yes" ],
     0x6402: [ "landuse",  "industrial" ],
     0x6403: [ "landuse",  "cemetery" ],
-    0x6404: [ "amenity",  "place_of_worship", "religion", "christrian" ],
+    0x6404: [ "amenity",  "place_of_worship", "religion", "christian" ],
     0x6405: [ "amenity",  "public_building" ],
     0x6406: [ "amenity",  "ferry_terminal" ],
     0x6407: [ "waterway", "dam" ], # Map_Features requires a way
@@ -487,7 +508,8 @@ poi_types = {
     0x6413: [ "tunnel",   "yes", "layer", "-1" ],
     0x64135:[ "natural",  "cave_entrance" ],
     0x6414: [ "amenity",  "drinking_water" ],
-    0x6415: [ "historic", "ruins" ],
+    0x6415: [ "historic", "ruins", "building", "fortress" ],
+    0x64155:[ "historic", "ruins", "building", "bunker" ],
     0x6416: [ "tourism",  "hotel" ],
     0x6500: [ "waterway", "other" ],
     0x6502: [ "highway",  "ford" ],
@@ -649,31 +671,31 @@ def print_point(point, index, argv):
     head = ''.join(("<node id='", str(index_to_nodeid(index)),
             "' visible='true' lat='", str(point[0]),
             "' lon='", str(point[1]), "'>"))
-    print head
+    print(head)
     src = pointattrs[index].pop('_src')
     for key in pointattrs[index]:
         try:
-            print "\t<tag k='%s' v='%s' />" % \
-                (key, xmlize(pointattrs[index][key]))
+            print("\t<tag k='%s' v='%s' />" % \
+                (key, xmlize(pointattrs[index][key])))
         except:
            sys.stderr.write("converting key " + key + ": " +
                            str(pointattrs[index][key]) + " failed\n")
-    print "\t<tag k='source' v='%s (%s)' />" % (source, argv[src])
-    print "</node>"
+    print("\t<tag k='source' v='%s (%s)' />" % (source, argv[src]))
+    print("</node>")
 
 def print_way(way, index, argv):
     """Prints a way given by way together with its ID to stdout as XML"""
     if way.pop('_c') <= 0:
         return
-    print "<way id='%d' visible='true'>" % index_to_wayid(index)
+    print("<way id='%d' visible='true'>" % index_to_wayid(index))
     for nindex in way.pop('_nodes'):
-        print "\t<nd ref='%d' />" % index_to_nodeid(nindex)
+        print("\t<nd ref='%d' />" % index_to_nodeid(nindex))
 
     src = way.pop('_src')
     for key in way:
-        print "\t<tag k='%s' v='%s' />" % (key, xmlize(way[key]))
-    print "\t<tag k='source' v='%s (%s)' />" % (source, argv[src])
-    print "</way>"
+        print("\t<tag k='%s' v='%s' />" % (key, xmlize(way[key])))
+    print("\t<tag k='source' v='%s (%s)' />" % (source, argv[src]))
+    print("</way>")
 
 def print_relation(rel, index, argv):
     """Prints a relation given by rel together with its ID to stdout as XML"""
@@ -682,7 +704,7 @@ def print_relation(rel, index, argv):
     if not rel.has_key("_members"):
         sys.stderr.write( "warning: Unable to print relation not having memebers: %r\n" % (rel,) )
         return
-    print "<relation id='%i' visible='true'>" % index_to_relationid(index)
+    print("<relation id='%i' visible='true'>" % index_to_relationid(index))
     for role, (type, members) in rel.pop('_members').items():
         for member in members:
             if type == "node":
@@ -691,13 +713,14 @@ def print_relation(rel, index, argv):
                 id = index_to_wayid(member)
             else:
                 id = index_to_relationid(member)
-            print "\t<member type='%s' ref='%i' role='%s' />" % (type, id, role)
+            print("\t<member type='%s' ref='%i' role='%s' />" % \
+                            (type, id, role))
 
     src = rel.pop('_src')
     for key in rel:
-        print "\t<tag k='%s' v='%s' />" % (key, xmlize(rel[key]))
-    print "\t<tag k='source' v='%s (%s)' />" % (source, argv[src])
-    print "</relation>"
+        print("\t<tag k='%s' v='%s' />" % (key, xmlize(rel[key])))
+    print("\t<tag k='source' v='%s (%s)' />" % (source, argv[src]))
+    print("</relation>")
 
 def points_append(node, attrs):
     global borders
@@ -743,8 +766,8 @@ def prepare_line(nodes_str, closed):
     try:
         node_indices = map(points.index, nodes)
     except:
-        print points
-        print nodes
+        print(points)
+        print(node)
         raise ParsingError('Can\'t map node indices')
     pts = 0
     for node in node_indices:
@@ -795,9 +818,6 @@ def convert_tag(way, key, value, feat):
         way['oneway'] = value
     elif key in [ 'Data0', 'Data1', 'Data2', 'Data3', 'Data4' ]:
         num = int(key[4:])
-        if '_nodes' in way:
-            sys.stderr.write("warning: Way " + str(way) + " has multiple "
-                             "polylines/polygons, some will be discarded!\n")
         count, way['_nodes'] = prepare_line(value, feat == Features.polygon)
         if '_c' in way:
             way['_c'] += count
@@ -805,18 +825,16 @@ def convert_tag(way, key, value, feat):
             way['_c'] = count
         # way['layer'] = num ??
     elif key.startswith('_Inner'):
-        if feat != Features.polygon:
-            sys.stderr.write("warning: Way " + str(way) + " has multiple "
-                             "polylines/polygons, some will be discarded!\n")
+        count, nodes = prepare_line(value, feat == Features.polygon)
+        if '_innernodes' not in way:
+            way['_innernodes'] = []
+            if feat != Features.polygon:
+                way['_join'] = 1
+        way['_innernodes'].append(nodes)
+        if '_c' in way:
+            way['_c'] += count
         else:
-            count, nodes = prepare_line(value, feat == Features.polygon)
-            if '_innernodes' not in way:
-                way['_innernodes'] = []
-            way['_innernodes'].append(nodes)
-            if '_c' in way:
-                way['_c'] += count
-            else:
-                way['_c'] = count
+            way['_c'] = count
     elif key == 'Type':
         if feat == Features.polygon:
             tag(way, shape_types[int(value, 0)])
@@ -919,6 +937,10 @@ def convert_tag(way, key, value, feat):
         fclass = int(value) # Routing helper
         # Ignore it for the moment, seems to be used mainly for temporary setups
         # such as detours.
+    elif key == 'Speed':
+        way['maxspeed'] = value
+    elif key == 'Height_m':
+        way['maxheight'] = value
     elif key in [ 'Nod0', 'Nod1' ]:
         # TODO: what does this do?
         pass
@@ -1052,22 +1074,22 @@ class NodesToWayNotFound(ValueError):
 
 def nodes_to_way(a, b):
     for way in ways:
-        ## print "DEBUG: way['_nodes']: %r" % (way['_nodes'],)
+        ## print("DEBUG: way['_nodes']: %r" % (way['_nodes'],)
         if a in way['_nodes'] and b in way['_nodes']:
             # Hopefully there's only one
             return way
 
-    raise NodesToWayNotFound(a,b)
+    raise NodesToWayNotFound(a, b)
 
     for way in ways:
         way_nodes = way['_nodes']
         if a in way_nodes:
-            print "DEBUG: node a: %r found in way: %r" % (a,way)
+            print("DEBUG: node a: %r found in way: %r" % (a, way))
         if b in way_nodes:
-            print "DEBUG: node b: %r found in way: %r" % (b,way)
+            print("DEBUG: node b: %r found in way: %r" % (b, way))
 
-    ## print "DEBUG: no way nodes: a: %r b: %r" % (a,b,)
-    raise NodesToWayNotFound(a,b)
+    ## print "DEBUG: no way nodes: a: %r b: %r" % (a, b)
+    raise NodesToWayNotFound(a, b)
 
 def signbit(x):
     if x > 0:
@@ -1102,7 +1124,7 @@ def prepare_restriction(rel):
     split_way(nodes_to_way(fromnode, fromvia), fromvia)
     split_way(nodes_to_way(tonode, tovia), tovia)
 
-def make_restriction(rel):
+def make_restriction_fromviato(rel):
     nodes = rel.pop('_nodes')
     rel['_members'] = {
         'from': ('way', [ ways.index(nodes_to_way(nodes[0], nodes[1])) ]),
@@ -1116,14 +1138,21 @@ def make_restriction(rel):
         ways[rel['_members']['from'][1][0]]['_c'] += 1
         ways[rel['_members']['to'][1][0]]['_c'] += 1
 
+    return nodes
+
+def name_turn_restriction(rel, nodes):
     # Try to suss out the type of restriction.. needs to be checked manually
+    if 'name' in rel and rel['name'].lower().find('nakaz') != -1:
+        beginning = 'only_'
+    else:
+        beginning = 'no_'
     if 'name' in rel:
         if rel['name'].find('<<') != -1:
             rel['restriction'] = 'no_u_turn'
         elif rel['name'].find('<') != -1:
-            rel['restriction'] = 'no_left_turn'
+            rel['restriction'] = beginning + 'left_turn'
         elif rel['name'].find('>') != -1:
-            rel['restriction'] = 'no_left_turn'
+            rel['restriction'] = beginning + 'right_turn'
 
     # Multiple via nodes are not approved by OSM anyway
     if 'restriction' not in rel and len(nodes) == 3:
@@ -1138,14 +1167,14 @@ def make_restriction(rel):
         angle = (blat - alat) * (clon - blon) - (blon - alon) * (clat - blat)
 
         if angle > 0.0:
-            rel['restriction'] = 'no_right_turn'
+            rel['restriction'] = beginning + 'right_turn'
         else:
-            rel['restriction'] = 'no_left_turn'
+            rel['restriction'] = beginning + 'no_left_turn'
 
 def make_multipolygon(outer, holes):
     rel = {
         'type':     'multipolygon',
-        'note':     'TODO: fix roles manually',
+        'note':     'FIXME: fix roles manually',
         '_c':       outer['_c'],
         '_src':     outer['_src'],
         '_members': {
@@ -1233,18 +1262,17 @@ def parse_txt(infile):
     miasto = None
     comment = None
     for line in infile:
-        if line.endswith("\r\n"):
-            line = line[:-2] + "\n"
-        if line == "[POLYLINE]\n":
+        line = line.strip()
+        if line == "[POLYLINE]":
             polyline = {}
             feat = Features.polyline
-        elif line == "[POLYGON]\n":
+        elif line == "[POLYGON]":
             polyline = {}
             feat = Features.polygon
-        elif line == "[POI]\n":
+        elif line == "[POI]":
             polyline = {}
             feat = Features.poi
-        elif line == '[END]\n':
+        elif line == '[END]':
             way = { '_src': srcidx }
             for key in polyline:
                 convert_tag(way, key, polyline[key], feat)
@@ -1282,11 +1310,11 @@ def parse_txt(infile):
                     way['_out'] = 1
             else:
                 ways.append(way)
-        elif polyline is not None:
+        elif polyline is not None and line != '':
             try:
                 key, value = line.split('=', 1)
             except:
-                print line
+                print(line)
                 raise ParsingError('Can\'t split the thing')
             key = key.strip()
             if key in polyline:
@@ -1307,7 +1335,7 @@ def parse_txt(infile):
                 comment = strn
         elif line.startswith('Miasto='):
             miasto = recode(line[7:].strip(" \t\n"))
-        elif line != '\n':
+        elif line != '':
             raise ParsingError('Unhandled line ' + line)
 
 def parse_pnt(infile):
@@ -1317,9 +1345,9 @@ def parse_pnt(infile):
 # Main program.
 
 if len(sys.argv) < 2 or sys.argv[1] == "--help":
-    print "Usage: txt2osm [files...]"
-    print "Example:"
-    print "\t ./txt2osm.py UMP-Warszawa/src/WOLOMIN*.txt -- UMP-Warszawa/src/*.txt > wolomin.osm"
+    print("Usage: " + sys.argv[0] + " [files...]")
+    print("Example:")
+    print("\t ./txt2osm.py UMP-Warszawa/src/WOLOMIN*.txt -- UMP-Warszawa/src/*.txt > wolomin.osm")
     sys.exit()
 for n, f in enumerate(sys.argv[1:]):
     srcidx = n + 1
@@ -1367,12 +1395,13 @@ for rel in relations:
     ways.remove(rel)
 
 for rel in relations:
-    if rel['type'] == 'restriction':
+    if rel['type'] in [ 'restriction', 'lane_restriction' ]:
         try:
             preprepare_restriction(rel)
             ## print "DEBUG: preprepare_restriction(rel:%r) OK." % (rel,)
-        except NodesToWayNotFound,ntwnf:
-            sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
+        except NodesToWayNotFound:
+            sys.stderr.write("warning: Unable to find nodes to preprepare "
+                            "restriction from rel: %r\n" % (rel,))
 
 # Way level:  split ways on level changes
 # TODO: possibly emit a relation to group the ways
@@ -1398,20 +1427,51 @@ for way in levelledways:
 
 for way in ways:
     if '_innernodes' in way:
-        relations.append(make_multipolygon(way, way.pop('_innernodes')))
+        if '_join' in way:
+            del way['_join']
+            for segment in way.pop('_innernodes'):
+                subway = way.copy()
+                subway['_nodes'] = segment
+                ways.append(subway)
+        else:
+            relations.append(make_multipolygon(way, way.pop('_innernodes')))
 
 for rel in relations:
-    if rel['type'] == 'restriction':
+    if rel['type'] in [ 'restriction', 'lane_restriction' ]:
         try:
             prepare_restriction(rel)
-        except NodesToWayNotFound,ntwnf:
-            sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
+        except NodesToWayNotFound:
+            sys.stderr.write("warning: Unable to find nodes to " +
+                        "preprepare restriction from rel: %r\n" % (rel,))
 for rel in relations:
-    if rel['type'] == 'restriction':
+    if rel['type'] in [ 'restriction', 'lane_restriction' ]:
         try:
-            make_restriction(rel)
-        except NodesToWayNotFound,ntwnf:
-            sys.stderr.write( "warning: Unable to find nodes to preprepare restriction from rel: %r\n" % (rel,) )
+            rnodes = make_restriction_fromviato(rel)
+
+            if rel['type'] == 'restriction':
+                name_turn_restriction(rel, rnodes)
+        except NodesToWayNotFound:
+            sys.stderr.write("warning: Unable to find nodes to " +
+                        "preprepare restriction from rel: %r\n" % (rel,))
+
+# Quirks
+for way in ways:
+    if 'highway' in way and way['highway'] == 'unclassified':
+        if 'name' in way:
+            way['highway'] = 'residential'
+            way['surface'] = 'unpaved'
+        else:
+            way['highway'] = 'track'
+            if 'note' not in way:
+                way['note'] = 'FIXME: select one of: residential, unclassified, track'
+
+for index, point in enumerate(pointattrs):
+    if 'shop' in point and point['shop'] == 'fixme':
+        for way in ways:
+            if index in way['_nodes'] and 'highway' in way:
+                del point['shop']
+                point['noexit'] = 'yes'
+                break
 
 for way in ways:
     if way['_c'] > 0:
@@ -1419,9 +1479,9 @@ for way in ways:
             if '_out' in pointattrs[node]:
                 del pointattrs[node]['_out']
 
-print "<?xml version='1.0' encoding='UTF-8'?>"
-print "<osm version='0.6' generator='txt2osm %s converter for UMP-PL'>" \
-    % __version__
+print("<?xml version='1.0' encoding='UTF-8'?>")
+print("<osm version='0.6' generator='txt2osm %s converter for UMP-PL'>" \
+    % __version__)
 
 for index, point in enumerate(points):
     print_point(point, index, sys.argv)
@@ -1432,4 +1492,4 @@ for index, way in enumerate(ways):
 for index, rel in enumerate(relations):
     print_relation(rel, index, sys.argv)
 
-print "</osm>"
+print("</osm>")
