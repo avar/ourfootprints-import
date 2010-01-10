@@ -1208,6 +1208,8 @@ def parse_txt(infile):
     miasto = None
     comment = None
     for line in infile:
+        if line.endswith("\r\n"):
+            line = line[:-2] + "\n"
         if line == "[POLYLINE]\n":
             polyline = {}
             feat = Features.polyline
