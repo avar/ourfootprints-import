@@ -647,7 +647,7 @@ borders = None
 borders_resize = 1
 
 class Features: # fake enum
-    poi, polyline, polygon = range(3)
+    poi, polyline, polygon, ignore = range(4)
 
 class ParsingError(Exception):
     pass
@@ -1272,6 +1272,8 @@ def parse_txt(infile):
         elif line == "[POI]":
             polyline = {}
             feat = Features.poi
+        elif line == "[IMG ID]":
+            feat = Features.ignore
         elif line == '[END]':
             way = { '_src': srcidx }
             for key in polyline:
@@ -1310,6 +1312,10 @@ def parse_txt(infile):
                     way['_out'] = 1
             else:
                 ways.append(way)
+        elif feat == Features.ignore:
+            # Ignore everything within e.g. [IMG ID] until some other
+            # rule picks up something interesting, e.g. a polyline
+            pass
         elif polyline is not None and line != '':
             try:
                 key, value = line.split('=', 1)
