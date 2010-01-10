@@ -1233,6 +1233,8 @@ def parse_txt(infile):
     miasto = None
     comment = None
     for line in infile:
+        if line.endswith("\r\n"):
+            line = line[:-2] + "\n"
         if line == "[POLYLINE]\n":
             polyline = {}
             feat = Features.polyline
@@ -1335,7 +1337,7 @@ for n, f in enumerate(sys.argv[1:]):
 
     if f.endswith("pnt") or f.endswith("pnt.txt"):
         parse_pnt(infile)
-    elif f.endswith("txt"):
+    elif f.endswith("txt") or f.endswith("mp"):
         parse_txt(infile)
     infile.close()
 
