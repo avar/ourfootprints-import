@@ -1310,7 +1310,7 @@ for n, f in enumerate(sys.argv[1:]):
 
     if f.endswith("pnt") or f.endswith("pnt.txt"):
         parse_pnt(infile)
-    elif f.endswith("txt"):
+    elif f.endswith("txt") or f.endswith("mp"):
         parse_txt(infile)
     infile.close()
 
