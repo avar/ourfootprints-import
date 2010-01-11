@@ -16,7 +16,9 @@ for my $user (@users) {
     my @tracks = glob "*.gpx";
 
     for my $track (@tracks) {
-        my $cmd = qq[java -Dusername="ourFootPrints import" -Dpassword="$ENV{ofp_pass}" -cp $jgpxupload GpxUpload "Track by $user from 2009: $track" "$user, ourFootPrints" $track];
+        my $desc = "ourFootPrints track by $user from 2009";
+        my $tags = "$user, ourFootPrints, Iceland, 2009";
+        my $cmd = qq[java -Dusername="ourFootPrints import" -Dpassword="$ENV{ofp_pass}" -cp $jgpxupload GpxUpload "$desc" "$tags" $track];
         say $cmd;
         system $cmd;
     }
