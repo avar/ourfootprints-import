@@ -1,0 +1,2 @@
+This repository houses scripts and documentation relating to the
+ourFootPrints.de import into OpenStreetMap.
