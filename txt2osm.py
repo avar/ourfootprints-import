@@ -22,6 +22,7 @@
 import sys
 import time
 import math
+import re
 from xml.sax import saxutils
 
 __version__ = '0.1.1'
@@ -1279,7 +1280,7 @@ def parse_txt(infile):
             for key in polyline:
                 convert_tag(way, key, polyline[key], feat)
             if comment is not None:
-                way['note'] = comment
+                set_ourfootprints_comments(way, comment)
             comment = None
             if 'Type' in polyline:
                 highway = int(polyline['Type'], 0)
@@ -1343,6 +1344,119 @@ def parse_txt(infile):
             miasto = recode(line[7:].strip(" \t\n"))
         elif line != '':
             raise ParsingError('Unhandled line ' + line)
+
+def set_ourfootprints_comments(way, comment):
+    if comment == '' or 'name' in way and comment and way['name'] == comment:
+        1
+        #sys.stderr.write("No comment for naughty way '" + way['name'] + "' with comment '" + comment + "'\n")
+    else:
+        # Include the raw comment for later hacking
+        way['ourfootprints:raw_comment'] = comment
+
+        m_gps = re.search("^GPS.+", comment)
+        if re.search("BerndFrebel", comment):
+            m_von_vom = re.search("^(.*?)\s*Daten von (BerndFrebel) (.*?)$", comment)
+        else:
+            m_von_vom = re.search("^(.*?)\s*Daten von (.*)(?: vo[mn])? (.*?)$", comment)
+
+        if m_gps:
+            way['ourfootprints:source'] = 'gps'
+            set_ourfootprints_comments_gps(way, comment)
+        elif m_von_vom:
+            set_ourfootprints_comments_von_vom(way, comment, m_von_vom)
+        elif comment == 'GPS':
+            way['ourfootprints:source'] = 'gps'
+        else:
+            sys.stderr.write("Didn't grok ourfootprints comment '" + comment + "'\n")
+            #way['ourfootprints:FIXME'] = comment
+
+def set_ourfootprints_comments_von_vom(way, comment, m):
+    track = m.group(1)
+    person = m.group(2)
+    date = m.group(3)
+
+    if person:
+        person = re.sub(" vo[mn]$", "", person)
+        fn_search = re.search("^([A-Z][a-z]+) ([A-Z][a-z]+)$", person)
+        p_search = re.search("^([A-Z][a-z]+)([A-Z][a-z]+)$", person)
+        n_search = re.search("^([A-Z][a-z]+)$", person)
+        if fn_search:
+            way['ourfootprints:author'] = fn_search.group(1) + fn_search.group(2)
+        elif p_search:
+            way['ourfootprints:author'] = p_search.group(1) + " " + p_search.group(2)
+        elif n_search:
+            way['ourfootprints:author'] = n_search.group(1)
+        elif person == 'IlseGünterLeitner' or person == 'IlseGuenterLeitner':
+            way['ourfootprints:author'] = 'Ilse Günter Leitner'
+        elif person == 'HansJuergenStahl':
+            way['ourfootprints:author'] = 'Hans Juergen Stahl'
+        elif person == 'Percy071008':
+            way['ourfootprints:author'] = 'Percy'
+            way['ourfootprints:date'] = '2008-10-07'
+        elif person == 'mir':
+            way['ourfootprints:author'] = 'Thomas Ransberger'
+        else:
+            way['ourfootprints:author:FIXME'] = person
+            
+    if track:
+        way['ourfootprints:track'] = track
+
+    if date:
+        Mon2num = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'Mai': '05', 'Jun': '06', 'Juni': '06',
+                   'Jul': '07', 'Aug': '08', 'Sep': '09', 'Sept': '09', 'Oct': '10', 'Nov': '11',
+                   'Dec': '12'}
+        m_search = re.search("^([A-Z][a-z]{2,3})\.?(\d{2})$", date)
+        year_search = re.search("^(\d{4})$", date)
+        dd_mm_yy_search = re.search("^(\d{2})\.?(\d{1,2})\.?(\d{2})$", date)
+        if m_search:
+            way['ourfootprints:date'] = '20' + m_search.group(2) + '-' + Mon2num[m_search.group(1)];
+        elif year_search:
+            way['ourfootprints:date'] = year_search.group(1)
+        elif dd_mm_yy_search:
+            way['ourfootprints:date'] = '20%02d-%02d-%02d' % (int(dd_mm_yy_search.group(1)), int(dd_mm_yy_search.group(2)), int(dd_mm_yy_search.group(3)))
+        elif date == 'Aug-Sept08':
+            way['ourfootprints:date'] = '2008-08 - 2008-09'
+        elif date == 'JunJul.06':
+            way['ourfootprints:date'] = '2008-06 - 2008-07'
+        elif date == 'vom Aug06 und Aug07':
+            way['ourfootprints:date'] = '2006-08 - 2007-08'
+        else:
+            way['ourfootprints:date:FIXME'] = date
+
+def set_ourfootprints_comments_gps(way, comment):
+    m = re.search("^GPS[,;]? ([A-Z][a-z]+)$", comment)
+    if m:
+        way['ourfootprints:gps:user'] = m.group(1)
+    else:
+        m = re.search("^GPS[,;]? (.+)$", comment)
+        if m:
+            if m.group(1) == '(Erik)':
+                way['ourfootprints:gps:user'] = 'Erik';
+            elif m.group(1) == 'MArtin':
+                way['ourfootprints:gps:user'] = 'Martin';
+            elif m.group(1) == 'ich':
+                way['ourfootprints:gps:user'] = 'Thomas Ransberger';
+            elif m.group(1) == 'Erik, Axel' or m.group(1) == 'Axel - Erik':
+                way['ourfootprints:gps:user'] = 'Erik; Axel';
+            # dates
+            elif m.group(1) == ';13-JUL-05':
+                way['ourfootprints:gps:date'] = '2005-07-13'
+            elif m.group(1) == ';Track F578 27.7.2005':
+                way['ourfootprints:gps:date'] = '2005-07-27'
+            elif m.group(1) == 'Jun08':
+                way['ourfootprints:gps:date'] = '2008-06'
+            elif m.group(1) == ';15-JUL-05':
+                way['ourfootprints:gps:date'] = '2005-07-15'
+            elif m.group(1) == ';Track 26.7.2005':
+                way['ourfootprints:gps:date'] = '2005-07-26'
+            elif m.group(1) == ';Track 28.7.2005':
+                way['ourfootprints:gps:date'] = '2005-07-28'
+            elif m.group(1) == '2003' or m.group(1) == '2003 ':
+                way['ourfootprints:gps:date'] = '2003'
+            else:
+                way['ourfootprints:gps:FIXME'] = comment
+        else:
+            way['ourfootprints:gps:FIXME'] = comment
 
 def parse_pnt(infile):
 #   raise ParsingError('No?')
