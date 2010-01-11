@@ -640,7 +640,7 @@ relations = []
 maxtypes = []
 turnrestrictions = []
 # FIXME: should use the timestamp of the cvs checkout from src/CVS
-source = "http://ump.waw.pl/ retrieved " + time.strftime('%X %x')
+source = "ourfootprints"
 srcidx = 0
 
 borders = None
@@ -680,7 +680,7 @@ def print_point(point, index, argv):
         except:
            sys.stderr.write("converting key " + key + ": " +
                            str(pointattrs[index][key]) + " failed\n")
-    print("\t<tag k='source' v='%s (%s)' />" % (source, argv[src]))
+    #print("\t<tag k='source' v='%s' />" % source)
     print("</node>")
 
 def print_way(way, index, argv):
@@ -694,7 +694,7 @@ def print_way(way, index, argv):
     src = way.pop('_src')
     for key in way:
         print("\t<tag k='%s' v='%s' />" % (key, xmlize(way[key])))
-    print("\t<tag k='source' v='%s (%s)' />" % (source, argv[src]))
+    print("\t<tag k='source' v='%s' />" % source)
     print("</way>")
 
 def print_relation(rel, index, argv):
