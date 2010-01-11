@@ -1,7 +1,7 @@
 This repository houses scripts and documentation relating to the
 ourFootPrints.de import into OpenStreetMap.
 
-= GPX upload
+# GPX upload
 
 For uploding GPX I use
 [jgpxupload](http://svn.openstreetmap.org/applications/utils/gps-tracks/jgpxupload)
