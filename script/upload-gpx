@@ -1,0 +1,25 @@
+#!/usr/bin/env perl
+use autodie;
+use Modern::Perl;
+use File::Spec::Functions qw(catfile catdir);
+
+my $tracks = '~/g/ourfootprints-data/tracks'; $tracks =~ s/~/$ENV{HOME}/;
+my $jgpxupload = '~/src/osm/applications/utils/gps-tracks/jgpxupload/src'; $jgpxupload =~ s/~/$ENV{HOME}/;
+
+chdir $tracks;
+
+my @users = grep { -d } glob "*";
+
+for my $user (@users) {
+    chdir catdir($tracks, $user);
+
+    my @tracks = glob "*.gpx";
+
+    for my $track (@tracks) {
+        my $cmd = qq[java -Dusername="ourFootPrints import" -Dpassword="$ENV{ofp_pass}" -cp $jgpxupload GpxUpload "Track by $user from 2009: $track" "$user, ourFootPrints" $track];
+        say $cmd;
+        system $cmd;
+    }
+
+    chdir '..';
+}
