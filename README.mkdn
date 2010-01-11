@@ -11,3 +11,53 @@ For uploding GPX I use
     javac GpxUpload.java
     cd ~/g/ourfootprints-import
     ofp_pass="SECRET" perl script/upload-gpx ~/g/ourfootprints-data
+
+# Data conversion
+
+To convert the .mp file to .osm I'm using http://github.com/avar/ump2osm:
+
+    git clone git@github.com:avar/ump2osm.git
+    git checkout ourfootprints
+
+Then:
+
+    python ~/g/ump2osm/txt2osm.py /home/avar/g/ourfootprints-data/openstreetmap.mp > ourfootprint-roads.osm
+
+# Data upload
+
+    svn co http://svn.openstreetmap.org/applications/utils/import/bulk_upload_06
+
+Patch bulk_upload_06:
+    
+    $ svn diff bulk_upload.py 
+    Index: bulk_upload.py
+    ===================================================================
+    --- bulk_upload.py	(revision 19406)
+    +++ bulk_upload.py	(working copy)
+    @@ -49,8 +49,8 @@
+     __version__ = "$Id$"
+     user_agent = "bulk_upload.py/%s Python/%s" % (__version__.split()[2], sys.version.split()[0])
+     
+    -api_host='http://api.openstreetmap.org'
+    -#api_host='http://api06.dev.openstreetmap.org'
+    +#api_host='http://api.openstreetmap.org'
+    +api_host='http://api06.dev.openstreetmap.org'
+     headers = {
+         'User-Agent' : user_agent,
+     }
+    @@ -373,6 +373,11 @@
+         idMap = IdMap(options.infile + ".db")
+         tags = {
+             'created_by': user_agent,
+    +        'source': 'ourfootprints',
+    +        'website': 'http://www.ourfootprints.de/gps/mapsource-island_e.html',
+    +        'permission': 'http://lists.openstreetmap.org/pipermail/talk-is/2010-January/000363.html',
+    +        'raw_data': 'http://github.com/avar/ourfootprints-data',
+    +        'conversion_script': 'http://github.com/avar/ourfootprints-import',
+             'comment': options.comment
+         }
+         importProcessor = ImportProcessor(options.user,options.password,idMap,tags)
+    
+Upload:
+
+    python bulk_upload.py -i ~/g/ourfootprints-import/ourfootprint-roads.osm -u "ourFootPrints import" -p "SEEKRT" -c "Importing ourFootPrints.de road data from ourfootprints-data 1b25f76345 and ourfootprints-import 932f4eff6"
