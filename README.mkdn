@@ -1,2 +1,13 @@
 This repository houses scripts and documentation relating to the
 ourFootPrints.de import into OpenStreetMap.
+
+= GPX upload
+
+For uploding GPX I use
+[jgpxupload](http://svn.openstreetmap.org/applications/utils/gps-tracks/jgpxupload)
++ a custom script:
+
+    cd ~/src/osm/applications/utils/gps-tracks/jgpxupload/src
+    javac GpxUpload.java
+    cd ~/g/ourfootprints-import
+    ofp_pass="SECRET" perl script/upload-gpx ~/g/ourfootprints-data
