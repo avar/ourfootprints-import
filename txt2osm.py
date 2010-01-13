@@ -29,28 +29,28 @@ __version__ = '0.1.1'
 
 pline_types = {
     # The ring road and Reykjanesbraut
-    0x1:  [ "highway",  "motorway" ],
+    0x1:  [ "ofp:highway",  "motorway" ],
     # A section of road #1 near Akureyri, a bit within Reykjavík and on Reykjanes
-    0x2:  [ "highway",  "primary" ],
+    0x2:  [ "ofp:highway",  "primary" ],
     # Misc stofnvegur-ish roads all over the place
-    0x3:  [ "highway",  "primary" ],
+    0x3:  [ "ofp:highway",  "primary" ],
     # Misc secondary-ish roads
-    0x4:  [ "highway",  "secondary" ],
+    0x4:  [ "ofp:highway",  "secondary" ],
     # Only used in Vestmanneyjar and one place in Austfirðir
-    0x5:  [ "highway",  "secondary" ],
+    0x5:  [ "ofp:highway",  "secondary" ],
     # Mostly residential but also some non-residential roads
-    0x6:  [ "highway",  "residential" ],
+    0x6:  [ "ofp:highway",  "residential" ],
     #0x7:  [ "highway",  "living_street", "note", "FIXME: select one of: living_street, service, residential" ],
     #0x8:  [ "highway",  "primary_link" ],
     #0x9:  [ "highway",  "secondary_link" ],
     # Various track-like roads and more
-    0xa:  [ "highway",  "unclassified" ],
+    0xa:  [ "ofp:highway",  "unclassified" ],
     #0xb:  [ "highway",  "trunk_link" ],
     #0xc:  [ "junction", "roundabout" ],
     #0xd:  [ "highway",  "cycleway" ],
     #0xe:  [ "highway",  "service", "tunnel", "yes" ],
     # ~12 tunnels around the country
-    0x14: [ "highway", "primary", "tunnel",  "yes", ],
+    0x14: [ "ofp:highway", "primary", "ofp:tunnel",  "yes", ],
 
     # All of this is not used in ourfootprints
     0x16: [ "highway",  "pedestrian" ],
@@ -609,9 +609,9 @@ reftype = {
     0x2a: 'int_ref', # FIXME: should differentate the types
     0x2b: 'int_ref',
     0x2c: 'int_ref',
-    0x2d: 'ref',
-    0x2e: 'ref',
-    0x2f: 'ref',
+    0x2d: 'ofp:ref',
+    0x2e: 'ofp:ref',
+    0x2f: 'ofp:ref',
 }
 
 class Mylist(object):
@@ -819,8 +819,8 @@ def convert_tag(way, key, value, feat):
                 else:
                     raise ParsingError('Problem parsing label ' + value)
                 label = ref + label
-        if 'name' not in way and label != "":
-            way['name'] = label
+        if 'ofp:name' not in way and label != "":
+            way['ofp:name'] = label
     elif key.lower() in [ 'label2', 'lanel2', 'lable2', 'level2', 'lbel2' ]:
         way['name'] = value
     elif key.lower() == 'label3':
