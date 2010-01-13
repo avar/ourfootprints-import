@@ -6,5 +6,10 @@ cd ~/src/bulk_upload_06
 python bulk_upload_sax.py \
     -i ~/g/ourfootprints-import/ourfootprint-roads.osm \
     -u "ourFootPrints import" \
-    -p $ofp_pass \
-    -c "Importing ourFootPrints.de road data from ourfootprints-data $ofp_data_rev and ourfootprints-import $ofp_import_rev"
+    -p "$ofp_pass" \
+    -c "Importing ourFootPrints.de road data from ourfootprints-data $ofp_data_rev and ourfootprints-import $ofp_import_rev" \
+    -t source=ourfootprints \
+    -t website="http://www.ourfootprints.de/gps/mapsource-island_e.html" \
+    -t permission="http://lists.openstreetmap.org/pipermail/talk-is/2010-January/000363.html" \
+    -t raw_data="http://github.com/avar/ourfootprints-data" \
+    -t conversion_script="http://github.com/avar/ourfootprints-import"
