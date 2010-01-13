@@ -841,6 +841,7 @@ def convert_tag(way, key, value, feat):
             tag(way, shape_types[int(value, 0)])
         elif feat == Features.polyline:
             tag(way, pline_types[int(value, 0)])
+            tag(way, [ 'ourfootprints:road_type', str(int(value, 0)) ])
         else:
             tag(way, poi_types[int(value, 0)])
     elif key in [ 'EndLevel', 'Level', 'Levles' ]:
