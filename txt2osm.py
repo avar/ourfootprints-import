@@ -28,21 +28,31 @@ from xml.sax import saxutils
 __version__ = '0.1.1'
 
 pline_types = {
+    # The ring road and Reykjanesbraut
     0x1:  [ "highway",  "motorway" ],
-    0x2:  [ "highway",  "trunk" ],
+    # A section of road #1 near Akureyri, a bit within Reykjavík and on Reykjanes
+    0x2:  [ "highway",  "primary" ],
+    # Misc stofnvegur-ish roads all over the place
     0x3:  [ "highway",  "primary" ],
+    # Misc secondary-ish roads
     0x4:  [ "highway",  "secondary" ],
-    0x5:  [ "highway",  "tertiary" ],
+    # Only used in Vestmanneyjar and one place in Austfirðir
+    0x5:  [ "highway",  "secondary" ],
+    # Mostly residential but also some non-residential roads
     0x6:  [ "highway",  "residential" ],
-    0x7:  [ "highway",  "living_street", "note", "FIXME: select one of: living_street, service, residential" ],
-    0x8:  [ "highway",  "primary_link" ],
-    0x9:  [ "highway",  "secondary_link" ],
+    #0x7:  [ "highway",  "living_street", "note", "FIXME: select one of: living_street, service, residential" ],
+    #0x8:  [ "highway",  "primary_link" ],
+    #0x9:  [ "highway",  "secondary_link" ],
+    # Various track-like roads and more
     0xa:  [ "highway",  "unclassified" ],
-    0xb:  [ "highway",  "trunk_link" ],
-    0xc:  [ "junction", "roundabout" ],
-    0xd:  [ "highway",  "cycleway" ],
-    0xe:  [ "highway",  "service", "tunnel", "yes" ],
-    0x14: [ "railway",  "rail" ],
+    #0xb:  [ "highway",  "trunk_link" ],
+    #0xc:  [ "junction", "roundabout" ],
+    #0xd:  [ "highway",  "cycleway" ],
+    #0xe:  [ "highway",  "service", "tunnel", "yes" ],
+    # ~12 tunnels around the country
+    0x14: [ "highway", "primary", "tunnel",  "yes", ],
+
+    # All of this is not used in ourfootprints
     0x16: [ "highway",  "pedestrian" ],
     0x18: [ "waterway", "stream" ],
     0x19: [ "_rel",     "restriction" ],
@@ -1574,17 +1584,6 @@ for rel in relations:
         except NodesToWayNotFound:
             sys.stderr.write("warning: Unable to find nodes to " +
                         "preprepare restriction from rel: %r\n" % (rel,))
-
-# Quirks
-for way in ways:
-    if 'highway' in way and way['highway'] == 'unclassified':
-        if 'name' in way:
-            way['highway'] = 'residential'
-            way['surface'] = 'unpaved'
-        else:
-            way['highway'] = 'track'
-            if 'note' not in way:
-                way['note'] = 'FIXME: select one of: residential, unclassified, track'
 
 for index, point in enumerate(pointattrs):
     if 'shop' in point and point['shop'] == 'fixme':
