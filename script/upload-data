@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+ofp_data_rev=$(cd ~/g/ourfootprints-data ; git rev-parse HEAD | perl -pe 's/(.{10}).*/$1/')
+ofp_import_rev=$(cd ~/g/ourfootprints-import ; git rev-parse HEAD | perl -pe 's/(.{10}).*/$1/')
+
+cd ~/src/bulk_upload_06
+python bulk_upload_sax.py \
+    -i ~/g/ourfootprints-import/ourfootprint-roads.osm \
+    -u "ourFootPrints import" \
+    -p $ofp_pass \
+    -c "Importing ourFootPrints.de road data from ourfootprints-data $ofp_data_rev and ourfootprints-import $ofp_import_rev"
