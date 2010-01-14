@@ -4,8 +4,8 @@ ofp_import_rev=$(cd ~/g/ourfootprints-import ; git rev-parse HEAD | perl -pe 's/
 
 cd ~/src/bulk_upload_06
 python bulk_upload_sax.py \
-    --changeset-limit 20000 \
-    --put-limit 2000 \
+    --changeset-limit 5000 \
+    --put-limit 500 \
     -i ~/g/ourfootprints-import/ourfootprint-roads.osm \
     -u "ourFootPrints import" \
     -p "$ofp_pass" \
