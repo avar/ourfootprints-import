@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+use Modern::Perl;
+
+chomp(my $id_count = qx[cat ~/g/ourfootprints-import/ofp-roads.osm | perl -pe 's/.*?id=.(-\\d+).*/\$1/g'|grep ^-|sort|uniq|wc -l]);
+chomp(my $import_count = qx[python ~/src/bulk_upload_06/util/dump_shelve.py /home/avar/g/ourfootprints-import/ofp-roads.osm.db | perl -pe 's/:.*//'|wc -l]);
+
+say "$import_count of $id_count imported or " . ($import_count / $id_count * 100) . "%";
